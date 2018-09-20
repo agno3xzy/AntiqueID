@@ -53,8 +53,9 @@ input.usrpswd {
     padding: 15px 5px;
     margin-left: 0px;
     margin-top: 20px;
-    width: 360px;
+    width: 10px;
     border: none;
     text-align: left;
     color: #757575;
+    overflow: hidden;  
 }

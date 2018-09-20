@@ -26,8 +26,14 @@
             ResultSet rs = statement.executeQuery(sql);
             String expertlist[] = {};
             while (rs.next()) {
-                String expertlisttemp[] = rs.getString(3).split("#");
-                expertlist = expertlisttemp;
+                if(rs.getString(3) != null && rs.getString(3).equals("")==false){
+                    String expertlisttemp[] = rs.getString(3).split("#");
+                    expertlist = expertlisttemp;
+                }
+                else{
+                    String temp[] = {"尚未关注~"};
+                    expertlist = temp;
+                }
             }
         %>
 
@@ -35,6 +41,20 @@
         <h2>Expert Collection</h2>
 
         <%
+            //若关注专家的字符串为空，则说明原先有，但被删除完，此时置为初始值。
+            if(expertlist[0] == ""){
+                expertlist[0] = "尚未关注~";
+            }
+            //若尚未关注专家，则只显示一个尚未关注的长条，无删除按钮
+            if(expertlist[0] == "尚未关注~"){
+                out.print("<div class=\"alert" + " ");
+                out.print("info");
+                out.print("\">");
+                out.print("<p id=\"" + 0);
+                out.print("\">" + expertlist[0] + "</p>");
+                out.print("</div>");
+                return;
+            }
             for (int i = 0; i < expertlist.length; i++) {
                 out.print("<form action=\"mainpage_expertupdate.jsp\">");
                 out.print("<div class=\"alert" + " ");

@@ -57,7 +57,7 @@
                 <div>
                     <ul>
                         <li><a href="mainpage.jsp">主页</a></li>
-                        <li><a href="auction.html">拍卖</a></li>
+                        <li><a href="auction.jsp">拍卖</a></li>
                         <li><a class="active" href="cls_upload.jsp">鉴定</a></li>
                         <li><a href="mall.jsp">商城</a></li>
                         <li style="float:left"><a href="expert_ask.jsp">问答</a></li>

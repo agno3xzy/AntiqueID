@@ -4,13 +4,40 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/auction_compare.jsp</file>
-            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/auction_details.jsp</file>
             <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/expert_detail.jsp</file>
             <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/auction.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/cls_addtocollection.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mall_wp.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/login_admin.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mainpage_followexpert.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mainpage_expertupdate.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/checkRegister.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/css/bottom_navigation.css</file>
             <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mainpage.jsp</file>
-            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/css/cls_choose_category.css</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/src/java/com/login/AdminloginServlet.java</file>
             <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/cls_choose_category.jsp</file>
             <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/admin_page.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/register.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mall_sx.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/auction_details.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mall.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mall_rx.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/apply_expert.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/expert_detail_update.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/cls_upload.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mainpage_collection.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/expert_ask.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/login.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/cls_addtocomm.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/welcome.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/admin_commoditydetails.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/cls_result.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/css/cheakbox.css</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/index.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mainpage_update.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mall_my.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/mall_commoditydetails.jsp</file>
+            <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/css/cls_choose_category.css</file>
             <file>file:/C:/Users/agno3/Documents/NetBeansProjects/AntiqueID/web/css/commodity.css</file>
         </group>
     </open-files>

@@ -23,8 +23,8 @@ and open the template in the editor.
 
         <c:forEach var="row" items="${result.rows}">
             <div class="commodity">
-                <div style="width:170px;height:210px">
-                    <img src="${row.comm_img}" style="position:absolute;clip:rect(0px,170px,210px,0px);width:11.5%" alt=""/>
+                <div style="width:170px;height:240px">
+                    <img src="${row.comm_img}" style="width:100%" />
                 </div>
                 <p class="name"><c:out value="${row.comm_name}"/></p>
                 <p class="content"><c:out value="${row.comm_info}"/></p>
@@ -41,8 +41,8 @@ and open the template in the editor.
 
        <div class="buttonDiv">
             <ul>
-                <li><a class="active" href="mainpage.jsp">主页</a></li>
-                <li><a href="auction.jsp">拍卖</a></li>
+                <li><a  href="mainpage.jsp">主页</a></li>
+                <li><a class="active" href="auction.jsp">拍卖</a></li>
                 <li><a href="cls_upload.jsp">鉴定</a></li>
                 <li><a href="mall.jsp">商城</a></li>
                 <li ><a href="expert_ask.jsp">问答</a></li>
