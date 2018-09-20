@@ -12,16 +12,16 @@
             {
                 if (form.username.value == "")
                 {
-                    alert("???????");
+                    alert("?????????");
                     return false;
                 }
                 if (form.password.value != form.newword.value)
                 {
-                    alert("??????????");
+                    alert("????????");
                     return false;
                 } else if (form.password.value == "")
                 {
-                    alert("?????????");
+                    alert("??????");
                     return false;
                 } else
                     return true;
@@ -31,7 +31,7 @@
                     String flag = request.getParameter("errNo");
                     try {
                         if (flag != null) {
-                            out.println("???????????");
+                            out.println("??????");
                         }
                     } catch (Exception e) {
                         e.printStackTrace();

@@ -39,7 +39,7 @@
            for (int i = 0; i < colllist.length; i++) {   
                if (colllist[i].equals(deleteString)==true) {
                        }
-                   if (i != colllist.length-1 &&colllist[i].equals(deleteString)==false) {
+                  else if (i != colllist.length-1 &&colllist[i].equals(deleteString)==false) {
                            newcollliString = newcollliString+colllist[i] + "#";
                        }
 
@@ -51,7 +51,9 @@
                    }
                    }
            newcollliString = "\""+newcollliString+"\"";
-           
+            if (newcollliString=="\"#\"") {
+                    newcollliString = "";
+                }
              String sql2 = new String("UPDATE mainpage SET  main_collection = "+ newcollliString +"WHERE main_id = " + queryString);     
                Statement statement2 = connection.createStatement();
                statement2.executeUpdate(sql2);

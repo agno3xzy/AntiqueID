@@ -39,7 +39,7 @@
             for (int i = 0; i < expertlist.length; i++) {
                 if (expertlist[i].equals(deleteString) == true) {
                 }
-                if (i != expertlist.length - 1 && expertlist[i].equals(deleteString) == false) {
+                else if (i != expertlist.length - 1 && expertlist[i].equals(deleteString) == false) {
                     newexpertlistString = newexpertlistString + expertlist[i] + "#";
                 } else {
                     if (expertlist[i].equals(deleteString) == false) {
@@ -49,6 +49,9 @@
                 }
             }
             newexpertlistString = "\"" + newexpertlistString + "\"";
+            if (newexpertlistString=="\"#\"") {
+                    newexpertlistString = "";
+                }
             System.out.println("newexpertlistString: " + newexpertlistString);
             String sql2 = new String("UPDATE mainpage SET  main_followexpert = " + newexpertlistString + "WHERE main_id = " + queryString);
             Statement statement2 = connection.createStatement();

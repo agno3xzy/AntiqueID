@@ -27,18 +27,45 @@
             Connection connection = DriverManager.getConnection(url2, usename, psw);
             Statement statement = connection.createStatement();
             String sql = new String("SELECT * FROM  mainpage WHERE main_id = " + queryString);
+            System.out.println("sql: " + sql);
             ResultSet rs = statement.executeQuery(sql);
+            System.out.println("resultset: " + rs);
             String colllist[] = {};
+//            while (rs.next()) {
+//                String colllisttemp[] = rs.getString(2).split("#");
+//                colllist = colllisttemp;
+//            }
+//            String[] colllist = new String[100];
+            System.out.println("colllist");
             while (rs.next()) {
-                String colllisttemp[] = rs.getString(2).split("#");
-                colllist = colllisttemp;
+                if (rs.getString(2) != null && rs.getString(2).equals("")==false) {
+                    colllist = rs.getString(2).split("#");
+                } else {
+                    String temp[] = {"尚未收藏~"};
+                    colllist = temp;
+                }
             }
+            System.out.println("end");
         %>
 
 
         <h2>Collection</h2>
 
         <%
+            //若收藏的字符串为空，则说明原先有，但被删除完，此时置为初始值。
+            if(colllist[0] == ""){
+                colllist[0] = "尚未收藏~";
+            }
+            //若尚未收藏，则只显示一个尚未收藏的长条，无删除按钮
+            if (colllist[0] == "尚未收藏~") {
+                out.print("<div class=\"alert" + " ");
+                out.print("info");
+                out.print("\">");
+                out.print("<p id=\"" + 0);
+                out.print("\">" + colllist[0] + "</p>");
+                out.print("</div>");
+                return;
+            }
             for (int i = 0; i < colllist.length; i++) {
                 out.print("<form action=\"mainpage_update.jsp\">");
                 out.print("<div class=\"alert" + " ");
@@ -56,7 +83,6 @@
                 out.print("</div>");
                 out.print("</form>");
             }
-
         %>
 
         <div class="buttonDiv">

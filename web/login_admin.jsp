@@ -23,10 +23,12 @@
 
                         <div class="cont_forms_active_login_admin" style="position: absolute"> 
                             <h2>ADMIN LOGIN</h2>
-                            <div class="ipt"><input class="usrpswd" type="text" placeholder="Email" /></div>
-                            <div class="ipt"><input class="usrpswd" type="password" placeholder="Password" /></div>
+                            <form action = "/AntiqueID/AdminloginServlet" method="get"  >
+                                <div class="ipt"><input class="usrpswd" type="text" name="admin_id" placeholder="Email" /></div>
+                            <div class="ipt"><input class="usrpswd" type="password"name="admin_passwd" placeholder="Password" /></div>
                             <br>
-                            <button class="btn_login" onClick="cambiar_login()">LOGIN</button>
+                            <button type="submit" class="btn_login" onClick="cambiar_login()">LOGIN</button>
+                            </form>
                         </div>
 
                     </div>
