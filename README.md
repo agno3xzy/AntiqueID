@@ -27,8 +27,8 @@ The anticipated user features:
 - Deep Learning assisted Tang Sancai Evaluation
 - "Sancai Workshop" : a artistic recreation platform that is mainly implemented by painting, 3D modeling and style transfer. 
 
-- Note that: 
+- Some other notes:
   - We are NOT pursuing a abusolute certification of the Sancai pottery, since it's impossible to do that. A specific certification requires smell and touch which is way more beyond our capacity. What we do is trying to provide some basic facts and conclusions, also some historical information for any user to accumulate, with only a snapshot.
   - At the end of our production, we might only come up with concept features in anything associated with trading, for that we have no intention of real industry production.
-
-* We will present a basic implementation of our evaluation function in a web application way before 2018/11/20.
+  - app-demo-jsp is a web application prototype wrote by us. It cannot be run instantly because it need a MySQL environment and specific database, which we haven't uploaded. But we are planning on switching to Django. Currently learning Django development.
+- We will present a basic implementation of our evaluation function in a web application way before 2018/11/20.
