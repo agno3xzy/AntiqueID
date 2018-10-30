@@ -9,13 +9,13 @@
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 	
 	<style type="text/css">
-		html,
+		/*html,
 		body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
-        #con{
+        con1 {
             position:absolute;
             top:0;
             left:0;
@@ -24,17 +24,43 @@
             background-image:url("sancai_background.jpg");
             background-position: center 0;
             background-repeat: no-repeat;
-            background-attachment:fixed;
+            background-attachment: fixed;
             background-size: cover;
-            -webkit-background-size: cover;/* 兼容Webkit内核浏览器如Chrome和Safari */
-            -o-background-size: cover;/* 兼容Opera */
+            -webkit-background-size: cover;!* 兼容Webkit内核浏览器如Chrome和Safari *!
+            -o-background-size: cover;!* 兼容Opera *!
+    -moz-background-size: cover;
+
+
             zoom: 1;
-        }
+        }*/
+
+	#bg {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+
+	#bg img {
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:auto;
+		width:100%;
+		height:100%;
+		z-index:-1;
+	}
+
+
 	</style>
 </head>
 
 <body class="body">
-    <div id="con"></div>
+    <div id="bg">
+		<img src="sancai_background.jpg">
+	</div>
     <div class="container-fluid" style=" in-height:95%; ">
 		<div class="row">
 			  <div class="col-sm-2">
@@ -82,7 +108,7 @@
 			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
 		</div>
 	</footer>	
-	
+
 </body>
 
 </html>
