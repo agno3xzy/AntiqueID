@@ -3,8 +3,8 @@ from django.shortcuts import render
 def index(request):
 	return render(request, 'personal/home.html')
 
-def test(request):
-	return render(request, 'personal/bootstrap_cover_test.html')
+def home(request):
+	return render(request, 'personal/bootstrap_cover.html')
 
 def contact(request):
 	return render(request, 'personal/basic.html', {

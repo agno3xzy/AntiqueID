@@ -19,6 +19,8 @@ from django.conf.urls.static import static
 from . import settings
 
 
+#personal -- main page
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('personal.urls')),
