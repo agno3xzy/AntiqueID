@@ -28,3 +28,5 @@ urlpatterns = [
 
 urlpatterns += static('classification/', document_root=settings.MEDIA_ROOT)
 urlpatterns += static('workshop/', document_root=settings.MEDIA_ROOT)
+urlpatterns += static('/', document_root=settings.MEDIA_ROOT)
+urlpatterns += static('test/', document_root=settings.MEDIA_ROOT)
