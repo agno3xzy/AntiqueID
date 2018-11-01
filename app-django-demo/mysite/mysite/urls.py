@@ -26,9 +26,11 @@ urlpatterns = [
     path('',include('personal.urls')),
     path('classification/', include('classification.urls')),
     path('workshop/', include('workshop.urls')),
+    path('login/', include('login.urls')),
 ]
 
 urlpatterns += static('classification/', document_root=settings.MEDIA_ROOT)
 urlpatterns += static('workshop/', document_root=settings.MEDIA_ROOT)
 urlpatterns += static('/', document_root=settings.MEDIA_ROOT)
 urlpatterns += static('test/', document_root=settings.MEDIA_ROOT)
+urlpatterns += static('login/', document_root=settings.MEDIA_ROOT)

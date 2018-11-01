@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'classification',
     'workshop',
     'testbootstrap',
+    'login',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
