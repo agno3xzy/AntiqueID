@@ -6,3 +6,6 @@ def index(request):
 
 def color_mind(request):
     return render(request, 'classification/color_mind.html')
+
+def result(request):
+    return render(request, 'classification/intro2.html')
