@@ -2,16 +2,18 @@
 .flip-card {
     background-color: transparent;
     width: 300px;
-    height: 200px;
+    height: 300px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -38,8 +40,8 @@
 
 /* Style the back side */
 .flip-card-back {
-    background-image: url('/cloud_5.png');
+    background-image: url('/background/myadmin_expert.png');
     background-size: cover;
     transform: rotateY(180deg);
-    text-shadow: 3px 2px red;
+    text-shadow: 3px 2px #fff9f6;
 }
