@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>专家资历</title>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'expert/css/bootstrap-grid.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'expert/css/album.css' %}" rel="stylesheet">
+    <link href="{% static 'expert/css/carousel.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-image: url('/bk_test.jpg');background-size: cover;">
+      <a class="navbar-brand" href="#" style="color: #533f03">三彩知因</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/" style="color: #533f03">主页 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" style="color: #533f03">辅助鉴别</a>
+          </li>
+          <li class="nav-item" style="color: #533f03">
+            <a class="nav-link" href="../login/signin/" style="color: #533f03">鉴宝馆</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </header>
+    <main role="main" >
+      <section class="jumbotron text-center" style="background-image: url('/bk_test.jpg'); background-size: cover;">
+          <div style="margin-top: -10%">
+            <h1 class="featurette-heading">商品信息</h1>
+            <br /><br />
+          </div>
+        <div class="row featurette" style="margin-bottom: -2.5%">
+          <div class="col-md-7 order-md-2" style="margin-left: -5%">
+            <div class="container">
+                <h2 class="featurette-heading">三彩马</h2>
+                <br />
+                <p class="lead">XX年XX月XX日于XX墓出土，色彩鲜艳，体型优美</p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">立即购买</a>
+                <a href="#" class="btn btn-secondary my-2">联系卖家</a>
+            </p>
+            </div>
+          </div>
+          <div class="col-md-5 order-md-1" style="margin-left: 3%">
+            <img class="featurette-image img-fluid mx-auto" src="/example0.png" alt="Generic placeholder image">
+          </div>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light" style="background-image: url('/bk_test.jpg'); background-size: cover">
+          <h1 class="jumbotron-heading" style="text-align: center">专家评价</h1>
+          <br />
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>肖专家</h2>
+                    <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="{% static 'expert/js/vendor/popper.min.js' %></script>
+    <script src="{% static 'expert/js/bootstrap.bundle.min.js' %}></script>
+    <script src="{% static 'expert/js/vendor/holder.min.js' %}></script>
+  </body>
+</html>
