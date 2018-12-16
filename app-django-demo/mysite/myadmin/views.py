@@ -16,3 +16,5 @@ def mallmanagement(request):
 def usermanagement(request):
     return render(request, 'myadmin/usermanagement.html')
 
+def expert_detail(request):
+    return render(request, 'myadmin/expert_detail.html')

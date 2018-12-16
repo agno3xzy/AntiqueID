@@ -22,116 +22,151 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-
+    <script src="/static/myadmin/js/expertapply.js"></script>
     <!-- Bootstrap core CSS -->
-
-
     <!-- Custom styles for this template -->
-    <link href="/static/personal/css/cover.css" rel="stylesheet">
+    <link href="/static/myadmin/css/cover.css" rel="stylesheet">
     <link href="/static/myadmin/css/flipcard.css" rel="stylesheet">
 </head>
 
-<body class="text-center" style="background-image: url('/2.png');background-size: cover;background-attachment: fixed;">
-
+<body class="text-center" style="background-image: url('/background/myadmin.png');background-size: cover;">
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
         <div class="inner">
-
-
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link " style="color: black" href="#">主页</a>
-                <a class="nav-link active" style="color: black" href="expertapply/">专家申请管理</a>
-                <a class="nav-link" style="color: black" href="mallmanagement/">商城管理</a>
-                <a class="nav-link" style="color: black" href="auctionmanagement/">拍卖管理</a>
-                <a class="nav-link" style="color: black" href="usermanagement/">用户管理</a>
+                <a class="nav-link" style="color: black" href="http://127.0.0.1:8000/myadmin/">主页</a>
+                <a class="nav-link active" style="color: black"
+                   href="http://127.0.0.1:8000/myadmin/expertapply/">专家申请管理</a>
+                <a class="nav-link" style="color: black"
+                   href="http://127.0.0.1:8000/myadmin/mallmanagement/">商城管理</a>
+                <a class="nav-link " style="color: black"
+                   href="http://127.0.0.1:8000/myadmin/auctionmanagement/">拍卖管理</a>
+                <a class="nav-link" style="color: black"
+                   href="http://127.0.0.1:8000/myadmin/usermanagement/">用户管理</a>
             </nav>
 
         </div>
     </header>
 
-
-
-
-
-
-
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-*">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="/avatar1.jpg" alt="Avatar" style="width: 100%;height: 100%;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
+    <div class="container text-center" style="margin-top: 50px">
+        <div class="row ">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Expert Resume</h1>
+                </div>
+            </div>
         </div>
-        <div class="col-md-*">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="/avatar1.jpg" alt="Avatar" style="width: 100%;
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-*">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src='/avatar/avatar1.png' alt="Avatar" style="width: 100%;height: 100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>XX博物馆馆长</p>
+                            <br/>
+                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="col-md-*">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/avatar/avatar2.png" alt="Avatar" style="width: 100%;
     height: 100%;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-*">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="/avatar1.jpg" alt="Avatar" style="width: 100%;
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>XX博物馆馆长</p>
+                            <br/>
+                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-*">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/avatar/avatar1.png" alt="Avatar" style="width: 100%;
     height: 100%;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>XX博物馆馆长</p>
+                            <br/>
+                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-*">
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="/avatar1.jpg" alt="Avatar" style="width: 100%;
+
+        <div class="row">
+            <div class="col-md-*">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/avatar/avatar2.png" alt="Avatar" style="width: 100%;
     height: 100%;">
-    </div>
-    <div class="flip-card-back">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-  </div>
-</div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>XX博物馆馆长</p>
+                            <br/>
+                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-*">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/avatar/avatar1.png" alt="Avatar" style="width: 100%;
+    height: 100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>XX博物馆馆长</p>
+                            <br/>
+                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-*">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/avatar/avatar2.png" alt="Avatar" style="width: 100%;
+    height: 100%;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>John Doe</h1>
+                            <p>XX博物馆馆长</p>
+                            <br/>
+                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
-
-
-    <footer class="mastfoot mt-auto">
-        <div class="inner">
-
-        </div>
-    </footer>
-</div>
-
+</body>
+</html>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -142,5 +177,4 @@
 <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script src="/static/personal/js/vendor/popper.min.js"></script>
 <script src="/static/personal/js/bootstrap.min.js"></script>
-</body>
-</html>
+
