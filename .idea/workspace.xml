@@ -2,63 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf291506-0199-42e5-b660-3df87e8fdf21" name="Default Changelist" comment="little bit more progress">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/banner1.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/product9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/sancai_haibao.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/sannder2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/media/img/sancai_product/shop-banner-1.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/easyzoom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/linearicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/meanmenu.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/nice-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/slick.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/venobox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/easyzoom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/imagesloaded.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/isotope.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/jquery.countdown.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/jquery.counterup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/jquery.meanmenu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/jquery.nice-select.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/jquery.scrollUp.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/slick.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/vendor/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/vendor/modernizr-2.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/venobox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/templates/shop/shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app-django-demo/mysite/shop/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app-django-demo/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app-django-demo/mysite/mysite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app-django-demo/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app-django-demo/mysite/mysite/urls.py" afterDir="false" />
@@ -70,8 +13,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AntiqueID$test.coverage" NAME="test Coverage Results" MODIFIED="1541416682836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app-django-demo/mysite/classification/color_thief" />
     <SUITE FILE_PATH="coverage/AntiqueID___bad$manage.coverage" NAME="manage Coverage Results" MODIFIED="1545038027130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app-django-demo/mysite" />
+    <SUITE FILE_PATH="coverage/AntiqueID$test.coverage" NAME="test Coverage Results" MODIFIED="1541416682836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app-django-demo/mysite/classification/color_thief" />
     <SUITE FILE_PATH="coverage/AntiqueID$manage.coverage" NAME="manage Coverage Results" MODIFIED="1541685641606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app-django-demo/mysite" />
   </component>
   <component name="DatabaseView">
@@ -93,36 +36,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/urls.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="57">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/apps.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/mysite/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="515">
+              <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/models.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/models.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/mysite/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -133,29 +71,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state relative-caret-position="76">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/expert/templates/expert/expert_choose.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -230,9 +150,9 @@
         <option value="$PROJECT_DIR$/app-django-demo/mysite/workshop/views.py" />
         <option value="$PROJECT_DIR$/app-django-demo/mysite/workshop/templates/workshop/frontpage.html" />
         <option value="$PROJECT_DIR$/app-django-demo/mysite/shop/urls.py" />
-        <option value="$PROJECT_DIR$/app-django-demo/mysite/mysite/settings.py" />
-        <option value="$PROJECT_DIR$/app-django-demo/mysite/mysite/urls.py" />
         <option value="$PROJECT_DIR$/app-django-demo/mysite/shop/views.py" />
+        <option value="$PROJECT_DIR$/app-django-demo/mysite/mysite/urls.py" />
+        <option value="$PROJECT_DIR$/app-django-demo/mysite/mysite/settings.py" />
       </list>
     </option>
   </component>
@@ -247,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,61 +196,19 @@
               <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="expert" type="462c0819:PsiDirectoryNode" />
+              <item name="auction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
               <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="expert" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
-              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="expert" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="expert" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
-              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="expert" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
-              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="expert" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="expert" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
-              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
-              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,8 +240,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.shop.html">
-    <configuration name="home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AntiqueID/app-django-demo/mysite/workshop/templates/workshop/home.html">
+  <component name="RunManager" selected="Django server.Unnamed">
+    <configuration name="home.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/AntiqueID/app-django-demo/mysite/workshop/templates/workshop/home.html">
       <method v="2" />
     </configuration>
     <configuration name="shop.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AntiqueID---bad/app-django-demo/mysite/shop/templates/shop/shop.html">
@@ -398,7 +277,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="mysite.settings" />
       </envs>
-      <option name="SDK_HOME" value="D:\software\python3.6.5\python.exe" />
+      <option name="SDK_HOME" value="D:\study\python3.6\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -440,13 +319,12 @@
     <list>
       <item itemvalue="Django server.Unnamed" />
       <item itemvalue="JavaScript Debug.home.html" />
-      <item itemvalue="Python.manage" />
       <item itemvalue="JavaScript Debug.shop.html" />
+      <item itemvalue="Python.manage" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.shop.html" />
-        <item itemvalue="JavaScript Debug.home.html" />
       </list>
     </recent_temporary>
   </component>
@@ -461,6 +339,7 @@
       <option name="presentableId" value="Default" />
       <updated>1540861829551</updated>
       <workItem from="1545037921881" duration="3903000" />
+      <workItem from="1545045380624" duration="289000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1541337064700</created>
@@ -557,17 +436,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3903000" />
+    <option name="totallyTimeSpent" value="4192000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19638069" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49596122" weight="0.2082153" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49596122" visible="true" weight="0.20715836" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44513136" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -576,13 +456,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19292605" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50403875" side_tool="true" weight="0.2082671" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4983845" visible="true" weight="0.21246459" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4983845" weight="0.21235102" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3279743" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.07457627" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.03753351" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.03731343" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14297253" />
@@ -648,13 +528,7 @@
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/bk_test2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/workshop/templates/workshop/frontpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="335" column="62" lean-forward="true" selection-start-line="335" selection-start-column="62" selection-end-line="335" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/workshop/templates/workshop/frontpage.html" />
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/templates/personal/bootstrap_cover.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="988">
@@ -698,18 +572,14 @@
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/product/product2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/avatar/avatar1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/avatar/avatar1.png" />
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/product/product24.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/sancai_background2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/background/myadmin.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/background/myadmin.png" />
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/login/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -742,39 +612,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-684">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/vendor/jquery-1.12.4.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/slick.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/tests.py" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/js/vendor/jquery-1.12.4.min.js" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/static/shop/css/slick.css" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/admin.py" />
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/templates/shop/shop.html">
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/templates/shop/shop.html" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/views.py" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/expert/templates/expert/expert_choose.html" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/models.py" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/apps.py" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/urls.py" />
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="15" />
+        <state relative-caret-position="57">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -785,52 +653,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/views.py">
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/mysite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="515">
+          <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/personal/urls.py">
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/expert/templates/expert/expert_choose.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/shop/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
         </state>
       </provider>
     </entry>

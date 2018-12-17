@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'myadmin',
     'expert',
     'shop',
+    'auction',
 ]
 
 MIDDLEWARE = [
