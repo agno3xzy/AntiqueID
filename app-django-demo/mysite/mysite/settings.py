@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myadmin',
     'expert',
+    'shop',
 ]
 
 MIDDLEWARE = [

@@ -29,6 +29,7 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('myadmin/', include('myadmin.urls')),
     path('expert/', include('expert.urls')),
+    path('shop/', include('expert.urls')),
 ]
 
 urlpatterns += static('classification/', document_root=settings.MEDIA_ROOT)
@@ -38,3 +39,4 @@ urlpatterns += static('test/', document_root=settings.MEDIA_ROOT)
 urlpatterns += static('login/', document_root=settings.MEDIA_ROOT)
 urlpatterns += static('myadmin/', document_root=settings.MEDIA_ROOT)
 urlpatterns += static('expert/', document_root=settings.MEDIA_ROOT)
+urlpatterns += static('shop/', document_root=settings.MEDIA_ROOT)
