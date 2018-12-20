@@ -29,7 +29,7 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('myadmin/', include('myadmin.urls')),
     path('expert/', include('expert.urls')),
-    path('shop/', include('expert.urls')),
+    path('shop/', include('shop.urls')),
     path('auction/', include('auction.urls')),
 ]
 
