@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf291506-0199-42e5-b660-3df87e8fdf21" name="Default Changelist" comment="little bit more progress">
+    <list default="true" id="bf291506-0199-42e5-b660-3df87e8fdf21" name="Default Changelist" comment="img add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-django-demo/mysite/auction/static/auction/auction_img/auction_special_img.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction.html" beforeDir="false" afterPath="$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction_special_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-django-demo/mysite/media/auction_special_img.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +50,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="265" lean-forward="true" selection-start-line="265" selection-end-line="265" />
+            <state relative-caret-position="88">
+              <caret line="300" column="5" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#body#1;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#h1#0;n#div#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,8 +75,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/expert/templates/expert/expert_choose.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="415">
+              <caret line="132" column="1" lean-forward="true" selection-start-line="132" selection-start-column="1" selection-end-line="137" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,9 +115,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -174,13 +180,14 @@
         <option value="$PROJECT_DIR$/app-django-demo/mysite/mysite/urls.py" />
         <option value="$PROJECT_DIR$/app-django-demo/mysite/mysite/settings.py" />
         <option value="$PROJECT_DIR$/app-django-demo/mysite/classification/templates/classification/intro2.html" />
+        <option value="$PROJECT_DIR$/app-django-demo/mysite/auction/static/auction/css/web_bg.css" />
         <option value="$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="465" />
-    <option name="y" value="242" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="71" />
+    <option name="y" value="435" />
     <option name="width" value="1280" />
     <option name="height" value="722" />
   </component>
@@ -245,16 +252,6 @@
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
               <item name="auction" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="auction" type="462c0819:PsiDirectoryNode" />
-              <item name="auction_img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
-              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="auction" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -271,14 +268,14 @@
               <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
               <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -286,16 +283,16 @@
               <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AntiqueID---bad" type="b2602c69:ProjectViewProjectNode" />
               <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -303,9 +300,9 @@
               <item name="AntiqueID" type="462c0819:PsiDirectoryNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,6 +314,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -325,11 +323,11 @@
       <recent name="$PROJECT_DIR$/app-django-demo/mysite/media/product" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\study\大创\AntiqueID\app-django-demo\mysite\auction\static\auction\css" />
       <recent name="D:\study\大创\AntiqueID\app-django-demo\mysite\auction\static\auction" />
+      <recent name="D:\study\大创\AntiqueID\app-django-demo\mysite\auction\templates\auction" />
+      <recent name="D:\study\大创\AntiqueID\app-django-demo\mysite\media" />
+      <recent name="D:\study\大创\AntiqueID\app-django-demo\mysite\auction\static\auction\css" />
       <recent name="C:\Users\piao\PycharmProjects\AntiqueID\app-django-demo\mysite\media\img" />
-      <recent name="C:\Users\piao\PycharmProjects\AntiqueID\app-django-demo\mysite\shop\static\shop" />
-      <recent name="C:\Users\piao\PycharmProjects\AntiqueID\app-django-demo\mysite\shop\templates\shop" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -344,7 +342,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.Unnamed">
+  <component name="RunManager" selected="JavaScript Debug.auction.html">
     <configuration name="auction_details.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AntiqueID---bad/app-django-demo/mysite/auction/templates/auction/auction_details.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -454,7 +452,7 @@
       <updated>1540861829551</updated>
       <workItem from="1545037921881" duration="3903000" />
       <workItem from="1545045380624" duration="289000" />
-      <workItem from="1548896766050" duration="12699000" />
+      <workItem from="1548896766050" duration="16033000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1541337064700</created>
@@ -498,33 +496,33 @@
       <option name="project" value="LOCAL" />
       <updated>1542549018679</updated>
     </task>
-    <task id="LOCAL-00007" summary="test">
-      <created>1541080112780</created>
+    <task id="LOCAL-00007" summary="img add">
+      <created>1548928005504</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1541080112780</updated>
+      <updated>1548928005505</updated>
     </task>
-    <task id="LOCAL-00008" summary="test">
-      <created>1541080224150</created>
+    <task id="LOCAL-00008" summary="img add">
+      <created>1548928034968</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1541080224150</updated>
+      <updated>1548928034968</updated>
     </task>
-    <task id="LOCAL-00009" summary="test">
-      <created>1541080449949</created>
+    <task id="LOCAL-00009" summary="img add">
+      <created>1548928081212</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1541080449950</updated>
+      <updated>1548928081212</updated>
     </task>
-    <task id="LOCAL-00010" summary="test">
-      <created>1541080545971</created>
+    <task id="LOCAL-00010" summary="img add">
+      <created>1548928236913</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1541080545971</updated>
+      <updated>1548928236913</updated>
     </task>
     <task id="LOCAL-00011" summary="test">
       <created>1541224650353</created>
@@ -547,23 +545,23 @@
       <option name="project" value="LOCAL" />
       <updated>1541237866138</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16891000" />
+    <option name="totallyTimeSpent" value="20225000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="71" y="435" width="1280" height="722" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30819672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49596122" visible="true" weight="0.20715836" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6972789" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49596122" visible="true" weight="0.32482994" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.69631237" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
@@ -577,7 +575,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.07457627" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.03731343" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.057377048" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14297253" />
@@ -612,21 +610,10 @@
     <MESSAGE value="a bit progress on classification sample page, changing background" />
     <MESSAGE value="a bit progress" />
     <MESSAGE value="little bit more progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="little bit more progress" />
+    <MESSAGE value="img add" />
+    <option name="LAST_COMMIT_MESSAGE" value="img add" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/product/product7.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/sancai_background.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/product/product1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/product/product2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/avatar/avatar1.png" />
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/media/product/product24.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -757,29 +744,12 @@
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/login/static/login/css/form-validation.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7315">
-          <caret line="385" selection-start-line="385" selection-end-line="385" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/login/templates/login/signin.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/login/templates/login/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4729" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/expert/templates/expert/expert_choose.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/classification/templates/classification/home.html">
@@ -802,13 +772,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction_special_img.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7315">
+          <caret line="385" selection-start-line="385" selection-end-line="385" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/auction/static/auction/css/web_bg.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/auction/static/auction/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/auction/static/auction/css/album.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/expert/templates/expert/expert_choose.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="132" column="1" lean-forward="true" selection-start-line="132" selection-start-column="1" selection-end-line="137" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app-django-demo/mysite/auction/templates/auction/auction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="265" lean-forward="true" selection-start-line="265" selection-end-line="265" />
+        <state relative-caret-position="88">
+          <caret line="300" column="5" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#body#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#body#1;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#h1#0;n#div#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
