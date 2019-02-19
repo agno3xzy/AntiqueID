@@ -2,15 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef463ee2-e759-4d3c-9e64-b54ce741ac7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite/classification/templates/classification/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/album.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/cover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/jumbotron.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/css/style2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/quantize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/vendor/holder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/auction/static/auction/js/vendor/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/media/auction/auction1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/media/auction/auction2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/media/auction/auction3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/media/auction/auction4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/media/auction/auction5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/media/auction/auction6.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/classification/templates/classification/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/templates/classification/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/classification/templates/classification/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/templates/classification/intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/classification/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/classification/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/login/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/login/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/login/templates/login/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/login/templates/login/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/auction/templates/auction/auction.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/auction/templates/auction/auction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/auction/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/auction/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/login/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,18 +86,19 @@
     <session id="-686715389">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.closed" value="28" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="3" />
-          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.27" value="3" />
           <entry key="project.open.time.28" value="2" />
           <entry key="project.open.time.29" value="2" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.34" value="1" />
-          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.36" value="2" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="1" />
@@ -67,18 +106,18 @@
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="28" />
-          <entry key="html" value="79" />
+          <entry key="html" value="88" />
           <entry key="jpeg" value="2" />
-          <entry key="jpg" value="8" />
-          <entry key="js" value="5" />
-          <entry key="png" value="7" />
-          <entry key="py" value="148" />
+          <entry key="jpg" value="9" />
+          <entry key="js" value="6" />
+          <entry key="png" value="9" />
+          <entry key="py" value="165" />
           <entry key="sql" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -86,10 +125,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="28" />
-          <entry key="HTML" value="79" />
-          <entry key="Image" value="17" />
-          <entry key="JavaScript" value="5" />
-          <entry key="Python" value="148" />
+          <entry key="HTML" value="88" />
+          <entry key="Image" value="20" />
+          <entry key="JavaScript" value="6" />
+          <entry key="Python" value="165" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="1" />
         </counts>
@@ -97,19 +136,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="239" />
-          <entry key="html" value="1648" />
+          <entry key="html" value="1769" />
           <entry key="js" value="67" />
-          <entry key="py" value="2692" />
+          <entry key="py" value="2709" />
           <entry key="txt" value="109" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="239" />
-          <entry key="HTML" value="1648" />
+          <entry key="HTML" value="1769" />
           <entry key="JavaScript" value="67" />
           <entry key="PLAIN_TEXT" value="109" />
-          <entry key="Python" value="2692" />
+          <entry key="Python" value="2709" />
         </counts>
       </usages-collector>
     </session>
@@ -117,87 +156,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/header.html">
+        <entry file="file://$PROJECT_DIR$/mysite/auction/templates/auction/auction_details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="71" column="52" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+            <state relative-caret-position="427">
+              <caret line="626" selection-start-line="626" selection-end-line="626" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="72" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/mysite/auction/templates/auction/example0.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/logout.html">
+        <entry file="file://$PROJECT_DIR$/mysite/auction/templates/auction/auction.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="-370">
+              <caret line="74" column="41" lean-forward="true" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/sancai_background.jpg">
+        <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/auctionmanagement.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-684">
+              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/expert_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-912" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/media/auction/auction1.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/login/templates/login/signin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/classification/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/color_mind.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/home.html">
+        <entry file="file://$PROJECT_DIR$/mysite/auction/static/auction/js/npm.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/login/views.py">
+        <entry file="file://$PROJECT_DIR$/mysite/expert/templates/expert/expert_choose.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-                <marker date="1550302898567" expanded="true" signature="1402:1407" ph="..." />
-              </folding>
+            <state relative-caret-position="185">
+              <caret line="63" selection-end-line="140" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/classification/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/auction/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -230,6 +259,7 @@
       <find>for</find>
       <find>rela</find>
       <find>AUTH_</find>
+      <find>expert</find>
     </findStrings>
     <replaceStrings>
       <replace>managed = True</replace>
@@ -277,13 +307,15 @@
         <option value="$PROJECT_DIR$/mysite/login/templates/login/massagepage.html" />
         <option value="$PROJECT_DIR$/mysite/login/templates/login/signin.html" />
         <option value="$PROJECT_DIR$/mysite/login/forms.py" />
-        <option value="$PROJECT_DIR$/mysite/login/views.py" />
         <option value="$PROJECT_DIR$/mysite/classification/views.py" />
         <option value="$PROJECT_DIR$/mysite/classification/urls.py" />
         <option value="$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html" />
         <option value="$PROJECT_DIR$/mysite/classification/templates/classification/intro.html" />
         <option value="$PROJECT_DIR$/mysite/classification/templates/classification/header.html" />
         <option value="$PROJECT_DIR$/mysite/classification/templates/classification/logout.html" />
+        <option value="$PROJECT_DIR$/mysite/login/views.py" />
+        <option value="$PROJECT_DIR$/mysite/auction/urls.py" />
+        <option value="$PROJECT_DIR$/mysite/auction/templates/auction/auction.html" />
       </list>
     </option>
   </component>
@@ -299,8 +331,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="95" />
+    <option name="x" value="-150" />
+    <option name="y" value="137" />
     <option name="width" value="1615" />
     <option name="height" value="1070" />
   </component>
@@ -329,58 +361,91 @@
               <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="auction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="auction" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="auction" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="auction" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="auction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
+              <item name="expert" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="auction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app-django-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="app-django-demo" type="462c0819:PsiDirectoryNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="myadmin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -399,15 +464,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\auction\static" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\myadmin\static\myadmin\css" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\myadmin\static\myadmin\img" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\myadmin\static\myadmin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media\auction" />
+      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media\background" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media\avatar" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\myadmin\static\myadmin\css" />
-      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -522,19 +589,25 @@
       <option name="project" value="LOCAL" />
       <updated>1550206901915</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="use session and and an logout function in classification page">
+      <created>1550403847576</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1550403847576</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16485754" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2055631" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4972863" weight="0.3285528" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6350068" visible="true" weight="0.2398957" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4972863" weight="0.31812257" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6350068" visible="true" weight="0.16949153" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932158" weight="0.30989584" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -565,61 +638,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="use session and and an logout function in classification page" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mysite/expert/templates/expert/expert_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/expert/templates/expert/expert_comment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/auction/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/personal/templates/personal/bootstrap_cover.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="41" column="71" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/expert/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/personal/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/mysite/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d2bcefe5-8fdf-4ec6-a55b-2cfab0cba85f/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/models.py" />
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/contrib/auth/checks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/utils/autoreload.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4047">
@@ -668,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/usermanagement.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -682,41 +693,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/expert_detail.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/auctionmanagement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/login/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/myadmin/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/login/templates/login/massagepage.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -758,16 +739,6 @@
     <entry file="file://$PROJECT_DIR$/mysite/classification/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/basic.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/templates/login/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="87" column="18" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="87" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/login/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -775,48 +746,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/sancai_background.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/templates/login/signin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <marker date="1550302898567" expanded="true" signature="1402:1407" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/home.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="1349">
           <caret line="71" column="52" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/templates/login/signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" selection-start-line="35" selection-end-line="53" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/templates/login/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1653">
+          <caret line="87" column="18" selection-start-line="38" selection-start-column="1" selection-end-line="87" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" selection-start-line="29" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/logout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -827,24 +801,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/home.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/auction/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/basic.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="322">
           <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html">
+    <entry file="file://$PROJECT_DIR$/mysite/auction/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="72" />
+        <state relative-caret-position="133">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/logout.html">
+    <entry file="file://$PROJECT_DIR$/mysite/auction/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="247">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/expert/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding>
+            <marker date="1550413273657" expanded="true" signature="1405:1410" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/auction/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/auction/templates/auction/auction_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="626" selection-start-line="626" selection-end-line="626" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/auction/templates/auction/example0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/expert/templates/expert/expert_choose.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="63" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/auction/static/auction/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/media/auction/auction1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/auctionmanagement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/expert_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/auction/templates/auction/auction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-370">
+          <caret line="74" column="41" lean-forward="true" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
         </state>
       </provider>
     </entry>

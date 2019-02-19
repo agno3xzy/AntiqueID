@@ -17,7 +17,7 @@ def signin(request):
                 if user.user_passwd == password:
                     request.session['is_login'] = True
                     request.session['user_id'] = user.user_id
-                    request.session['user_id'] = user.user_email
+                    request.session['user_email'] = user.user_email
                     return redirect("http://127.0.0.1:8000/classification/")
                     message = "密码正确！"
                 else:

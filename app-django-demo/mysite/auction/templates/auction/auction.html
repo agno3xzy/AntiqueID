@@ -1,434 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="theme-color" content="#c4cdd5">
-        <link href="https://drinksoma.com/collections" rel="canonical"><title>
-    拍卖行</title>
-        <meta content="https://drinksoma.com/collections" property="og:url">
-        <meta content="Collections" property="og:title">
-        <meta content="website" property="og:type">
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-<link href="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/layout.theme.css?16268582608194611475" rel="stylesheet" type="text/css">
+    <title>拍卖行</title>
 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
+    <link href="{% static 'auction/css/jumbotron.css' %}" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'auction/css/bootstrap-grid.min.css' %}" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="{% static 'auction/css/carousel.css' %}" rel="stylesheet">
+</head>
 
+<body>
+<div style="background-image: url('/bk_test.jpg'); background-size: cover">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top"
+             style="background-image: url('/bk_test.jpg');background-size: cover;">
+            <a class="navbar-brand" href="#" style="color: #533f03">三彩知因</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <meta name="google-site-verification" content="joL8LqIx9UF_v1dxeSz6QuJ2BndA8_I42YWQb4bl2Tw">
-<meta name="shopify-digital-wallet" id="shopify-digital-wallet" content="/2686910523/digital_wallets/dialog">
-<meta name="shopify-checkout-api-token" content="852d878fe07ecc41aad26d1c72e971e7">
-<meta id="in-context-paypal-metadata" data-shop-id="2686910523" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
-<style media="all">.additional-checkout-button{border:0 !important;border-radius:5px !important;display:inline-block;margin:0 0 10px;padding:0 24px !important;max-width:100%;min-width:150px !important;line-height:44px !important;text-align:center !important}.additional-checkout-button+.additional-checkout-button{margin-left:10px}.additional-checkout-button:last-child{margin-bottom:0}.additional-checkout-button span{font-size:14px !important}.additional-checkout-button img{display:inline-block !important;height:1.3em !important;margin:0 !important;vertical-align:middle !important;width:auto !important}@media (max-width: 500px){.additional-checkout-button{display:block;margin-left:0 !important;padding:0 10px !important;width:100%}}.additional-checkout-button--apple-pay{color:#fff !important;display:none;font-family:-apple-system, Helvetica Neue, sans-serif !important;min-width:150px !important;white-space:nowrap !important}.additional-checkout-button--apple-pay:hover,.additional-checkout-button--apple-pay:active,.additional-checkout-button--apple-pay:visited{color:#fff !important;text-decoration:none !important}.additional-checkout-button--apple-pay .additional-checkout-button__logo{}@media (max-width: 500px){.additional-checkout-button--apple-pay{display:none}}.additional-checkout-button--google-pay{line-height:0 !important;padding:0 !important;border-radius:unset !important;width:80px !important}@media (max-width: 500px){.additional-checkout-button--google-pay{width:100% !important}}.gpay-iframe{height:44px !important;width:100%  !important;cursor:pointer;vertical-align:middle !important}.additional-checkout-button--paypal-express{ !important}.additional-checkout-button--paypal,.additional-checkout-button--venmo{vertical-align:top;line-height:0 !important;padding:0 !important}.additional-checkout-button--amazon{;position:relative !important}.additional-checkout-button--amazon .additional-checkout-button__logo{-webkit-transform:translateY(4px) !important;transform:translateY(4px) !important}.additional-checkout-button--amazon .alt-payment-list-amazon-button-image{max-height:none !important;opacity:0 !important;position:absolute !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important}.additional-checkout-button-visually-hidden{border:0 !important;clip:rect(0, 0, 0, 0) !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-2px !important;overflow:hidden !important;padding:0 !important;position:absolute !important}
-</style>
-<style>.shopify-payment-button__button--hidden {
-  visibility: hidden;
-}
-
-.shopify-payment-button__button {
-  border-radius: 4px;
-  border: none;
-  box-shadow: 0 0 0 0 transparent;
-  cursor: pointer;
-  display: block;
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1;
-  text-align: center;
-  width: 100%;
-}
-
-.shopify-payment-button__button[disabled] {
-  opacity: 0.6;
-  cursor: default;
-}
-
-.shopify-payment-button__button--unbranded {
-
-  padding: 1em 2em;
-}
-
-.shopify-payment-button__button--unbranded:hover:not([disabled]) {
-
-}
-
-.shopify-payment-button__more-options {
-  border: 0 none;
-  cursor: pointer;
-  display: block;
-  font-size: 1em;
-  margin-top: 1em;
-  text-align: center;
-  width: 100%;
-}
-
-.shopify-payment-button__more-options:hover:not([disabled]) {
-  text-decoration: underline;
-}
-
-.shopify-payment-button__more-options[disabled] {
-  opacity: 0.6;
-  cursor: default;
-}
-
-.shopify-payment-button__button--branded {
-  display: flex;
-  flex-direction: column;
-  min-height: 44px;
-  position: relative;
-  z-index: 1;
-}
-
-.shopify-payment-button__button--branded .shopify-cleanslate {
-  flex: 1 !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-</style>
-<script id="shopify-features" type="application/json">{"accessToken":"852d878fe07ecc41aad26d1c72e971e7","betas":[],"domain":"","shopId":2686910523,"smart_payment_buttons_url":"https:\/\/cdn.shopifycloud.com\/payment-sheet\/assets\/latest\/spb.js"}</script>
-<script>var Shopify = Shopify || {};
-
-Shopify.currency = {"active":"USD"};
-
-Shopify.theme.handle = "null";
-Shopify.theme.style = {"id":null,"handle":null};</script>
-<script>(function() {
-  function asyncLoad() {
-    var urls = ["https:\/\/rechargeassets-bootstrapheroes-rechargeapps.netdna-ssl.com\/static\/js\/recharge.js?shop=drinksoma.myshopify.com","\/\/social-login.oxiapps.com\/api\/init?shop=drinksoma.myshopify.com"];
-    for (var i = 0; i < urls.length; i++) {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = urls[i];
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
-    }
-  };
-  if(window.attachEvent) {
-    window.attachEvent('onload', asyncLoad);
-  } else {
-    window.addEventListener('load', asyncLoad, false);
-  }
-})();</script>
-<script id="__st">var __st={"a":2686910523,"offset":-18000,"reqid":"87e7347f-3d12-46ab-8939-f4602a159a8f","pageurl":"drinksoma.com\/products","u":"1de68c8b4580","p":"collections"};</script>
-<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
-<script>window.Shopify = window.Shopify || {};
-window.Shopify.Checkout = window.Shopify.Checkout || {};
-window.Shopify.Checkout.apiHost = "drinksoma.myshopify.com";</script>
-<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-window.ShopifyAnalytics.meta.currency = 'USD';
-var meta = {"page":{"pageType":"collections"}};
-for (var attr in meta) {
-  window.ShopifyAnalytics.meta[attr] = meta[attr];
-}</script>
-<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
-
-};
-</script>
-<script class="analytics">(window.gaDevIds=window.gaDevIds||[]).push('BwiEti');
-
-
-(function () {
-  var customDocumentWrite = function(content) {
-    var jquery = null;
-
-    if (window.jQuery) {
-      jquery = window.jQuery;
-    } else if (window.Checkout && window.Checkout.$) {
-      jquery = window.Checkout.$;
-    }
-
-    if (jquery) {
-      jquery('body').append(content);
-    }
-  };
-
-  var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
-  if (trekkie.integrations) {
-    return;
-  }
-  trekkie.methods = [
-    'identify',
-    'page',
-    'ready',
-    'track',
-    'trackForm',
-    'trackLink'
-  ];
-  trekkie.factory = function(method) {
-    return function() {
-      var args = Array.prototype.slice.call(arguments);
-      args.unshift(method);
-      trekkie.push(args);
-      return trekkie;
-    };
-  };
-  for (var i = 0; i < trekkie.methods.length; i++) {
-    var key = trekkie.methods[i];
-    trekkie[key] = trekkie.factory(key);
-  }
-  trekkie.load = function(config) {
-    trekkie.config = config;
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.onerror = function(e) {
-      (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
-    };
-    script.async = true;
-    script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.09.05.1';
-    var first = document.getElementsByTagName('script')[0];
-    first.parentNode.insertBefore(script, first);
-  };
-  trekkie.load(
-    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2686910523,"isMerchantRequest":null,"themeId":32094355515,"themeCityHash":3414431847330995067}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1.0},"Google Analytics":{"trackingId":"UA-42879953-1","domain":"auto","siteSpeedSampleRate":"10","enhancedEcommerce":true,"doubleClick":true,"includeSearch":true},"Google Gtag Pixel":{"conversionId":"968698347","eventLabels":[{"type":"page_view","action_label":"AW-968698347\/_n1_CKuEv4sBEOvT9M0D"},{"type":"purchase","action_label":"AW-968698347\/Px3FCK6Ev4sBEOvT9M0D"},{"type":"view_item","action_label":"AW-968698347\/hT6aCLGEv4sBEOvT9M0D"},{"type":"add_to_cart","action_label":"AW-968698347\/V68VCLSEv4sBEOvT9M0D"},{"type":"begin_checkout","action_label":"AW-968698347\/dakWCLeEv4sBEOvT9M0D"},{"type":"search","action_label":"AW-968698347\/YR3nCLqEv4sBEOvT9M0D"},{"type":"add_payment_info","action_label":"AW-968698347\/X_h_CL2Ev4sBEOvT9M0D"}],"targetCountry":"US"},"Session Attribution":{}}
-  );
-
-  var loaded = false;
-  trekkie.ready(function() {
-    if (loaded) return;
-    loaded = true;
-
-    window.ShopifyAnalytics.lib = window.trekkie;
-
-      ga('require', 'linker');
-      function addListener(element, type, callback) {
-        if (element.addEventListener) {
-          element.addEventListener(type, callback);
-        }
-        else if (element.attachEvent) {
-          element.attachEvent('on' + type, callback);
-        }
-      }
-      function decorate(event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement;
-        if (target && (target.getAttribute('action') || target.getAttribute('href'))) {
-          ga(function (tracker) {
-            var linkerParam = tracker.get('linkerParam');
-            document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
-          });
-        }
-      }
-      addListener(window, 'load', function(){
-        for (var i=0; i < document.forms.length; i++) {
-          var action = document.forms[i].getAttribute('action');
-          if(action && action.indexOf('/cart') >= 0) {
-            addListener(document.forms[i], 'submit', decorate);
-          }
-        }
-        for (var i=0; i < document.links.length; i++) {
-          var href = document.links[i].getAttribute('href');
-          if(href && href.indexOf('/checkout') >= 0) {
-            addListener(document.links[i], 'click', decorate);
-          }
-        }
-      });
-
-
-    var originalDocumentWrite = document.write;
-    document.write = customDocumentWrite;
-    try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
-    document.write = originalDocumentWrite;
-
-
-        window.ShopifyAnalytics.lib.page(
-          null,
-          {"pageType":"collections"}
-        );
-
-
-  });
-
-
-      var eventsListenerScript = document.createElement('script');
-      eventsListenerScript.async = true;
-      eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-76ce6d7f3e50d4b8c05874c34d2ea1340c45e5babba61276dadcaeed488ca16a.js";
-      document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
-
-})();</script><script src="//cdn.shopify.com/s/assets/shop_events_listener-76ce6d7f3e50d4b8c05874c34d2ea1340c45e5babba61276dadcaeed488ca16a.js" async=""></script><script src="//cdn.shopify.com/s/assets/shop_events_listener-76ce6d7f3e50d4b8c05874c34d2ea1340c45e5babba61276dadcaeed488ca16a.js" async=""></script>
-<script src="//cdn.shopify.com/s/assets/storefront/express_buttons-2428f6c73027d6afb0cbb3304cccef69f300ebe13924a54ed3377fb8a3f3228c.js" defer="defer" crossorigin="anonymous" integrity="sha256-JCj2xzAn1q+wy7MwTMzvafMA6+E5JKVO0zd/uKPzIow="></script>
-<script src="//cdn.shopify.com/s/assets/storefront/features-d376eb2a518990596e116b955366db3249aab4f3187bfb2f86bbb4d52abbcbd1.js" defer="defer" crossorigin="anonymous" integrity="sha256-03brKlGJkFluEWuVU2bbMkmqtPMYe/svhru01Sq7y9E="></script>
-<script src="//cdn.shopify.com/s/assets/themes_support/ga_urchin_forms-68ca1924c495cfc55dac65f4853e0c9a395387ffedc8fe58e0f2e677f95d7f23.js" defer="defer"></script>
-
-
-        <script src="https://js.shubox.io/v1/f40e1471-b93f-4b86-b1a0-aa5caa3f8c05.js"></script><script src="https://d.adroll.com/consent/check/undefined?_s=12904a3da0a4125148b6e6e798c5d1f3" type="text/javascript"></script>
-    <script src="//static.hotjar.com/c/hotjar-269477.js?sv=5" async=""></script><script src="https://d.adroll.com/consent/check/M5YWBFXGOJBS3N2CR4J3UF?_s=454c06f312e4a96c13a7e1665d3c4f9c&amp;adroll_fpc=9d57d0aa955627f9584683c5a1974e4c" type="text/javascript"></script><script src="https://script.hotjar.com/modules-aac78db949fa8bad21a45e66f0427dc1.js" async=""></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script src="https://www.googleadservices.com/pagead/conversion/968698347/?random=1544953590275&amp;cv=9&amp;fst=1544953590275&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=7&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fdrinksoma.com%2Fproducts&amp;ref=https%3A%2F%2Fdrinksoma.com%2Fcart&amp;tiba=Collections%20%E2%80%93%20Soma&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/968698347/?random=1544953590282&amp;cv=9&amp;fst=1544953590282&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=376635471%2C659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=7&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;data=path%3D%2Fcollections%3Breferrer%3Dhttps%3A%2F%2Fdrinksoma.com%2Fcart%3Bsearch%3D%3Btitle%3DCollections%20%E2%80%93%20Soma%3Burl%3Dhttps%3A%2F%2Fdrinksoma.com%2Fcollections&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fdrinksoma.com%2Fproducts&amp;ref=https%3A%2F%2Fdrinksoma.com%2Fcart&amp;tiba=Collections%20%E2%80%93%20Soma&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://www.googleadservices.com/pagead/conversion/968698347/?random=1544953590364&amp;cv=9&amp;fst=1544953590364&amp;num=1&amp;label=_n1_CKuEv4sBEOvT9M0D&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=7&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;data=event%3Dpage_view%3Bpage_path%3D%2Fproducts%3Bpage_title%3DCollections%20%E2%80%93%20Soma&amp;gtm=2oibc0&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fdrinksoma.com%2Fcollections&amp;ref=https%3A%2F%2Fdrinksoma.com%2Fcart&amp;tiba=Collections%20%E2%80%93%20Soma&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="//system.picreel.com/js/blocked_sites.js"></script><script src="https://script.hotjar.com/modules-aac78db949fa8bad21a45e66f0427dc1.js" async=""></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script src="//system.picreel.com/js/jstracker.content.min.js"></script><script src="//sumo.b-cdn.net/virtual/6bc97f81da7bc9629912e91690f016caad7618c6/client/js/156085c5-0017-4150-b225-a731ad248f38/service.js" type="text/javascript" charset="utf-8" async="" data-requiremodule="156085c5-0017-4150-b225-a731ad248f38/service" data-requirecontext="_"></script><link href="//sumo.b-cdn.net/virtual/2126618965e7b973017bf44f9ce73430aee50e3c/client/js/../css/listbuilder/listbuilder-popup.css" rel="stylesheet" type="text/css"><style class="jx_ui_StyleSheet" type="text/css" media="print" __jx__id="___$_2">.zopim { display: none !important }</style><script src="//static.hotjar.com/c/hotjar-269477.js?sv=5" async=""></script><script src="http://www.googleadservices.com/pagead/conversion/968698347/?random=1544956931964&amp;cv=9&amp;fst=1544956931964&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;sendb=1&amp;frm=0&amp;url=http%3A%2F%2Flocalhost%3A63342%2FAntiqueID%2Fapp-django-demo%2Fmysite%2Ftestbootstrap%2Ftemplates%2Facution%2Fauction_details.html%3F_ijt%3Dmuluua7q8lrah0a83se9utqh0c&amp;tiba=%E6%8B%8D%E5%8D%96%E8%A1%8C&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/968698347/?random=1544956931967&amp;cv=9&amp;fst=1544956931967&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=376635471%2C659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;data=path%3D%2Fcollections%3Breferrer%3D%3Bsearch%3D%3F_ijt%5C%3Dmuluua7q8lrah0a83se9utqh0c%3Btitle%3D%E6%8B%8D%E5%8D%96%E8%A1%8C%3Burl%3Dhttps%3A%2F%2Fdrinksoma.com%2Fcollections%3F_ijt%5C%3Dmuluua7q8lrah0a83se9utqh0c&amp;sendb=1&amp;frm=0&amp;url=http%3A%2F%2Flocalhost%3A63342%2FAntiqueID%2Fapp-django-demo%2Fmysite%2Ftestbootstrap%2Ftemplates%2Facution%2Fauction_details.html%3F_ijt%3Dmuluua7q8lrah0a83se9utqh0c&amp;tiba=%E6%8B%8D%E5%8D%96%E8%A1%8C&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://fast.a.klaviyo.com/media/js/analytics/klaviyo_analytics.js" type="text/javascript" async=""></script><script src="//system.picreel.com/js/blocked_sites.js"></script><script src="//system.picreel.com/js/jstracker.content.min.js"></script><style class="jx_ui_StyleSheet" type="text/css" media="print" __jx__id="___$_2">.zopim { display: none !important }</style><script src="//sumo.b-cdn.net/virtual/6bc97f81da7bc9629912e91690f016caad7618c6/client/js/156085c5-0017-4150-b225-a731ad248f38/service.js" type="text/javascript" charset="utf-8" async="" data-requiremodule="156085c5-0017-4150-b225-a731ad248f38/service" data-requirecontext="_"></script><link href="//sumo.b-cdn.net/virtual/2126618965e7b973017bf44f9ce73430aee50e3c/client/js/../css/listbuilder/listbuilder-popup.css" rel="stylesheet" type="text/css"></head>
-<div>
-<body style="background-image: url('/bk_test.jpg'); background-size: cover"></body>
-<header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-image: url('/bk_test.jpg');background-size: cover;">
-      <a class="navbar-brand" href="#" style="color: #533f03">三彩知因</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/" style="color: #533f03">主页 <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#" style="color: #533f03">辅助鉴赏</a>
-          </li>
-          <li class="nav-item" style="color: #533f03">
-            <a class="nav-link" href="../login/signin/" style="color: #533f03">鉴宝馆</a>
-          </li>
-          <li class="nav-item" style="color: #533f03">
-            <a class="nav-link" href="../workshop/" style="color: #533f03">三彩坊</a>
-          </li>
-          <li class="nav-item" style="color: #533f03">
-            <a class="nav-link" href="../auction/" style="color: #533f03">拍卖</a>
-          </li>
-          <li class="nav-item" style="color: #533f03">
-            <a class="nav-link" href="../shop/" style="color: #533f03">商城</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" style="color: #533f03">主页 <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="color: #533f03">辅助鉴赏</a>
+                    </li>
+                    <li class="nav-item" style="color: #533f03">
+                        <a class="nav-link" href="../login/signin/" style="color: #533f03">鉴宝馆</a>
+                    </li>
+                    <li class="nav-item" style="color: #533f03">
+                        <a class="nav-link" href="../workshop/" style="color: #533f03">三彩坊</a>
+                    </li>
+                    <li class="nav-item" style="color: #533f03">
+                        <a class="nav-link" href="../auction/" style="color: #533f03">拍卖</a>
+                    </li>
+                    <li class="nav-item" style="color: #533f03">
+                        <a class="nav-link" href="../shop/" style="color: #533f03">商城</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-        <h1 class="page-hero__title"><font face="LiSu" size=36>拍卖行</font></h1>
 
+    <main role="main">
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="container marketing">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/auction/auction1.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩兽面镇墓兽</h2>
+                    <p>目前最高竞拍价：￥39000.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/auction/auction2.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩骑马男俑</h2>
+                    <p>目前最高竞拍价：￥8000.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/auction/auction3.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩高胡帽男牵马俑</h2>
+                    <p>目前最高竞拍价：￥88000.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+
+                <br/>
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/auction/auction4.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩蓝釉白斑马</h2>
+                    <p>目前最高竞拍价：￥47000.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/auction/auction5.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩骑马女俑</h2>
+                    <p>目前最高竞拍价：￥28000.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/auction/auction6.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩女坐俑</h2>
+                    <p>目前最高竞拍价：￥59900.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+
+                <br/>
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/auction/auction1.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩兽面镇墓兽</h2>
+                    <p>目前最高竞拍价：￥39000.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                   <img class="rounded-circle" src="/auction/auction2.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩骑马男俑</h2>
+                    <p>目前最高竞拍价：￥8000.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="/auction/auction3.jpg" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>三彩高胡帽男牵马俑</h2>
+                    <p>目前最高竞拍价：￥88000.00</p>
+                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+    </main>
 </div>
-<div class="grid grid--3-up">
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="{% static 'auction/js/vendor/popper.min.js' %></script>
+    <script src="{% static 'auction/js/bootstrap.bundle.min.js' %}></script>
+<script src="{% static 'auction/js/vendor/holder.min.js' %}></script>
 
-        <div class="grid-col">
-
-
-
-
-<a class="product-card" href="/auction_details.html">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1630x1630">
-    <h3 class="product-card__title">唐三彩0</h3>
-    <p class="product-card__text">目前最高竞拍价：￥12000.99</p>
-    <p class="text-link" href="/auction_details.html">参与竞拍</p>
-</a>
-
-        </div>
-
-        <div class="grid-col">
-
-
-
-
-<a class="product-card" href="">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1200x1200">
-    <h3 class="product-card__title">唐三彩1</h3>
-    <p class="product-card__text">目前最高竞拍价：￥40000.00</p>
-    <p class="text-link" href="auction_detailse">参与竞拍</p>
-</a>
-
-        </div>
-
-        <div class="grid-col">
-
-
-
-
-<a class="product-card" href="">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1200x1200">
-    <h3 class="product-card__title">唐三彩2</h3>
-    <p class="product-card__text">目前最高竞拍价：￥39000.00</p>
-    <p class="text-link" href="auction_details">参与竞拍</p>
-</a>
-
-        </div>
-
-        <div class="grid-col">
-
-
-
-
-<a class="product-card" href="">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1200x1200">
-    <h3 class="product-card__title">唐三彩3</h3>
-    <p class="product-card__text">目前最高竞拍价：￥30000.00</p>
-    <p class="text-link" href="auction_details">参与竞拍</p>
-</a>
-
-        </div>
-
-        <div class="grid-col">
-
-
-
-
-<a class="product-card" href="">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1200x1200">
-    <h3 class="product-card__title">唐三彩4</h3>
-    <p class="product-card__text">目前最高竞拍价：￥49000.00</p>
-    <p class="text-link" href="auction_details">参与竞拍</p>
-</a>
-
-        </div>
-
-        <div class="grid-col">
-
-
-
-
-<a class="product-card" href="">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1123x1123">
-    <h3 class="product-card__title">唐三彩5</h3>
-    <p class="product-card__text">目前最高竞拍价：￥39000.00</p>
-    <p class="text-link" href="auction_details">参与竞拍</p>
-</a>
-
-        </div>
-
-        <div class="grid-col">
-
-
-
-
-<a class="product-card" href="">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1200x1200">
-    <h3 class="product-card__title">唐三彩6</h3>
-    <p class="product-card__text">目前最高竞拍价：￥29000.00</p>
-    <p class="text-link" href="auction_details">参与竞拍</p>
-</a>
-
-        </div>
-
-        <div class="grid-col">
-
-
-
-
-<a class="product-card" href="">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1200x1200">
-    <h3 class="product-card__title">唐三彩7</h3>
-    <p class="product-card__text">目前最高竞拍价：￥35000.00</p>
-    <p class="text-link" href="auction_details">参与竞拍</p>
-</a>
-
-        </div>
-    <div class="grid-col">
-
-
-
-
-<a class="product-card" href="">
-    <img class="product-card__image content-image" alt="img" src="/example0.png?1200x1200">
-    <h3 class="product-card__title">唐三彩8</h3>
-    <p class="product-card__text">目前最高竞拍价：￥95000.00</p>
-    <p class="text-link" href="auction_details">参与竞拍</p>
-
-</a>
-
-        </div>
-
-    </div>
-
-
-        <script src="https://js.shubox.io/v1/f40e1471-b93f-4b86-b1a0-aa5caa3f8c05.js"></script><script src="https://d.adroll.com/consent/check/undefined?_s=12904a3da0a4125148b6e6e798c5d1f3" type="text/javascript"></script>
-    <script src="//static.hotjar.com/c/hotjar-269477.js?sv=5" async=""></script><script src="https://d.adroll.com/consent/check/M5YWBFXGOJBS3N2CR4J3UF?_s=454c06f312e4a96c13a7e1665d3c4f9c&amp;adroll_fpc=9d57d0aa955627f9584683c5a1974e4c" type="text/javascript"></script><script src="https://script.hotjar.com/modules-aac78db949fa8bad21a45e66f0427dc1.js" async=""></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script src="https://www.googleadservices.com/pagead/conversion/968698347/?random=1544953590275&amp;cv=9&amp;fst=1544953590275&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=7&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fdrinksoma.com%2Fproducts&amp;ref=https%3A%2F%2Fdrinksoma.com%2Fcart&amp;tiba=Collections%20%E2%80%93%20Soma&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/968698347/?random=1544953590282&amp;cv=9&amp;fst=1544953590282&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=376635471%2C659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=7&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;data=path%3D%2Fcollections%3Breferrer%3Dhttps%3A%2F%2Fdrinksoma.com%2Fcart%3Bsearch%3D%3Btitle%3DCollections%20%E2%80%93%20Soma%3Burl%3Dhttps%3A%2F%2Fdrinksoma.com%2Fcollections&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fdrinksoma.com%2Fproducts&amp;ref=https%3A%2F%2Fdrinksoma.com%2Fcart&amp;tiba=Collections%20%E2%80%93%20Soma&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://www.googleadservices.com/pagead/conversion/968698347/?random=1544953590364&amp;cv=9&amp;fst=1544953590364&amp;num=1&amp;label=_n1_CKuEv4sBEOvT9M0D&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=7&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;data=event%3Dpage_view%3Bpage_path%3D%2Fproducts%3Bpage_title%3DCollections%20%E2%80%93%20Soma&amp;gtm=2oibc0&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fdrinksoma.com%2Fcollections&amp;ref=https%3A%2F%2Fdrinksoma.com%2Fcart&amp;tiba=Collections%20%E2%80%93%20Soma&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="//system.picreel.com/js/blocked_sites.js"></script><script src="https://script.hotjar.com/modules-aac78db949fa8bad21a45e66f0427dc1.js" async=""></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script src="//system.picreel.com/js/jstracker.content.min.js"></script><script src="//sumo.b-cdn.net/virtual/6bc97f81da7bc9629912e91690f016caad7618c6/client/js/156085c5-0017-4150-b225-a731ad248f38/service.js" type="text/javascript" charset="utf-8" async="" data-requiremodule="156085c5-0017-4150-b225-a731ad248f38/service" data-requirecontext="_"></script><link href="//sumo.b-cdn.net/virtual/2126618965e7b973017bf44f9ce73430aee50e3c/client/js/../css/listbuilder/listbuilder-popup.css" rel="stylesheet" type="text/css"><style class="jx_ui_StyleSheet" type="text/css" media="print" __jx__id="___$_2">.zopim { display: none !important }</style><script src="//static.hotjar.com/c/hotjar-269477.js?sv=5" async=""></script><script src="http://www.googleadservices.com/pagead/conversion/968698347/?random=1544956931964&amp;cv=9&amp;fst=1544956931964&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;sendb=1&amp;frm=0&amp;url=http%3A%2F%2Flocalhost%3A63342%2FAntiqueID%2Fapp-django-demo%2Fmysite%2Ftestbootstrap%2Ftemplates%2Facution%2Fauction_details.html%3F_ijt%3Dmuluua7q8lrah0a83se9utqh0c&amp;tiba=%E6%8B%8D%E5%8D%96%E8%A1%8C&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/968698347/?random=1544956931967&amp;cv=9&amp;fst=1544956931967&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=376635471%2C659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=2&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;data=path%3D%2Fcollections%3Breferrer%3D%3Bsearch%3D%3F_ijt%5C%3Dmuluua7q8lrah0a83se9utqh0c%3Btitle%3D%E6%8B%8D%E5%8D%96%E8%A1%8C%3Burl%3Dhttps%3A%2F%2Fdrinksoma.com%2Fcollections%3F_ijt%5C%3Dmuluua7q8lrah0a83se9utqh0c&amp;sendb=1&amp;frm=0&amp;url=http%3A%2F%2Flocalhost%3A63342%2FAntiqueID%2Fapp-django-demo%2Fmysite%2Ftestbootstrap%2Ftemplates%2Facution%2Fauction_details.html%3F_ijt%3Dmuluua7q8lrah0a83se9utqh0c&amp;tiba=%E6%8B%8D%E5%8D%96%E8%A1%8C&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://fast.a.klaviyo.com/media/js/analytics/klaviyo_analytics.js" type="text/javascript" async=""></script><script src="//system.picreel.com/js/blocked_sites.js"></script><script src="//system.picreel.com/js/jstracker.content.min.js"></script><style class="jx_ui_StyleSheet" type="text/css" media="print" __jx__id="___$_2">.zopim { display: none !important }</style><script src="//sumo.b-cdn.net/virtual/6bc97f81da7bc9629912e91690f016caad7618c6/client/js/156085c5-0017-4150-b225-a731ad248f38/service.js" type="text/javascript" charset="utf-8" async="" data-requiremodule="156085c5-0017-4150-b225-a731ad248f38/service" data-requirecontext="_"></script><link href="//sumo.b-cdn.net/virtual/2126618965e7b973017bf44f9ce73430aee50e3c/client/js/../css/listbuilder/listbuilder-popup.css" rel="stylesheet" type="text/css"></head>
-    <nav class="pagination">
-    <span class="page-number">第 1 页/共 1 页</span>
-        <a class="older-posts" href="/page/1/">下一页 →</a>
-</nav>
-    </div>
-</body>
+  </body>
 </html>
