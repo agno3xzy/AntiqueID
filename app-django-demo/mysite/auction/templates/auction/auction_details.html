@@ -1,639 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="theme-color" content="#c4cdd5">
-        <link href="https://drinksoma.com/products/brew-bottle" rel="canonical"><title>auction_details</title><meta name="description" content="The Soma Brew Bottle is designed to provide the highest quality coffee and tea, with the most convenience. Made from high quality, shatter-resistant double-walled glass to keep your coffee warmer for longer. It’s perfectly designed to take on the go.">
-<meta content="Soma" property="og:site_name">
-<meta content="https://drinksoma.com/products/brew-bottle" property="og:url">
-<meta content="Brew Bottle" property="og:title">
-<meta content="product" property="og:type">
-<meta content="The Soma Brew Bottle is designed to provide the highest quality coffee and tea, with the most convenience. Made from high quality, shatter-resistant double-walled glass to keep your coffee warmer for longer. It’s perfectly designed to take on the go." property="og:description"><meta content="40.00" property="og:price:amount">
-  <meta content="USD" property="og:price:currency"><meta content="http://cdn.shopify.com/s/files/1/0026/8691/0523/products/Empty_Logo-_2_1024x1024.jpg?v=1533742826" property="og:image">
-<meta content="https://cdn.shopify.com/s/files/1/0026/8691/0523/products/Empty_Logo-_2_1024x1024.jpg?v=1533742826" property="og:image:secure_url">
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-<meta name="twitter:site" content="@">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Brew Bottle">
-<meta name="twitter:description" content="The Soma Brew Bottle is designed to provide the highest quality coffee and tea, with the most convenience. Made from high quality, shatter-resistant double-walled glass to keep your coffee warmer for longer. It’s perfectly designed to take on the go.">
+    <title>拍卖详情页面</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
+    <link href="{% static 'auction/css/cover.css' %}" rel="stylesheet">
+</head>
 
-<link href="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/layout.theme.styleLiquid.scss.css?16268582608194611475" rel="stylesheet" type="text/css">
-<link href="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/layout.theme.css?16268582608194611475" rel="stylesheet" type="text/css">
-
-        <style>
-  @font-face {
-  font-family: Helvetica;
-  font-weight: 400;
-  font-style: normal;
-  src: url("https://fonts.shopifycdn.com/helvetica/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2?h1=ZHJpbmtzb21hLmNvbQ&hmac=de52acb129125a79e9b6e36094decb470d7e8880f49848ca65ef073f19ff1520") format("woff2"),
-       url("https://fonts.shopifycdn.com/helvetica/helvetica_n4.8bddb85c18a0094c427a9bf65dee963ad88de4e8.woff?h1=ZHJpbmtzb21hLmNvbQ&hmac=08e925a638ec13c707bca33d4ce1a57eb650c98f78ec31292ab4f8f90e0ef321") format("woff");
-}
-
-  @font-face {
-  font-family: Helvetica;
-  font-weight: 400;
-  font-style: normal;
-  src: url("https://fonts.shopifycdn.com/helvetica/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2?h1=ZHJpbmtzb21hLmNvbQ&hmac=de52acb129125a79e9b6e36094decb470d7e8880f49848ca65ef073f19ff1520") format("woff2"),
-       url("https://fonts.shopifycdn.com/helvetica/helvetica_n4.8bddb85c18a0094c427a9bf65dee963ad88de4e8.woff?h1=ZHJpbmtzb21hLmNvbQ&hmac=08e925a638ec13c707bca33d4ce1a57eb650c98f78ec31292ab4f8f90e0ef321") format("woff");
-}
-
-@font-face {
-  font-family: Helvetica;
-  font-weight: 700;
-  font-style: normal;
-  src: url("https://fonts.shopifycdn.com/helvetica/helvetica_n7.39bee04bd277a9c4e94e2fd42d53f4e3c0afb8a5.woff2?h1=ZHJpbmtzb21hLmNvbQ&hmac=718fad78ac4e0d95a0536716fed798d848373aa9c8f4a9f7db322bd0a31b467e") format("woff2"),
-       url("https://fonts.shopifycdn.com/helvetica/helvetica_n7.b95359461a6788d5549e702cb2123bc40c227e49.woff?h1=ZHJpbmtzb21hLmNvbQ&hmac=3b72739f16accb351a11fe46d138ba24ae599682c388b6177f65eb754ba2e15e") format("woff");
-}
-
-  @font-face {
-  font-family: Helvetica;
-  font-weight: 700;
-  font-style: oblique;
-  src: url("https://fonts.shopifycdn.com/helvetica/helvetica_o7.215fd4ca1a06214fa01e44328a1992c977700ea2.woff2?h1=ZHJpbmtzb21hLmNvbQ&hmac=680f095f3965ec1e3993aa2020a1a14a74477b39368ec79f45486aa750786138") format("woff2"),
-       url("https://fonts.shopifycdn.com/helvetica/helvetica_o7.b0a2026ae2aa64d060f9ce0ee1b3c3c1aa21bf88.woff?h1=ZHJpbmtzb21hLmNvbQ&hmac=4c3a57a7f56bd80332f09806db9573bc27499cfe08dcc566497b056e3d42fdfc") format("woff");
-}
-
-  :root {
-    --color-accent: #161d25;
-    --color-body-text: #161d25;
-    --color-main-background: #fff;
-    --color-border: #849bb6;
-    --font-heading: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
-    --font-body: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
-    --font-body-weight: 400;
-    --font-body-style: normal;
-    --font-body-bold-weight: 700;
-  }
-</style>
-
-        <script src="//social-login.oxiapps.com/api/init?shop=drinksoma.myshopify.com" type="text/javascript" async=""></script><script src="https://rechargeassets-bootstrapheroes-rechargeapps.netdna-ssl.com/static/js/recharge.js?shop=drinksoma.myshopify.com" type="text/javascript" async=""></script><script src="https://v2.zopim.com/?2Cui1CyGMO9LEjkgAIKquayPhDyw15WJ" type="text/javascript" charset="utf-8" async=""></script><script src="//downloads.mailchimp.com/js/signup-forms/popup/1.0/popup.js" type="text/javascript" charset="utf-8"></script><script src="https://s3.amazonaws.com/downloads.mailchimp.com/js/goal.min.js" defer="" type="text/javascript" async=""></script><script src="https://www.google-analytics.com/plugins/ua/ec.js" type="text/javascript" async=""></script><script src="https://s.adroll.com/j/roundtrip.js" type="text/javascript" async=""></script><script src="https://www.googletagmanager.com/gtm.js?id=GTM-NWC9C2&amp;l=dataLayer" type="text/javascript" async=""></script><script src="https://a.klaviyo.com/media/js/analytics/analytics.js" type="text/javascript" async=""></script><script src="https://www.googleadservices.com/pagead/conversion_async.js" type="text/javascript" async=""></script><script src="https://d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript" async=""></script><script src="https://connect.facebook.net/en_US/fbevents.js" type="text/javascript" async=""></script><script src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" type="text/javascript" async=""></script><script src="https://www.google-analytics.com/analytics.js" async=""></script><script src="https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.09.05.1" type="text/javascript" async=""></script><script id="analytics-js" src="https://cdn.segment.io/analytics.js/v1/jScvDMe0gcpX4VNJ2JSnykWkacfVXatB/analytics.min.js" type="text/javascript" async=""></script><script>
-            document.documentElement.className = document.documentElement.className.replace('no-js', '');
-            window.theme = {
-            strings: {
-                addToCart: "参与报价",
-                soldOut: "Sold Out",
-                unavailable: "Unavailable"
-            },
-            moneyFormat: "${{amount}}"
-            };
-
-            window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
-
-            window.analytics.load("jScvDMe0gcpX4VNJ2JSnykWkacfVXatB");
-
-                window.analytics.identify();
-
-            window.analytics.page();
-            let customerData = {};
-            customerData["firstName"] = "";
-            customerData["lastName"] = "";
-            customerData["email"] = "";
-            customerData["id"] = "";
-            window.customer = customerData;
-        </script>
-
-<!--[if (gt IE 9)|!(IE)]><!--><script src="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/vendors@layout.theme.js?16268582608194611475" defer="defer" type="text/javascript"></script><!--<![endif]-->
-<!--[if lte IE 9]><script type="text/javascript" src="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/vendors@layout.theme.js?16268582608194611475"></script><![endif]--><!--[if (gt IE 9)|!(IE)]><!--><script src="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/layout.theme.js?16268582608194611475" defer="defer" type="text/javascript"></script><!--<![endif]-->
-<!--[if lte IE 9]><script type="text/javascript" src="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/layout.theme.js?16268582608194611475"></script><![endif]--><!--[if (gt IE 9)|!(IE)]><!--><script src="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/vendors@template.product.js?16268582608194611475" defer="defer" type="text/javascript"></script><!--<![endif]-->
-<!--[if lte IE 9]><script type="text/javascript" src="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/vendors@template.product.js?16268582608194611475"></script><![endif]--><!--[if (gt IE 9)|!(IE)]><!--><script src="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/template.product.js?16268582608194611475" defer="defer" type="text/javascript"></script><!--<![endif]-->
-<!--[if lte IE 9]><script type="text/javascript" src="//cdn.shopify.com/s/files/1/0026/8691/0523/t/2/assets/template.product.js?16268582608194611475"></script><![endif]-->
-        <!-- Header Scripts -->
+<body class="text-center" style="background-image: url('/background/myadmin.png');background-size: cover;">
 
 
-
-        <meta name="google-site-verification" content="joL8LqIx9UF_v1dxeSz6QuJ2BndA8_I42YWQb4bl2Tw">
-<meta name="shopify-digital-wallet" id="shopify-digital-wallet" content="/2686910523/digital_wallets/dialog">
-<meta name="shopify-checkout-api-token" content="852d878fe07ecc41aad26d1c72e971e7">
-<meta id="in-context-paypal-metadata" data-currency="USD" data-paypal-v4="true" data-locale="en_US" data-environment="production" data-shop-id="2686910523">
-<link href="https://drinksoma.com/products/brew-bottle.oembed" rel="alternate" type="application/json+oembed">
-<style media="all">.additional-checkout-button{border:0 !important;border-radius:5px !important;display:inline-block;margin:0 0 10px;padding:0 24px !important;max-width:100%;min-width:150px !important;line-height:44px !important;text-align:center !important}.additional-checkout-button+.additional-checkout-button{margin-left:10px}.additional-checkout-button:last-child{margin-bottom:0}.additional-checkout-button span{font-size:14px !important}.additional-checkout-button img{display:inline-block !important;height:1.3em !important;margin:0 !important;vertical-align:middle !important;width:auto !important}@media (max-width: 500px){.additional-checkout-button{display:block;margin-left:0 !important;padding:0 10px !important;width:100%}}.additional-checkout-button--apple-pay{background-color:#000 !important;color:#fff !important;display:none;font-family:-apple-system, Helvetica Neue, sans-serif !important;min-width:150px !important;white-space:nowrap !important}.additional-checkout-button--apple-pay:hover,.additional-checkout-button--apple-pay:active,.additional-checkout-button--apple-pay:visited{color:#fff !important;text-decoration:none !important}.additional-checkout-button--apple-pay .additional-checkout-button__logo{background: center center no-repeat !important;background-size:auto 100% !important;display:inline-block !important;vertical-align:middle !important;width:3em !important;height:1.3em !important}@media (max-width: 500px){.additional-checkout-button--apple-pay{display:none}}.additional-checkout-button--google-pay{line-height:0 !important;padding:0 !important;border-radius:unset !important;width:80px !important}@media (max-width: 500px){.additional-checkout-button--google-pay{width:100% !important}}.gpay-iframe{height:44px !important;width:100%  !important;cursor:pointer;vertical-align:middle !important}.additional-checkout-button--paypal-express{background-color:#ffc439 !important}.additional-checkout-button--paypal,.additional-checkout-button--venmo{vertical-align:top;line-height:0 !important;padding:0 !important}.additional-checkout-button--amazon{background-color:#fad676 !important;position:relative !important}.additional-checkout-button--amazon .additional-checkout-button__logo{-webkit-transform:translateY(4px) !important;transform:translateY(4px) !important}.additional-checkout-button--amazon .alt-payment-list-amazon-button-image{max-height:none !important;opacity:0 !important;position:absolute !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important}.additional-checkout-button-visually-hidden{border:0 !important;clip:rect(0, 0, 0, 0) !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-2px !important;overflow:hidden !important;padding:0 !important;position:absolute !important}
-</style>
-<style>.shopify-payment-button__button--hidden {
-  visibility: hidden;
-}
-
-.shopify-payment-button__button {
-  border-radius: 4px;
-  border: none;
-  box-shadow: 0 0 0 0 transparent;
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1;
-  text-align: center;
-  width: 100%;
-  transition: background 0.2s ease-in-out;
-}
-
-.shopify-payment-button__button[disabled] {
-  opacity: 0.6;
-  cursor: default;
-}
-
-.shopify-payment-button__button--unbranded {
-  background-color: #1990c6;
-  padding: 1em 2em;
-}
-
-.shopify-payment-button__button--unbranded:hover:not([disabled]) {
-  background-color: #136f99;
-}
-
-.shopify-payment-button__more-options {
-  background: transparent;
-  border: 0 none;
-  cursor: pointer;
-  display: block;
-  font-size: 1em;
-  margin-top: 1em;
-  text-align: center;
-  width: 100%;
-}
-
-.shopify-payment-button__more-options:hover:not([disabled]) {
-  text-decoration: underline;
-}
-
-.shopify-payment-button__more-options[disabled] {
-  opacity: 0.6;
-  cursor: default;
-}
-
-.shopify-payment-button__button--branded {
-  display: flex;
-  flex-direction: column;
-  min-height: 44px;
-  position: relative;
-  z-index: 1;
-}
-
-.shopify-payment-button__button--branded .shopify-cleanslate {
-  flex: 1 !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-</style>
-<script id="shopify-features" type="application/json">{"accessToken":"852d878fe07ecc41aad26d1c72e971e7","betas":[],"domain":"drinksoma.com","shopId":2686910523,"smart_payment_buttons_url":"https:\/\/cdn.shopifycloud.com\/payment-sheet\/assets\/latest\/spb.js"}</script>
-<script>var Shopify = Shopify || {};
-Shopify.shop = "drinksoma.myshopify.com";
-Shopify.currency = {"active":"USD"};
-Shopify.theme = {"name":"Soma Water","id":32094355515,"theme_store_id":null,"role":"main"};
-Shopify.theme.handle = "null";
-Shopify.theme.style = {"id":null,"handle":null};</script>
-<script>(function() {
-  function asyncLoad() {
-    var urls = ["https:\/\/rechargeassets-bootstrapheroes-rechargeapps.netdna-ssl.com\/static\/js\/recharge.js?shop=drinksoma.myshopify.com","\/\/social-login.oxiapps.com\/api\/init?shop=drinksoma.myshopify.com"];
-    for (var i = 0; i < urls.length; i++) {
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = urls[i];
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
-    }
-  };
-  if(window.attachEvent) {
-    window.attachEvent('onload', asyncLoad);
-  } else {
-    window.addEventListener('load', asyncLoad, false);
-  }
-})();</script>
-<script id="__st">var __st={"a":2686910523,"offset":-18000,"reqid":"5e55b2b5-1e7a-446a-95ab-b68b37892c14","pageurl":"drinksoma.com\/products\/brew-bottle","u":"f6da83f9b2f9","p":"product","rtyp":"product","rid":1450149085243};</script>
-<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
-<script>window.Shopify = window.Shopify || {};
-window.Shopify.Checkout = window.Shopify.Checkout || {};
-window.Shopify.Checkout.apiHost = "drinksoma.myshopify.com";</script>
-<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-window.ShopifyAnalytics.meta.currency = 'USD';
-var meta = {"product":{"id":1450149085243,"vendor":"Drink SOMA","type":"","variants":[{"id":13498752073787,"price":4000,"name":"Brew Bottle - Black","public_title":"Black","sku":"SM18501K"}]},"page":{"pageType":"product","resourceType":"product","resourceId":1450149085243}};
-for (var attr in meta) {
-  window.ShopifyAnalytics.meta[attr] = meta[attr];
-}</script>
-<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
-
-};
-</script>
-<script class="analytics">(window.gaDevIds=window.gaDevIds||[]).push('BwiEti');
-
-
-(function () {
-  var customDocumentWrite = function(content) {
-    var jquery = null;
-
-    if (window.jQuery) {
-      jquery = window.jQuery;
-    } else if (window.Checkout && window.Checkout.$) {
-      jquery = window.Checkout.$;
-    }
-
-    if (jquery) {
-      jquery('body').append(content);
-    }
-  };
-
-  var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
-  if (trekkie.integrations) {
-    return;
-  }
-  trekkie.methods = [
-    'identify',
-    'page',
-    'ready',
-    'track',
-    'trackForm',
-    'trackLink'
-  ];
-  trekkie.factory = function(method) {
-    return function() {
-      var args = Array.prototype.slice.call(arguments);
-      args.unshift(method);
-      trekkie.push(args);
-      return trekkie;
-    };
-  };
-  for (var i = 0; i < trekkie.methods.length; i++) {
-    var key = trekkie.methods[i];
-    trekkie[key] = trekkie.factory(key);
-  }
-  trekkie.load = function(config) {
-    trekkie.config = config;
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.onerror = function(e) {
-      (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
-    };
-    script.async = true;
-    script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.09.05.1';
-    var first = document.getElementsByTagName('script')[0];
-    first.parentNode.insertBefore(script, first);
-  };
-  trekkie.load(
-    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2686910523,"isMerchantRequest":null,"themeId":32094355515,"themeCityHash":3414431847330995067}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1.0},"Google Analytics":{"trackingId":"UA-42879953-1","domain":"auto","siteSpeedSampleRate":"10","enhancedEcommerce":true,"doubleClick":true,"includeSearch":true},"Google Gtag Pixel":{"conversionId":"968698347","eventLabels":[{"type":"page_view","action_label":"AW-968698347\/_n1_CKuEv4sBEOvT9M0D"},{"type":"purchase","action_label":"AW-968698347\/Px3FCK6Ev4sBEOvT9M0D"},{"type":"view_item","action_label":"AW-968698347\/hT6aCLGEv4sBEOvT9M0D"},{"type":"add_to_cart","action_label":"AW-968698347\/V68VCLSEv4sBEOvT9M0D"},{"type":"begin_checkout","action_label":"AW-968698347\/dakWCLeEv4sBEOvT9M0D"},{"type":"search","action_label":"AW-968698347\/YR3nCLqEv4sBEOvT9M0D"},{"type":"add_payment_info","action_label":"AW-968698347\/X_h_CL2Ev4sBEOvT9M0D"}],"targetCountry":"US"},"Session Attribution":{}}
-  );
-
-  var loaded = false;
-  trekkie.ready(function() {
-    if (loaded) return;
-    loaded = true;
-
-    window.ShopifyAnalytics.lib = window.trekkie;
-
-      ga('require', 'linker');
-      function addListener(element, type, callback) {
-        if (element.addEventListener) {
-          element.addEventListener(type, callback);
-        }
-        else if (element.attachEvent) {
-          element.attachEvent('on' + type, callback);
-        }
-      }
-      function decorate(event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement;
-        if (target && (target.getAttribute('action') || target.getAttribute('href'))) {
-          ga(function (tracker) {
-            var linkerParam = tracker.get('linkerParam');
-            document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
-          });
-        }
-      }
-      addListener(window, 'load', function(){
-        for (var i=0; i < document.forms.length; i++) {
-          var action = document.forms[i].getAttribute('action');
-          if(action && action.indexOf('/cart') >= 0) {
-            addListener(document.forms[i], 'submit', decorate);
-          }
-        }
-        for (var i=0; i < document.links.length; i++) {
-          var href = document.links[i].getAttribute('href');
-          if(href && href.indexOf('/checkout') >= 0) {
-            addListener(document.links[i], 'click', decorate);
-          }
-        }
-      });
-
-
-    var originalDocumentWrite = document.write;
-    document.write = customDocumentWrite;
-    try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
-    document.write = originalDocumentWrite;
-
-
-        window.ShopifyAnalytics.lib.page(
-          null,
-          {"pageType":"product","resourceType":"product","resourceId":1450149085243}
-        );
-
-
-        window.ShopifyAnalytics.lib.track(
-          "Viewed Product",
-          {"variantId":13498752073787,"productId":1450149085243,"name":"Brew Bottle - Black","price":"40.00","currency":"USD","sku":"SM18501K","brand":"Drink SOMA","variant":"Black","category":"","nonInteraction":true}
-        );
-
-  });
-
-
-      var eventsListenerScript = document.createElement('script');
-      eventsListenerScript.async = true;
-      eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-76ce6d7f3e50d4b8c05874c34d2ea1340c45e5babba61276dadcaeed488ca16a.js";
-      document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
-
-})();</script><script src="//cdn.shopify.com/s/assets/shop_events_listener-76ce6d7f3e50d4b8c05874c34d2ea1340c45e5babba61276dadcaeed488ca16a.js" async=""></script>
-<script src="//cdn.shopify.com/s/assets/storefront/express_buttons-2428f6c73027d6afb0cbb3304cccef69f300ebe13924a54ed3377fb8a3f3228c.js" defer="defer" crossorigin="anonymous" integrity="sha256-JCj2xzAn1q+wy7MwTMzvafMA6+E5JKVO0zd/uKPzIow="></script>
-<script src="//cdn.shopify.com/s/assets/storefront/features-d376eb2a518990596e116b955366db3249aab4f3187bfb2f86bbb4d52abbcbd1.js" defer="defer" crossorigin="anonymous" integrity="sha256-03brKlGJkFluEWuVU2bbMkmqtPMYe/svhru01Sq7y9E="></script>
-<script src="//cdn.shopify.com/s/assets/themes_support/ga_urchin_forms-68ca1924c495cfc55dac65f4853e0c9a395387ffedc8fe58e0f2e677f95d7f23.js" defer="defer"></script>
-
-
-        <script src="https://js.shubox.io/v1/f40e1471-b93f-4b86-b1a0-aa5caa3f8c05.js"></script><script src="https://d.adroll.com/consent/check/M5YWBFXGOJBS3N2CR4J3UF?_s=d6a3bea79e8e695e2ad61cb0743130ec&amp;adroll_fpc=9d57d0aa955627f9584683c5a1974e4c" type="text/javascript"></script>
-    <script src="//static.hotjar.com/c/hotjar-269477.js?sv=5" async=""></script><script id="adroll_scr_exp" onerror="window.adroll_exp_list = [];" src="https://s.adroll.com/j/exp/M5YWBFXGOJBS3N2CR4J3UF/index.js" type="text/javascript"></script><script src="https://www.googleadservices.com/pagead/conversion/968698347/?random=1544965362937&amp;cv=9&amp;fst=1544965362937&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=9&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fdrinksoma.com%2Fproducts%2Fbrew-bottle&amp;ref=https%3A%2F%2Fdrinksoma.com%2F&amp;tiba=Brew%20Bottle%20%E2%80%93%20Soma&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/968698347/?random=1544965362941&amp;cv=9&amp;fst=1544965362941&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=9&amp;u_tz=480&amp;u_java=true&amp;u_nplug=1&amp;u_nmime=1&amp;data=path%3D%2Fproducts%2Fbrew-bottle%3Breferrer%3Dhttps%3A%2F%2Fdrinksoma.com%2F%3Bsearch%3D%3Btitle%3DBrew%20Bottle%20%E2%80%93%20Soma%3Burl%3Dhttps%3A%2F%2Fdrinksoma.com%2Fproducts%2Fbrew-bottle&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fdrinksoma.com%2Fproducts%2Fbrew-bottle&amp;ref=https%3A%2F%2Fdrinksoma.com%2F&amp;tiba=Brew%20Bottle%20%E2%80%93%20Soma&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script src="https://pixel.cdnwidget.com/cdn/c.min.js?data-gdis=1&amp;data-apikey=afaa2674&amp;id=c.js&amp;data-adcb=adroll_callback_adcb" type="text/javascript"></script><script src="https://fast.a.klaviyo.com/media/js/analytics/klaviyo_analytics.js" type="text/javascript" async=""></script><script src="//system.picreel.com/js/blocked_sites.js"></script><script src="https://script.hotjar.com/modules-aac78db949fa8bad21a45e66f0427dc1.js" async=""></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script src="https://d.adroll.com/pixel/M5YWBFXGOJBS3N2CR4J3UF/FQG42O7F7RCQNEVIFQTR6Q?adroll_fpc=9d57d0aa955627f9584683c5a1974e4c&amp;pv=1365158424.2187154&amp;cookie=BALN4QRSZNG7XL3ASWN2LJ%3A2%7CM5YWBFXGOJBS3N2CR4J3UF%3A6%7CFQG42O7F7RCQNEVIFQTR6Q%3A6%7CQ656FA4MCVBBDC4W7DZPSQ%3A3%7C4WP6XOXFRZA7RCHGUU6VIU%3A1&amp;adroll_s_ref=https%3A//drinksoma.com/&amp;keyw=&amp;arrfrr=https%3A%2F%2Fdrinksoma.com%2Fproducts%2Fbrew-bottle" type="text/javascript" async="true"></script><script src="//system.picreel.com/js/jstracker.content.min.js"></script><script src="//s.adroll.com/j/sendrolling.js" type="text/javascript"></script><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/aol/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF"><img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/index/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF"><img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/n/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF"><img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/outbrain/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF"><img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/pubmatic/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF"><img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/taboola/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF"><img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/triplelift/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF"></div><img width="1" height="1" src="https://d.adroll.com/fb/tr/?id=964998856861266&amp;ev=ViewContent&amp;cd[content_type]=product&amp;cd[content_ids]=%2Fproducts%2Fbrew-bottle_&amp;cd[application_id]=321379434608647&amp;cd[product_catalog_id]=1112340215512197&amp;adroll_fpc=9d57d0aa955627f9584683c5a1974e4c" border="0"><img width="1" height="1" src="https://d.adroll.com/p/M5YWBFXGOJBS3N2CR4J3UF/?adroll_product_id=/products/brew-bottle&amp;adroll_fpc=9d57d0aa955627f9584683c5a1974e4c" border="0"><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/r/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF">
-<img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/b/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF">
-<img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/x/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF">
-<img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/l/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF">
-<img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/o/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF">
-<img width="1" height="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/g/out?advertisable=M5YWBFXGOJBS3N2CR4J3UF&amp;google_nid=adroll4">
-</div><style class="jx_ui_StyleSheet" type="text/css" media="print" __jx__id="___$_2">.zopim { display: none !important }</style><script src="//sumo.b-cdn.net/virtual/6bc97f81da7bc9629912e91690f016caad7618c6/client/js/156085c5-0017-4150-b225-a731ad248f38/service.js" type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="156085c5-0017-4150-b225-a731ad248f38/service"></script><link href="//sumo.b-cdn.net/virtual/2126618965e7b973017bf44f9ce73430aee50e3c/client/js/../css/listbuilder/listbuilder-popup.css" rel="stylesheet" type="text/css"></head>
-<body>
-<body style="background-image: url('/bk_test.jpg'); background-size: cover"></body>
-
-
-
-
-<section class="product-hero" id="product-hero">
-    <div class="product-hero__bg-img"></div>
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" style="color: black" href="/">主页</a>
+                <a class="nav-link " style="color: black"
+                   href="/classification/">辅助鉴赏</a>
+                <a class="nav-link" style="color: black"
+                   href="/workshop/">鉴宝馆</a>
+                <a class="nav-link active" style="color: black"
+                   href="/auction/">拍卖</a>
+                <a class="nav-link" style="color: black"
+                   href="/shop/">商城</a>
+            </nav>
+            </nav>
+        </div>
+    </header>
     <div class="container">
-
-
-
-
-
-
-<div class="purchase-form__wrap">
-    <body style="background-image: url('/example0.png'); background-size: cover"></body>
-    <form class="purchase-form" id="add-to-cart" data-productid="1450149085243" data-product-form="">
-
-        <h1 class="purchase-form__title" style="color: #0f0f0f">唐三彩</h1>
-
-
-        <div class="purchase-form-wysiwyg">
-            <p><span style="color: #0f0f0f">唐三彩，是从唐墓挖掘出来的陶器之泛称，后来学者视为一种陶瓷分类上的术语。唐三彩并非专指那三种色彩而言。在唐墓中所挖掘出来的各类陶俑、陶像，以及其他陶器上，有的只有单彩，或者二彩，有甚多的器物，却具有较复杂的多彩颜色。</span><span></span></p>
-
-
-        </div>
-        <div class="purchase-form__body">
-            <h3 class="purchase-form__package-title" style="color: #0f0f0f">参与竞拍</h3>
-
-
-
-                <div class="color-picker" data-soma-color-picker="">
-                    <ul class="color-picker__list">
-
-
-
-                    </ul>
-
-                    <p class="color-picker-name" style="color: #0f0f0f">最高报价: <span class="js-color-selection">XXX</span></p>
-                    <input type="text" name="您的报价" size="30"  maxlength="30" value="0">
-
-
-                </div>
-
-
-        </div>
-
-        <button class="btn btn--full db" data-product-form-submit="">参与报价</button>
-        <div data-soma-errors=""></div>
-    </form>
-</div>
-
-    </div>
-</section>
-<section class="section product-features">
-    <div class="container">
-        <div class="section-header">
-    <h2 class="section-header__title">了解详情</h2>
-
-
-    <div class="section-header__copy">
-        <p>本藏品已由xxx专家鉴定<br></p>
-    </div>
-
-</div>
-
-        <div class="grid grid--2-up grid--items-center">
-            <div class="grid-col">
-                <img class="product-card__image content-image"  src="/example0.png?1200x1200">
+        <div class="row">
+            <div class="col .col-xl-">
+                <img class="img-rounded" src="/auction/auction1.jpg">
             </div>
+            <div class="col .col-md-">
+                <h1>三彩兽面镇墓兽</h1>
+                <br>
+                <form action="/auction/auction_details/" method="post">
+
+                    <h2>目前最高报价</h2>
+                    {% if userprice %}
+                        <div class="alert alert-warning">{{ userprice }}</div>
+                    {% endif %}
+
+                    {% csrf_token %}
+                    <br>
+                    <h2>请输入您的报价</h2>
+                    <br>
+                    {{ price_form }}
+                    <input type="submit" value="提交报价">
+                </form>
 
-            <div class="grid-col"><div class="product-feature-content">
-    <h3 class="product-feature-content__title">颜色</h3>
-    <p class="product-feature-content__text">唐三彩全名唐代三彩釉陶器，在同一器物上，黄、绿、白或黄、绿、蓝、赭、黑等基本釉色同时交错使用，形成绚丽多彩的艺术效果。“三彩”是多彩的意思，并不专指三种颜色。</p>
-</div>
-
-<div class="product-feature-content">
-    <h3 class="product-feature-content__title">形态</h3>
-    <p class="product-feature-content__text">唐三彩的器皿较少，而小马、小家畜、小家禽数量较多，均具丰美的艺术意匠，尤以各种人物的陶俑，以及超自然形象的魌头，最具艺术价值。</p>
-</div>
-
-<div class="product-feature-content">
-    <h3 class="product-feature-content__title">背景</h3>
-    <p class="product-feature-content__text">唐三彩在中国文化中占有重要的历史地位，在中国的陶瓷史上留下了浓墨重彩的一笔。唐三彩诞生于唐代是有其文化渊源的。</p>
-</div>
-
-</div>
-        </div>
-    </div>
-</section>
-<section class="product-details" data-js-body=".product-details__content" data-js-trigger=".btn" data-ds-accordion="" data-js-state="open">
-    <a class="product-details__trigger btn btn--md" href="#">参与竞拍</a>
-    <div class="product-details__content" style="height: 0px;">
-        <div class="container">
-            <div class="product-details__media-wrap">
-                <div class="product-details__media">
-                    <img class="content-image" alt="Brew Bottle" src="https://cdn.accentuate.io/1450149085243/3072714276923/Shot%202_Logo%20(1).jpg?4267x9384">
-                </div>
-            </div>
-            <div class="product-details__content-wrap">
-                <div class="product-details__content-section">
-
-                        <div class="left-labeled-list ">
-  <h3 class="left-labeled-list__title">Materials</h3>
-  <ul class="left-labeled-list__list list-unstyled">
-
-
-
-
-
-
-    <li class="left-labeled-list__item">
-
-        <span class="left-labeled-list__col-sm left-labeled-list__label">BOTTLE</span>
-
-
-
-        <span class="left-labeled-list__col-lg left-labeled-list__content">BPA-free, borosilicate glass</span>
-
-    </li>
-
-
-
-    <li class="left-labeled-list__item">
-        <span class="left-labeled-list__col-sm left-labeled-list__label left-labeled-list__highlight">FILTER</span>
-        <span class="left-labeled-list__col-lg left-labeled-list__content">Stainless Steele</span>
-    </li>
-
-
-
-    <li class="left-labeled-list__item">
-        <span class="left-labeled-list__col-sm left-labeled-list__label left-labeled-list__highlight">LID</span>
-        <span class="left-labeled-list__col-lg left-labeled-list__content">Tritan ™</span>
-    </li>
-
-
-
-
-
-
-
-
-  </ul>
-
-
-</div>
-
-
-                </div>
-
-                <div class="product-details__content-section">
-                    <div class="left-labeled-list ">
-  <h3 class="left-labeled-list__title"></h3>
-  <ul class="left-labeled-list__list list-unstyled">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </ul>
-
-
-</div>
-
-                </div>
-
-                <div class="product-details__content-section">
-
-                        <div class="left-labeled-list ">
-  <h3 class="left-labeled-list__title">Dimensions &amp; Capacity</h3>
-  <ul class="left-labeled-list__list list-unstyled">
-
-
-
-
-
-
-    <li class="left-labeled-list__item">
-
-        <span class="left-labeled-list__col-sm left-labeled-list__label">VOLUME</span>
-
-
-
-        <span class="left-labeled-list__col-lg left-labeled-list__content">12 oz</span>
-
-    </li>
-
-
-
-    <li class="left-labeled-list__item">
-        <span class="left-labeled-list__col-sm left-labeled-list__label left-labeled-list__highlight">WIDTH</span>
-        <span class="left-labeled-list__col-lg left-labeled-list__content">2.8 inches</span>
-    </li>
-
-
-
-    <li class="left-labeled-list__item">
-        <span class="left-labeled-list__col-sm left-labeled-list__label left-labeled-list__highlight">HEIGHT</span>
-        <span class="left-labeled-list__col-lg left-labeled-list__content">9.1 inches</span>
-    </li>
-
-
-
-    <li class="left-labeled-list__item">
-        <span class="left-labeled-list__col-sm left-labeled-list__label left-labeled-list__highlight">DEPTH</span>
-        <span class="left-labeled-list__col-lg left-labeled-list__content">2.8 inches</span>
-    </li>
-
-
-
-
-
-
-  </ul>
-
-
-</div>
-
-
-
-                </div>
-
-                <div class="product-details__content-section">
-
-                        <div class="left-labeled-list ">
-  <h3 class="left-labeled-list__title">CARE</h3>
-  <ul class="left-labeled-list__list list-unstyled">
-
-
-
-
-
-
-    <li class="left-labeled-list__item">
-
-
-
-        <span class="left-labeled-list__col-lg left-labeled-list__content">Wash before use. Clean all parts after each use. All parts are dishwasher safe. It’s best to put the lid and filter on the top rack only. With daily use, oils will build up in the filter. We recommend a fragrance-free mild soap with water and a good brush for daily cleaning. Once per month you can soak your filter in a 2:1 water to vinegar mixture. Be sure to rinse the filter very well.</span>
-
-    </li>
-
-
-
-
-
-
-
-
-
-
-
-
-  </ul>
-
-
-</div>
-
-
-                </div>
             </div>
         </div>
 
-    </div>
-</section>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="/static/personal/js/vendor/popper.min.js"></script>
+        <script src="/static/personal/js/bootstrap.min.js"></script>
 </body>
 </html>
