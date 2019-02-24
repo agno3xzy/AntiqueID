@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from . import  models, forms
+import hashlib
 # Create your views here.
 
 def signin(request):
@@ -23,7 +24,7 @@ def signin(request):
                 else:
                     message = "密码不正确！"
             except:
-                message = "用户名不存在！"
+                message = "邮箱不存在！"
 
         #return render(request, 'login/signin.html', {"message": message})
         return render(request, 'login/signin.html', locals())
@@ -34,42 +35,55 @@ def signin(request):
 
 def signup(request):
     if request.session.get('is_login', None):
-        # 登录状态不允许注册
+        # 登录状态不允许注册。你可以修改这条原则！
         return redirect("/index/")
     if request.method == "POST":
         signup_form = forms.SignupForm(request.POST)
         message = "请检查填写的内容！"
         if signup_form.is_valid():  # 获取数据
             username = signup_form.cleaned_data['username']
+            email = signup_form.cleaned_data['email']
             password1 = signup_form.cleaned_data['password1']
             password2 = signup_form.cleaned_data['password2']
-            email = signup_form.cleaned_data['email']
-            userid = request.POST.get('userid')
-
+            phone = signup_form.cleaned_data['phone']
             if password1 != password2:  # 判断两次密码是否相同
                 message = "两次输入的密码不同！"
                 return render(request, 'login/signup.html', locals())
             else:
-                same_name_user = models.User.objects.filter(name=username)
-                if same_name_user:  # 用户名唯一
-                    message = '用户已经存在，请重新选择用户名！'
-                    return render(request, 'login/signup.html', locals())
-                same_email_user = models.User.objects.filter(email=email)
+                same_email_user = models.User.objects.filter(user_email=email)
                 if same_email_user:  # 邮箱地址唯一
                     message = '该邮箱地址已被注册，请使用别的邮箱！'
                     return render(request, 'login/signup.html', locals())
-
+                if len(phone) != 11:
+                    message = '手机号码错误'
+                    return render(request, 'login/signup.html', locals())
+                if len(password1) < 6:
+                    message = '密码必须不少于六位'
+                    return render(request, 'login/signup.html', locals())
                 # 当一切都OK的情况下，创建新用户
-
+                userid_query = models.User.objects.values_list('user_id').order_by('user_id').reverse()
+                userid_current = userid_query[0][0]
+                new_mainpage = models.Mainpage()
+                new_mainpage.main_id = userid_current + 1
                 new_user = models.User()
-                new_user.name = username
-                new_user.password = password1
-                new_user.email = email
-                new_user.id = userid
+                new_user.user_id = userid_current+1
+                new_user.user_passwd = password1  # 使用加密密码
+                new_user.user_email = email
+                new_user.user_name = username
+                new_user.user_phone = phone
+                new_user.mainpage_main = new_mainpage
+                new_user.user_idenity = 0
+                new_mainpage.save()
                 new_user.save()
-                return redirect('/login/')  # 自动跳转到登录页面
+                return redirect('/login/signin/',locals())  # 自动跳转到登录页面
     signup_form = forms.SignupForm()
-    return render(request, 'login/signup.html')
+    return render(request, 'login/signup.html',locals())
+
+def hash_code(s, salt='mysite'):# 注册页面密码加密
+    h = hashlib.sha256()
+    s += salt
+    h.update(s.encode())  # update方法只接收bytes类型
+    return h.hexdigest()
 
 def massagepage(request):
     return render(request, 'login/massagepage.html')
