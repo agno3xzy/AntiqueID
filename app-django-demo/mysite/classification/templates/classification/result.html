@@ -23,7 +23,40 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
 
+    <script>
+        function previewHandle(fileDOM) {
+            var file = fileDOM.files[0], // 获取文件
+                imageType = /^image\//,
+                reader = '';
+
+            // 文件是否为图片
+            if (!imageType.test(file.type)) {
+                alert("请选择图片！");
+                return;
+            }
+            // 判断是否支持FileReader
+            if (window.FileReader) {
+                reader = new FileReader();
+            }
+            // IE9及以下不支持FileReader
+            else {
+                alert("您的浏览器不支持图片预览功能，如需该功能请升级您的浏览器！");
+                return;
+            }
+
+            // 读取完成
+            reader.onload = function (event) {
+                // 获取图片DOM
+                var img = document.getElementById("preview-img");
+                // 图片路径设置为读取的图片
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+            }
+    </script>
 
     <link href="{% static 'classification/css/jumbotron.css' %}" rel="stylesheet">
 </head>
@@ -63,10 +96,23 @@
     <div class="jumbotron" style="background-image: url('/bk_test.jpg'); background-size: cover">
         <div class="container">
             <div class="row">
-                <div class="col-sm">
+                <img class="col-sm">
                     <h4>辅助鉴别，就现在！</h4>
                     <p>您可以看到下方这份靓丽的鉴赏报告。<br>不过，令人兴奋的是，您也可以拥有您自己的！<br>动手拍一张你心爱唐三彩的照片，或者从搜索引擎中寻觅。<br>找好之后，请点击"现在上传"，获取属于您的三彩报告！
                     </p>
+                    <div id="final_result" onload="previewHandle(this)">文件上传成功</div>
+                    <div id="preview-img" />
+                    <script type="text/javascript">
+                        const model = tf.loadModel('https://xingkai98.github.io/model_test/model.json');
+                        //var result = model.predict();
+                        var temp = "kkkj";
+                        document.getElementById('final_result').innerText = temp;
+                        //var img = document.getElementById('preview-img');
+                        //img.src = Dict['path'];
+                                                //document.getElementById('final_result').innerText = Dict['path'];
+                        //var imgH5 = "<img src=\"" + Dict['path'] + "\">";
+                        //document.getElementById('preview-img').innerHTML = imgH5;
+                    </script>
                     <form  action="upload_file/" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <input type="file" name="imageFile" id="img"/>
