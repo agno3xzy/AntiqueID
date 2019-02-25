@@ -11,6 +11,15 @@ for root, dirs, files in os.walk('D:\\2019Spring\Intel杯\数据集\Tangsancai\\
         print(dominant_color)
         horse_dominantcolor.append(dominant_color)
 print(horse_dominantcolor)
+background = Image.new("RGB", (1000, 1000), (255, 255, 255))
+background.show()
+iter = 0
+for i in range(5):
+    temp = (horse_dominantcolor[i][0], horse_dominantcolor[i][1], horse_dominantcolor[i][2])
+    background.paste(temp, (iter, 0, iter + 20, 20))
+    iter += 20
+background.show()
+
 # get the dominant color
 
 

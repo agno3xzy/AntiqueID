@@ -1,676 +1,350 @@
 <!doctype html>
-<html class="no-js" lang="en">
-<head>
+<html lang="en">
+  <head>
     {% load staticfiles %}
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>三彩坊</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="robots" content="noindex, follow"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, follow"/>
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!--All Css Here-->
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+    <title>专家资历</title>
 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <!-- Linearicon CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/linearicons.min.css' %}">
-    <!-- Font Awesome CSS-->
-    <link rel="stylesheet" type="text/css" href="{% static 'workshop/css/font-awesome.4.6.0.css' %}">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'expert/css/bootstrap-grid.min.css' %}" rel="stylesheet">
 
-    <!-- Animate CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/animate.css' %}">
-    <!-- Owl Carousel CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/owl.carousel.min.css' %}">
-    <!-- Slick CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/slick.css' %}">
-    <!-- Meanmenu CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/meanmenu.min.css' %}">
-    <!-- Easyzoom CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/easyzoom.css' %}">
-    <!-- Venobox CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/venobox.css' %}">
-    <!-- Jquery Ui CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/jquery-ui.css' %}">
-    <!-- Nice Select CSS-->
-    <link rel="stylesheet" href="{% static 'workshop/css/nice-select.css' %}">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{% static 'workshop/css/style.css' %}">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{% static 'workshop/css/responsive.css' %}">
-    <!-- Modernizr Js -->
-    <script src="{% static 'workshop/css/animate.css' %}js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="{% static 'expert/css/album.css' %}" rel="stylesheet">
+    <link href="{% static 'expert/css/carousel.css' %}" rel="stylesheet">
+  </head>
 
-</head>
-<body>
-
-
-<!--[if lt IE 8]>
-	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-
-<div class="wrapper">
-    <!--Header Area Start-->
+  <body>
     <header>
-        <div class="header-container" style="background-image: url('/s58bcfc20c5076.png');" height="30px">
-            <div class="header-area header-sticky pt-30 pb-30">
-                <div class="container">
-                    <div class="row">
-                        <!--Header Logo Start-->
-                        <div class="col-lg-3 col-md-3">
-                            <div class="logo-area">
-                                <a href="index.html">
-                                    <img src="123.png" height="50px" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <!--Header Logo End-->
-                        <!--Header Menu And Mini Cart Start-->
-                        <div class="col-lg-9 col-md-9 text-lg-right">
-                            <!--Main Menu Area Start-->
-                            <div class="header-menu">
-                                <nav>
-                                    <ul class="main-menu">
-                                        <li><a href="../">主页</a></li>
-                                        <li><a href="../classification/">辅助鉴赏</a></li>
-                                        <li><a href="../workshop/">鉴宝馆</a></li>
-                                        <li><a href="../auction/">拍卖</a></li>
-                                        <li><a href="../shop/">商城</a></li>
-                                        <li><a href="../expert/">专家问答</a></li>
-
-                                        </li>
-                                        <li><a style="color: transparent;" href="#">Features</a>
-                                            <!--Mega Menu Start-->
-                                            <ul class="mega-menu">
-                                                <li><a href="#" class="item-link">Pages</a>
-                                                    <ul>
-                                                        <li><a href="about.html">About Us</a></li>
-                                                        <li><a href="about-2.html">About Us 02</a></li>
-                                                        <li><a href="contact.html">Contact Us</a></li>
-                                                        <li><a href="contact-2.html">Contact Us 02</a></li>
-                                                        <li><a href="service.html">Services</a></li>
-                                                        <li><a href="service-2.html">Services 02</a></li>
-                                                        <li><a href="faq.html">Frequently Questions</a></li>
-                                                        <li><a href="404.html">Error 404</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#" class="item-link">Blog</a>
-                                                    <ul>
-                                                        <li><a href="blog-nosidebar.html">None Sidebar</a></li>
-                                                        <li><a href="blog-left-sidebar.html">Sidebar Left</a></li>
-                                                        <li><a href="single-blog.html">Gallery Format</a></li>
-                                                        <li><a href="single-blog.html">Audio Format</a></li>
-                                                        <li><a href="single-blog.html">Video Format</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#" class="item-link">Shop</a>
-                                                    <ul>
-                                                        <li><a href="shop-full-width.html">Full Width</a></li>
-                                                        <li><a href="shop-right-sidebar.html">Sidebar Right</a></li>
-                                                        <li><a href="shop-list.html">List View</a></li>
-                                                        <li><a href="single-product.html">Single Product</a></li>
-                                                        <li><a href="single-product.html">Variable Product</a></li>
-                                                        <li><a href="single-product.html">Grouped Product</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <!--Mega Menu End-->
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!--Main Menu Area End-->
-                            <!--Header Option Start-->
-
-                            <!--Header Option End-->
-                        </div>
-                        <!--Header Menu And Mini Cart End-->
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <!--Mobile Menu Area Start-->
-                            <div class="mobile-menu d-lg-none"></div>
-                            <!--Mobile Menu Area End-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-image: url('/bk_test.jpg');background-size: cover;">
+      <a class="navbar-brand" href="#" style="color: #533f03">三彩知因</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/" style="color: #533f03">主页 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" style="color: #533f03">辅助鉴赏</a>
+          </li>
+          <li class="nav-item" style="color: #533f03">
+            <a class="nav-link" href="../../login/signin/" style="color: #533f03">鉴宝馆</a>
+          </li>
+          <li class="nav-item" style="color: #533f03">
+            <a class="nav-link" href="../../workshop/" style="color: #533f03">三彩坊</a>
+          </li>
+          <li class="nav-item" style="color: #533f03">
+            <a class="nav-link" href="../../auction/" style="color: #533f03">拍卖</a>
+          </li>
+          <li class="nav-item" style="color: #533f03">
+            <a class="nav-link" href="../../shop/" style="color: #533f03">商城</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     </header>
-    <!--Header Area End-->
-    <!--Shop Area Start-->
-    <div class="shop-area mb-70" style="background-image: url('/bk_test.jpg')">
+    <main role="main" >
+      <section class="jumbotron text-center" style="background-image: url('/bk_test.jpg'); background-size: cover;">
+        <div class="row featurette" style="margin-top: -4%;margin-bottom: -4%">
+          <div class="col-md-7 order-md-2" style="margin-top: -6%; margin-left: -10%;">
+            <div class="container">
+                <h2 class="featurette-heading">三彩知因0号用户</h2>
+                <br />
+                <p class="lead">古玩老手</p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">修改个人信息</a>
+                <a href="#" class="btn btn-secondary my-2">申请成为专家</a>
+            </p>
+            </div>
+          </div>
+          <div class="col-md-5 order-md-1" style="margin-left:2.5%" >
+            <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="/avatar1.png" alt="Generic placeholder image">
+          </div>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light" style="background-image: url('/bk_test.jpg'); background-size: cover">
+          <h1 class="jumbotron-heading" style="text-align: center">商品收藏</h1>
+          <br />
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="shop-layout">
-                        <!--Breadcrumb One Start-->
-                        <div class="breadcrumb-one mb-120">
-                            <div class="breadcrumb-img img-full">
-                                <img src="img/page-banner/shop-banner-1.jpg" alt="">
-                            </div>
-                            <div class="breadcrumb-content">
 
-                            </div>
-                        </div>
-                        <!--Breadcrumb One End-->
-                        <!--Grid & List View Start-->
-                        <div class="shop-topbar-wrapper d-md-flex justify-content-md-between align-items-center">
-
-                            <!--Toolbar Short Area Start-->
-                            <div class="toolbar-short-area d-md-flex align-items-center">
-                                <p class="show-product"></p>
-                            </div>
-                            <!--Toolbar Short Area End-->
-                        </div>
-                        <!--Grid & List View End-->
-                        <section id="about" class="about-mf sect-pt4 route">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="box-shadow-full">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 col-md-5">
-                                                            <div class="about-img">
-                                                                <img src="avatar1.jpg"
-                                                                     class="img-fluid rounded b-shadow-a" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6 col-md-7">
-                                                            <div class="about-info">
-                                                                <p><span class="title-s">昵称： </span> <span>----</span>
-                                                                </p>
-                                                                <p><span class="title-s">用户ID: </span> <span>123</span>
-                                                                </p>
-                                                                <p><span class="title-s">邮箱: </span> <span>example@example.com</span>
-                                                                </p>
-                                                                <p><span class="title-s">手机号: </span> <span>13345678987</span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="skill-mf">
-                                                        <p class="title-s">兴趣</p>
-                                                        <span>唐三彩马</span> <span class="pull-right">85%</span>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar"
-                                                                 style="width: 85%;" aria-valuenow="85"
-                                                                 aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
-                                                        </div>
-                                                        <span>书画</span> <span class="pull-right">75%</span>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar"
-                                                                 style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
-                                                        </div>
-                                                        <span>唐三彩骆驼</span> <span class="pull-right">50%</span>
-                                                        <div class="progress">
-                                                            <div class="progress-bar" role="progressbar"
-                                                                 style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                                 aria-valuemax="100"></div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="about-me pt-4 pt-md-0">
-                                                        <div class="title-box-2">
-                                                            <h2 class="title-left">
-                                                                个人简介
-                                                            </h2>
-                                                        </div>
-                                                        <p class="lead">
-                                                            我是一名古玩爱好者。
-                                                        </p>
-                                                        <p class="lead">
-                                                            希望在这里能够结识其他唐三彩爱好者。
-                                                        </p>
-                                                        <p class="lead">
-                                                            我最喜欢收藏唐三彩中的马，因为它英俊潇洒。
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <br><br><br>
-                        <!--Shop Product Start-->
-                        <div class="shop-product">
-                            <div id="myTabContent-2" class="tab-content">
-                                <h2 class="title-left">
-                                                                我的收藏
-                                                            </h2>
-                                <div id="list" class="tab-pane fade show active">
-                                    <div class="product-list-view">
-                                        <div class="product-list-item mb-40">
-                                            <div class="row">
-                                                <!--Single List Product Start-->
-                                                <div class="col-md-4">
-                                                    <div class="single-product">
-                                                        <div class="product-img img-full">
-                                                            <a href="single-product.html">
-                                                                <img src="workshop_avatar/1.png" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="product-content shop-list">
-                                                        <h2><a href="single-product.html">唐三彩马</a></h2>
-                                                        <div class="product-reviews">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="product-description">
-                                                            <p></p>
-                                                        </div>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-                                                                <span class="price">$125.00</span>
-                                                                <span class="regular-price">$115.00</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-list-action">
-                                                            <div class="btn btn-lg btn-secondary"
-                                                                 style="background: #533f03;color: antiquewhite">
-                                                                <a style="color:antiquewhite" href="#">查看辅助鉴别报告</a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="product-list-action">
-
-                                                            <div class="btn btn-lg btn-secondary"
-                                                                 style="background: #533f03;color: antiquewhite">
-                                                                <a style="color:antiquewhite" href="#">进入购买界面</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--Single List Product End-->
-                                            </div>
-                                        </div>
-                                        <div class="product-list-item mb-40">
-                                            <div class="row">
-                                                <!--Single List Product Start-->
-                                                <div class="col-md-4">
-                                                    <div class="single-product">
-                                                        <div class="product-img img-full">
-                                                            <a href="single-product.html">
-                                                                <img src="workshop_avatar/2.png" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="product-content shop-list">
-                                                        <h2><a href="single-product.html">唐三彩马</a></h2>
-                                                        <div class="product-reviews">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="product-description">
-                                                            <p></p>
-                                                        </div>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-                                                                <span class="price">$100.00</span>
-                                                                <span class="regular-price">$90.00</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-list-action">
-                                                            <div class="btn btn-lg btn-secondary"
-                                                                 style="background: #533f03;color: antiquewhite">
-                                                                <a style="color:antiquewhite" href="#">查看辅助鉴别报告</a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="product-list-action">
-
-                                                            <div class="btn btn-lg btn-secondary"
-                                                                 style="background: #533f03;color: antiquewhite">
-                                                                <a style="color:antiquewhite" href="#">进入购买界面</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--Single List Product End-->
-                                            </div>
-                                        </div>
-                                        <div class="product-list-item mb-40">
-                                            <div class="row">
-                                                <!--Single List Product Start-->
-                                                <div class="col-md-4">
-                                                    <div class="single-product">
-                                                        <div class="product-img img-full">
-                                                            <a href="single-product.html">
-                                                                <img src="workshop_avatar/3.png" alt="">
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="product-content shop-list">
-                                                        <h2><a href="single-product.html">唐三彩骆驼</a></h2>
-                                                        <div class="product-reviews">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="product-description">
-                                                            <p></p>
-                                                        </div>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-                                                                <span class="regular-price">$90.00</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-list-action">
-                                                            <div class="btn btn-lg btn-secondary"
-                                                                 style="background: #533f03;color: antiquewhite">
-                                                                <a style="color:antiquewhite" href="#">查看辅助鉴别报告</a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="product-list-action">
-
-                                                            <div class="btn btn-lg btn-secondary"
-                                                                 style="background: #533f03;color: antiquewhite">
-                                                                <a style="color:antiquewhite" href="#">进入购买界面</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--Single List Product End-->
-                                            </div>
-                                        </div>
-                                        <div class="product-list-item mb-40">
-                                            <div class="row">
-                                                <!--Single List Product Start-->
-                                                <div class="col-md-4">
-                                                    <div class="single-product">
-                                                        <div class="product-img img-full">
-                                                            <a href="single-product.html">
-                                                                <img src="workshop_avatar/4.png" alt="">
-                                                            </a>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="product-content shop-list">
-                                                        <h2><a href="single-product.html">唐三彩男立像</a></h2>
-                                                        <div class="product-reviews">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="product-description">
-                                                            <p></p>
-                                                        </div>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-                                                                <span class="price">$75.00</span>
-                                                                <span class="regular-price">$50.00</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-list-action">
-                                                            <div class="btn btn-lg btn-secondary"
-                                                                 style="background: #533f03;color: antiquewhite">
-                                                                <a style="color:antiquewhite" href="#">查看辅助鉴别报告</a>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="product-list-action">
-
-                                                            <div class="btn btn-lg btn-secondary"
-                                                                 style="background: #533f03;color: antiquewhite">
-                                                                <a style="color:antiquewhite" href="#">进入购买界面</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--Single List Product End-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Pagination Start-->
-                                <div class="product-pagination">
-                                    <ul>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                                    </ul>
-                                </div>
-                                <!--Pagination End-->
-                            </div>
-                        </div>
-                        <!--Shop Product End-->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
                     </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
-    <!--Shop Area End-->
-
-
-    <!-- Modal Area Strat -->
-    <div class="modal fade" id="open-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
-                            class="fa fa-close"></i></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <!--Modal Img-->
-                        <div class="col-md-5">
-                            <!--Modal Tab Content Start-->
-                            <div class="tab-content product-details-large" id="myTabContent">
-                                <div class="tab-pane fade show active" id="single-slide1" role="tabpanel"
-                                     aria-labelledby="single-slide-tab-1">
-                                    <!--Single Product Image Start-->
-                                    <div class="single-product-img img-full">
-                                        <img src="img/single-product/large/single-product1.jpg" alt="">
-                                    </div>
-                                    <!--Single Product Image End-->
-                                </div>
-                                <div class="tab-pane fade" id="single-slide2" role="tabpanel"
-                                     aria-labelledby="single-slide-tab-2">
-                                    <!--Single Product Image Start-->
-                                    <div class="single-product-img img-full">
-                                        <img src="img/single-product/large/single-product2.jpg" alt="">
-                                    </div>
-                                    <!--Single Product Image End-->
-                                </div>
-                                <div class="tab-pane fade" id="single-slide3" role="tabpanel"
-                                     aria-labelledby="single-slide-tab-3">
-                                    <!--Single Product Image Start-->
-                                    <div class="single-product-img img-full">
-                                        <img src="img/single-product/large/single-product3.jpg" alt="">
-                                    </div>
-                                    <!--Single Product Image End-->
-                                </div>
-                                <div class="tab-pane fade" id="single-slide4" role="tabpanel"
-                                     aria-labelledby="single-slide-tab-4">
-                                    <!--Single Product Image Start-->
-                                    <div class="single-product-img img-full">
-                                        <img src="img/single-product/large/single-product4.jpg" alt="">
-                                    </div>
-                                    <!--Single Product Image End-->
-                                </div>
-                                <div class="tab-pane fade" id="single-slide5" role="tabpanel"
-                                     aria-labelledby="single-slide-tab-4">
-                                    <!--Single Product Image Start-->
-                                    <div class="single-product-img img-full">
-                                        <img src="img/single-product/large/single-product5.jpg" alt="">
-                                    </div>
-                                    <!--Single Product Image End-->
-                                </div>
-                                <div class="tab-pane fade" id="single-slide6" role="tabpanel"
-                                     aria-labelledby="single-slide-tab-4">
-                                    <!--Single Product Image Start-->
-                                    <div class="single-product-img img-full">
-                                        <img src="img/single-product/large/single-product6.jpg" alt="">
-                                    </div>
-                                    <!--Single Product Image End-->
-                                </div>
-                            </div>
-                            <!--Modal Content End-->
-                            <!--Modal Tab Menu Start-->
-                            <div class="single-product-menu">
-                                <div class="nav single-slide-menu owl-carousel" role="tablist">
-                                    <div class="single-tab-menu img-full">
-                                        <a class="active" data-toggle="tab" id="single-slide-tab-1"
-                                           href="#single-slide1"><img src="img/single-product/small/single-product1.jpg"
-                                                                      alt=""></a>
-                                    </div>
-                                    <div class="single-tab-menu img-full">
-                                        <a data-toggle="tab" id="single-slide-tab-2" href="#single-slide2"><img
-                                                src="img/single-product/small/single-product2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="single-tab-menu img-full">
-                                        <a data-toggle="tab" id="single-slide-tab-3" href="#single-slide3"><img
-                                                src="img/single-product/small/single-product3.jpg" alt=""></a>
-                                    </div>
-                                    <div class="single-tab-menu img-full">
-                                        <a data-toggle="tab" id="single-slide-tab-4" href="#single-slide4"><img
-                                                src="img/single-product/small/single-product4.jpg" alt=""></a>
-                                    </div>
-                                    <div class="single-tab-menu img-full">
-                                        <a data-toggle="tab" id="single-slide-tab-5" href="#single-slide5"><img
-                                                src="img/single-product/small/single-product5.jpg" alt=""></a>
-                                    </div>
-                                    <div class="single-tab-menu img-full">
-                                        <a data-toggle="tab" id="single-slide-tab-6" href="#single-slide6"><img
-                                                src="img/single-product/small/single-product6.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Modal Tab Menu End-->
-                        </div>
-                        <!--Modal Img-->
-                        <!--Modal Content-->
-                        <div class="col-md-7">
-                            <div class="modal-product-info">
-                                <h1>Sit voluptatem</h1>
-                                <div class="modal-product-price">
-                                    <span class="old-price">$74.00</span>
-                                    <span class="new-price">$69.00</span>
-                                </div>
-                                <a href="single-product.html" class="see-all">See all features</a>
-                                <div class="add-to-cart quantity">
-                                    <form class="add-quantity" action="#">
-                                        <div class="modal-quantity">
-                                            <input type="number" value="1">
-                                        </div>
-                                        <div class="add-to-link">
-                                            <button class="form-button" data-text="add to cart">add to cart</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="cart-description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco,Proin lectus ipsum, gravida et mattis vulputate,
-                                        tristique ut lectus.</p>
-                                </div>
-                                <div class="social-share">
-                                    <h3>Share this product</h3>
-                                    <ul class="socil-icon2">
-                                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href=""><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Modal Content-->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
                     </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
                 </div>
+              </div>
             </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- Modal Area End -->
-</div>
+            <div class="btn-group" style="margin-left: 50%">
+                <p><a class="btn btn-primary my-2" href="/workshop/allcomment/" role="button">全部</a></p>
+            </div>
+      </div>
 
+        <div class="album py-5 bg-light" style="background-image: url('/bk_test.jpg'); background-size: cover">
+          <h1 class="jumbotron-heading" style="text-align: center">专家收藏</h1>
+          <br />
+        <div class="container">
 
-<!--All Js Here-->
+          <div class="row">
 
-<!--Jquery 1.12.4-->
-<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-<!--Popper-->
-<script href="{% static 'workshop/js/popper.min.js' %}"></script>
-<!--Bootstrap-->
-<script src="{% static 'workshop/js/bootstrap.min.js' %}"></script>
-<!--Imagesloaded-->
-<script src="{% static 'workshop/js/imagesloaded.pkgd.min.js' %}"></script>
-<!--Isotope-->
-<script src="{% static 'workshop/js/isotope.pkgd.min.js' %}"></script>
-<!--Waypoints-->
-<script src="{% static 'workshop/js/waypoints.min.js' %}"></script>
-<!--Counterup-->
-<script src="{% static 'workshop/js/jquery.counterup.min.js' %}"></script>
-<!--Carousel-->
-<script src="{% static 'workshop/js/owl.carousel.min.js' %}"></script>
-<!--Slick-->
-<script src="{% static 'workshop/js/slick.min.js' %}"></script>
-<!--Meanmenu-->
-<script src="{% static 'workshop/js/jquery.meanmenu.min.js' %}"></script>
-<!--Easyzoom-->
-<script src="{% static 'workshop/js/easyzoom.min.js' %}"></script>
-<!--Nice Select-->
-<script src="{% static 'workshop/js/jquery.nice-select.min.js' %}"></script>
-<!--ScrollUp-->
-<script src="{% static 'workshop/js/jquery.scrollUp.min.js' %}"></script>
-<!--Wow-->
-<script src="{% static 'workshop/js/wow.min.js' %}"></script>
-<!--Venobox-->
-<script src="{% static 'workshop/js/venobox.min.js' %}"></script>
-<!--Jquery Ui-->
-<script src="http://cdn.bootcss.com/jqueryui/1.11.0/jquery-ui.min.js"></script>
-<!--Countdown-->
-<script src="{% static 'workshop/js/jquery.countdown.min.js' %}"></script>
-<!--Plugins-->
-<script src="{% static 'workshop/js/plugins.js' %}"></script>
-<!--Main Js-->
-<script src="{% static 'workshop/js/main.js' %}"></script>
-</body>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>X专家</h2>
+                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>X专家</h2>
+                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>X专家</h2>
+                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>X专家</h2>
+                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>X专家</h2>
+                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>X专家</h2>
+                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                    </div>
+                    <div class="btn-group">
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
+                    </div>
+                    <small class="text-muted">2018.12.16</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+            <div class="btn-group" style="margin-left: 50%">
+                <p><a class="btn btn-primary my-2" href="/workshop/allexpert/" role="button">全部</a></p>
+            </div>
+      </div>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="{% static 'expert/js/vendor/popper.min.js' %></script>
+    <script src="{% static 'expert/js/bootstrap.bundle.min.js' %}></script>
+    <script src="{% static 'expert/js/vendor/holder.min.js' %}></script>
+  </body>
 </html>
