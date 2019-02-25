@@ -37,6 +37,8 @@ def upload_file(request):
         if not myFile:
             return HttpResponse("no files for upload!")
         path = os.path.join(os.getcwd(), myFile.name)
+        print(path)
+        #path = os.path.join(os.path.dirname(os.path.realpath(path)))
         pic = ld.transform_pic(path, size)
         pic = pic.reshape([1,600,600,3])
         pic = tf.convert_to_tensor(pic)
