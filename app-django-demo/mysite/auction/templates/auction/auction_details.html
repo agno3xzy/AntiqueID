@@ -45,19 +45,24 @@
             </nav>
         </div>
     </header>
-<div class="container">
+    <div class="container">
         <div class="row">
-            <div class="col .col-xl-" style="width: 500px;margin-left: -200px">
-                <img class="img-rounded" src="/auction/auction1.jpg">
+            <div class="col .col-xl-">
+                <img class="img-rounded" src="{{ src0 }}">
             </div>
-            <div class="col .col-md-" style="width: 500px;margin-right: -200px">
-                <h1>三彩兽面镇墓兽</h1>
+            <div class="col .col-md-">
+                <h1>{{ name0 }}</h1>
                 <br>
                 <form action="/auction/auction_details/" method="post">
+                    <h2>商品起拍价</h2>
+                    {% if startprice %}
+                        <div class="alert alert-warning">{{ startprice0 }}</div>
+                    {% endif %}
 
+                    {% csrf_token %}
                     <h2>目前最高报价</h2>
                     {% if userprice %}
-                        <div class="alert alert-warning">{{ userprice }}</div>
+                        <div class="alert alert-warning">{{ sellprice0 }}</div>
                     {% endif %}
 
                     {% csrf_token %}
