@@ -40,12 +40,11 @@ def upload_file(request):
             return HttpResponse("no files for upload!")
         image = Image.open(myFile)
 
-        path = os.path.join(os.getcwd() + '/mysite/', myFile.name)
+        path = os.path.join(os.getcwd() + '/mysite/media/upload/', myFile.name)
         print(path)
         path = path.replace('\\', '/')
         print(path)
         image.save(path)
-        #path = 'C:/Users/agno3/Desktop/截图/辅助鉴定页面1.PNG'
         pic = ld.transform_pic(path, size)
         pic = pic.reshape([1,600,600,3])
         pic = tf.convert_to_tensor(pic)
