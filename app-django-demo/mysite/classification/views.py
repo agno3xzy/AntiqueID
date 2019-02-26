@@ -3,8 +3,10 @@ import os
 import json
 from django.http import HttpResponse,JsonResponse
 from . import img_loader as ld
+from PIL import  Image
 import numpy as np
 import tensorflow as tf
+
 # Create your views here.
 size = 600,600
 
@@ -36,15 +38,18 @@ def upload_file(request):
         myFile = request.FILES.get("imageFile", None)  # 获取上传的文件，如果没有文件，则默认为None
         if not myFile:
             return HttpResponse("no files for upload!")
-        path = os.path.join(os.getcwd(), myFile.name)
+        image = Image.open(myFile)
+
+        path = os.path.join(os.getcwd() + '/mysite/', myFile.name)
         print(path)
-        #path = os.path.join(os.path.dirname(os.path.realpath(path)))
+        path = path.replace('\\', '/')
+        print(path)
+        image.save(path)
+        #path = 'C:/Users/agno3/Desktop/截图/辅助鉴定页面1.PNG'
         pic = ld.transform_pic(path, size)
         pic = pic.reshape([1,600,600,3])
         pic = tf.convert_to_tensor(pic)
         Dict['path'] = path
-        print(path)
-        print(pic)
         destination = open(path, 'wb')  # 打开特定的文件进行二进制的写操作
         for chunk in myFile.chunks():  # 分块写入文件
             destination.write(chunk)
