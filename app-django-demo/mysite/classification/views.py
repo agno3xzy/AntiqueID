@@ -6,9 +6,10 @@ from . import img_loader as ld
 from PIL import  Image
 import numpy as np
 import tensorflow as tf
+from keras.models import load_model
 
 # Create your views here.
-size = 600,600
+size = 128,128
 
 def index(request):
     return render(request, 'classification/intro.html')
@@ -45,6 +46,7 @@ def upload_file(request):
         path = path.replace('\\', '/')
         print(path)
         image.save(path)
+        '''
         pic = ld.transform_pic(path, size)
         pic = pic.reshape([1,600,600,3])
         pic = tf.convert_to_tensor(pic)
@@ -53,9 +55,19 @@ def upload_file(request):
         for chunk in myFile.chunks():  # 分块写入文件
             destination.write(chunk)
         destination.close()
+        '''
+        model_path = "D:/2019Spring/Intel杯/数据集/Tangsancai/model_to_reformat/trained_model_horse_man_fake_plate.h5"
+        result = predict(model_path, path)
+        print(result)
         #locals代表所有数据传入render中的页面
         return render(request, "classification/result.html", locals())
         #用json模块将python的字典转为json格式以便js读取
         #return render(request, "classification/result.html", {'Dict':json.dumps(Dict)})
         #return HttpResponse("upload over!")
+
+def predict(model_path, pic_path):
+    model = load_model(model_path)
+    p = ld.transform_pic(pic_path, size)
+    p = p.reshape([1,128,128,3])
+    return model.predict(p)
 
