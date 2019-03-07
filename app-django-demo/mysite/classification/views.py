@@ -7,7 +7,7 @@ from PIL import  Image
 import numpy as np
 import tensorflow as tf
 from keras.models import load_model
-
+from keras import backend as K
 # Create your views here.
 size = 128,128
 
@@ -59,6 +59,20 @@ def upload_file(request):
         model_path = "D:/2019Spring/Intel杯/数据集/Tangsancai/model_to_reformat/trained_model_horse_man_fake_plate.h5"
         result = predict(model_path, path)
         print(result)
+        is_horse = False
+        is_man = False
+        is_fake = False
+        is_plate = False
+        if int(result[0][0]) == 1:
+            is_horse = True
+        if int(result[0][1]) == 1:
+            is_man = True
+        if int(result[0][2]) == 1:
+            is_fake = True
+        if int(result[0][3]) == 1:
+            is_plate = True
+
+
         #locals代表所有数据传入render中的页面
         return render(request, "classification/result.html", locals())
         #用json模块将python的字典转为json格式以便js读取
@@ -66,8 +80,11 @@ def upload_file(request):
         #return HttpResponse("upload over!")
 
 def predict(model_path, pic_path):
+    K.clear_session()
     model = load_model(model_path)
     p = ld.transform_pic(pic_path, size)
     p = p.reshape([1,128,128,3])
     return model.predict(p)
+        #model.predict_proba(p)
+
 
