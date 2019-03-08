@@ -1,13 +1,14 @@
-from django.shortcuts import render, redirect
 import os
-import json
-from django.http import HttpResponse,JsonResponse
-from . import img_loader as ld
-from PIL import  Image
-import numpy as np
-import tensorflow as tf
-from keras.models import load_model
+
+from PIL import Image
+from django.http import HttpResponse
+from django.shortcuts import render
 from keras import backend as K
+from keras.models import load_model
+
+from . import color_predict
+from . import img_loader as ld
+
 # Create your views here.
 size = 128,128
 
@@ -27,11 +28,6 @@ def logout(request):
     request.session.flush()
     return render(request, 'classification/logout.html')
 
-def handle_uploaded_file(f):
-    with open('test/name.jpg', 'wb+') as destination:
-        for chunk in f.chunks():
-            destination.write(chunk)
-
 def upload_file(request):
     if request.method == "POST":  # 请求方法为POST时，进行处理
         #这里的img是h5表单里的name
@@ -41,24 +37,15 @@ def upload_file(request):
             return HttpResponse("no files for upload!")
         image = Image.open(myFile)
 
-        path = os.path.join(os.getcwd() + '/mysite/media/upload/', myFile.name)
-        print(path)
-        path = path.replace('\\', '/')
-        print(path)
-        image.save(path)
-        '''
-        pic = ld.transform_pic(path, size)
-        pic = pic.reshape([1,600,600,3])
-        pic = tf.convert_to_tensor(pic)
-        Dict['path'] = path
-        destination = open(path, 'wb')  # 打开特定的文件进行二进制的写操作
-        for chunk in myFile.chunks():  # 分块写入文件
-            destination.write(chunk)
-        destination.close()
-        '''
+        pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', myFile.name)
+        pic_path = pic_path.replace('\\', '/')
+        image.save(pic_path)
+        pic_name = myFile.name
+        dominant_color = color_predict.dominant_predict(pic_path, pic_name)
+        #分类模型鉴定逻辑
         model_path = "D:/2019Spring/Intel杯/数据集/Tangsancai/model_to_reformat/trained_model_horse_man_fake_plate.h5"
-        result = predict(model_path, path)
-        print(result)
+        result = predict(model_path, pic_path)
+        #以下四个变量控制前端页面显示的结果
         is_horse = False
         is_man = False
         is_fake = False
@@ -73,11 +60,8 @@ def upload_file(request):
             is_plate = True
 
 
-        #locals代表所有数据传入render中的页面
-        return render(request, "classification/result.html", locals())
-        #用json模块将python的字典转为json格式以便js读取
-        #return render(request, "classification/result.html", {'Dict':json.dumps(Dict)})
-        #return HttpResponse("upload over!")
+        return render(request, "classification/intro2.html", locals())
+
 
 def predict(model_path, pic_path):
     K.clear_session()
@@ -86,5 +70,6 @@ def predict(model_path, pic_path):
     p = p.reshape([1,128,128,3])
     return model.predict(p)
         #model.predict_proba(p)
+
 
 
