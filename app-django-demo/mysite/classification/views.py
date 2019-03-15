@@ -1,13 +1,16 @@
 import os
-
+import sys
+from . import img_loader as ld
 from PIL import Image
 from django.http import HttpResponse
 from django.shortcuts import render
 from keras import backend as K
 from keras.models import load_model
 
-from . import color_predict
-from . import img_loader as ld
+sys.path.insert(0, 'mysite/classification/color_model')
+import color_predict
+import background_subtraction
+
 
 # Create your views here.
 size = 128,128
@@ -41,7 +44,11 @@ def upload_file(request):
         pic_path = pic_path.replace('\\', '/')
         image.save(pic_path)
         pic_name = myFile.name
-        dominant_color = color_predict.dominant_predict(pic_path, pic_name)
+
+        #这里预先输入了相应的rect
+        pic_rect = rect=(226,249,1480,1987)
+        pre_pic_path = background_subtraction.bg_sb(pic_path, pic_name, pic_rect)
+        dominant_color = color_predict.dominant_predict(pre_pic_path, pic_name)
         #分类模型鉴定逻辑
         model_path = "D:/2019Spring/Intel杯/数据集/Tangsancai/model_to_reformat/trained_model_horse_man_fake_plate.h5"
         result = predict(model_path, pic_path)
