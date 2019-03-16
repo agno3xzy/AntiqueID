@@ -15,13 +15,13 @@ def bg_sb(pic_path, pic_name , pic_rect):
     mask2 = np.where((mask == 2) | (mask == 0), 0, 1).astype('uint8')
     img = img * mask2[:, :, np.newaxis]
 
-    pic_name1 = 'pre1_' + pic_name
+    pic_name1 = 'pre1_' + pic_name.replace("jpg", "png")
     pic_path1 = os.path.join(os.getcwd() + '/mysite/media/image_preprocessing/', pic_name1)
     pic_path1 = pic_path1.replace('\\', '/')
 
     cv2.imwrite(pic_path1, img)
 
-    pic_name2 = 'pre2_' + pic_name
+    pic_name2 = 'pre2_' + pic_name.replace("jpg", "png")
     pic_path2 = os.path.join(os.getcwd() + '/mysite/media/image_preprocessing/', pic_name2)
     pic_path2 = pic_path2.replace('\\', '/')
 
