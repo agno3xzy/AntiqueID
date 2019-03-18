@@ -4,11 +4,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def bg_sb(pic_path, pic_name , pic_rect):
-    iterations_count = 1
+    iterations_count = 2
 
     img = cv2.imread(pic_path)
-    if img.size[0] > 500:
-        iterations_count = 2
+    if img.shape[1] > 500:
+        iterations_count = 4
 
     mask = np.zeros((img.shape[:2]), np.uint8)
     bgdModel = np.zeros((1, 65), np.float64)
