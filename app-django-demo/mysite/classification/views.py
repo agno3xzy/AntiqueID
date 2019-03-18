@@ -45,9 +45,19 @@ def upload_file(request):
         image.save(pic_path)
         pic_name = myFile.name
 
-        #这里预先输入了相应的rect
-        pic_rect = rect=(226,249,1480,1987)
+        #处理用户输入的坐标参数
+        raw_coordinate = request.POST.get("coordinate", None)
+        if not raw_coordinate:
+            pic_rect =(0, 0, int(image.size[0])-1, int(image.size[1])-1)
+            #pic_rect=(0,0,50,50)
+            print(pic_rect)
+        else:
+            real_coordinate = raw_coordinate.split("#", raw_coordinate.count('#'))
+            pic_rect =(int(real_coordinate[0]),int(real_coordinate[1]),int(real_coordinate[2]),int(real_coordinate[2]))
+
+        #图像前景分离
         pre_pic_path = background_subtraction.bg_sb(pic_path, pic_name, pic_rect)
+        #颜色模型
         dominant_color = color_predict.dominant_predict(pre_pic_path, pic_name)
         #分类模型鉴定逻辑
         model_path = "D:/2019Spring/Intel杯/数据集/Tangsancai/model_to_reformat/trained_model_horse_man_fake_plate.h5"

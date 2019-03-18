@@ -4,13 +4,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def bg_sb(pic_path, pic_name , pic_rect):
+    iterations_count = 1
 
     img = cv2.imread(pic_path)
+    if img.size[0] > 500:
+        iterations_count = 2
+
     mask = np.zeros((img.shape[:2]), np.uint8)
     bgdModel = np.zeros((1, 65), np.float64)
     fgdModel = np.zeros((1, 65), np.float64)
 
-    cv2.grabCut(img, mask, pic_rect, bgdModel, fgdModel, 1, cv2.GC_INIT_WITH_RECT)
+    cv2.grabCut(img, mask, pic_rect, bgdModel, fgdModel, iterations_count, cv2.GC_INIT_WITH_RECT)
 
     mask2 = np.where((mask == 2) | (mask == 0), 0, 1).astype('uint8')
     img = img * mask2[:, :, np.newaxis]
