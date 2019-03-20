@@ -4,8 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def bg_sb(pic_path, pic_name , pic_rect):
+    #基础迭代次数为两次
     iterations_count = 2
 
+    #若图片大小横坐标大于500，则增加迭代次数
     img = cv2.imread(pic_path)
     if img.shape[1] > 500:
         iterations_count = 4

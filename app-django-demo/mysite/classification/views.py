@@ -1,3 +1,4 @@
+import sys
 import os
 from . import img_loader as ld
 from PIL import Image
@@ -59,6 +60,7 @@ def upload_file(request):
         #分类模型鉴定逻辑
         model_path = "D:/2019Spring/Intel杯/数据集/Tangsancai/model_to_reformat/trained_model_horse_man_fake_plate.h5"
         result = predict(model_path, pic_path)
+
         #以下四个变量控制前端页面显示的结果
         is_horse = False
         is_man = False
