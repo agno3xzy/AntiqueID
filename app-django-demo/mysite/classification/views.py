@@ -1,5 +1,4 @@
 import os
-import sys
 from . import img_loader as ld
 from PIL import Image
 from django.http import HttpResponse
@@ -10,8 +9,6 @@ from keras.models import load_model
 sys.path.insert(0, 'mysite/classification/color_model')
 import color_predict
 import background_subtraction
-
-
 # Create your views here.
 size = 128,128
 

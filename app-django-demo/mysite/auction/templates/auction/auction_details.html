@@ -48,21 +48,21 @@
     <div class="container">
         <div class="row">
             <div class="col .col-xl-">
-                <img class="img-rounded" src="{{ src0 }}">
+                <img class="img-rounded" src="{{ src0.comm_img }}">
             </div>
             <div class="col .col-md-">
-                <h1>{{ name0 }}</h1>
+                <h1>{{ name0.comm_name }}</h1>
                 <br>
-                <form action="/auction/auction_details/" method="post">
+                <form action="/auction/details/" method="post">
                     <h2>商品起拍价</h2>
-                    {% if startprice %}
-                        <div class="alert alert-warning">{{ startprice0 }}</div>
+                    {% if startprice0.comm_startprice %}
+                        <div class="alert alert-warning">{{ startprice0.comm_startprice }}</div>
                     {% endif %}
 
                     {% csrf_token %}
                     <h2>目前最高报价</h2>
                     {% if userprice %}
-                        <div class="alert alert-warning">{{ sellprice0 }}</div>
+                        <div class="alert alert-warning">{{ sellprice0.comm_sellprice }}</div>
                     {% endif %}
 
                     {% csrf_token %}
@@ -70,6 +70,8 @@
                     <h2>请输入您的报价</h2>
                     <br>
                     {{ price_form }}
+                    <h6 style="color: #ac2925">{{ message }}</h6>
+                    <input hidden name="id" value="{{ commodity_id }}">
                     <input type="submit" value="提交报价">
                 </form>
 

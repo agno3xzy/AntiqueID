@@ -76,6 +76,19 @@
         <div class="container marketing">
 
             <div class="row">
+                {% for foo in comm_list %}
+                     <div class="col-lg-4">
+                        <img class="rounded-circle" src="{{ foo.comm_img }}" alt="Generic placeholder image" width="140" height="140">
+                        <h2>{{ foo.comm_name }}</h2>
+                        <p>目前最高竞拍价：￥{{ foo.comm_startprice  }}</p>
+                         <form action="auction_details/"  method="post" enctype="multipart/form-data">
+                             {% csrf_token %}
+                             <input hidden type="text" name = "id" value="{{ foo.comm_id }}">
+                             <p><input class="btn btn-secondary"  type="submit"  name="Submit" value="参与竞拍"/></p>
+                         </form>
+                    </div><!-- /.col-lg-4 -->
+                {% endfor %}
+        <!--
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="{{ src0 }}" alt="Generic placeholder image" width="140"
                          height="140">
@@ -84,21 +97,21 @@
 
 
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="{{ src1 }}" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>{{ name1 }}</h2>
                     <p>目前最高竞拍价：￥{{ price1  }}</p>
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="{{ src2 }}" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>{{ name2 }}</h2>
                     <p>目前最高竞拍价：￥{{ price2  }}</p>
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
 
                 <br/>
                 <div class="col-lg-4">
@@ -107,21 +120,21 @@
                     <h2>{{ name3 }}</h2>
                     <p>目前最高竞拍价：￥{{ price3  }}</p>
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="{{ src4 }}" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>{{ name4 }}</h2>
                     <p>目前最高竞拍价：￥{{ price4  }}</p>
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="{{ src5 }}" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>{{ name5 }}</h2>
                     <p>目前最高竞拍价：￥{{ price5  }}</p>
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
 
                 <br/>
                 <div class="col-lg-4">
@@ -130,21 +143,22 @@
                     <h2>{{ name6 }}</h2>
                     <p>目前最高竞拍价：￥{{ price6  }}</p>
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                    <img class="rounded-circle" src="{{ src7 }}" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>{{ name7 }}</h2>
                     <p>目前最高竞拍价：￥{{ price7  }}</p>
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="{{ src8 }}" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>{{ name8 }}</h2>
                     <p>目前最高竞拍价：￥{{ price8  }}</p>
                     <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
+            -->
             </div><!-- /.row -->
 
     </main>
