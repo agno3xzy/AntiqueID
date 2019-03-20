@@ -2,3 +2,8 @@
 body {
   padding-top: 3.5rem;
 }
+
+@font-face {
+  font-family: 'HuaKangOuYangXunTiW5-0-1';
+  src: url(../fonts/HuaKangOuYangXunTiW5-0-1.ttf);
+}

@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef463ee2-e759-4d3c-9e64-b54ce741ac7e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mysite/classification/color_model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/classification/color_predict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite/classification/static/classification/fonts/HuaKangOuYangXunTiW5-0-1.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/classification/color_model/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/classification/color_model/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/classification/static/classification/css/jumbotron.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/static/classification/css/jumbotron.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/classification/templates/classification/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/templates/classification/intro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/classification/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/classification/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,6 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/app_django_demo$background_subtraction.coverage" NAME="background_subtraction Coverage Results" MODIFIED="1551851378837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite/classification/color_model" />
     <SUITE FILE_PATH="coverage/app_django_demo$manage.coverage" NAME="manage Coverage Results" MODIFIED="1549789463732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysite" />
   </component>
   <component name="DatabaseView">
@@ -39,23 +49,27 @@
     <session id="-686715389">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="45" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.closed" value="61" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.24" value="2" />
-          <entry key="project.open.time.25" value="3" />
+          <entry key="project.open.time.25" value="4" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.27" value="3" />
-          <entry key="project.open.time.28" value="3" />
+          <entry key="project.open.time.28" value="6" />
           <entry key="project.open.time.29" value="4" />
           <entry key="project.open.time.30" value="2" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.32" value="1" />
-          <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.34" value="1" />
-          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.31" value="2" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.33" value="2" />
+          <entry key="project.open.time.34" value="3" />
+          <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="3" />
@@ -64,141 +78,151 @@
           <entry key="project.open.time.46" value="2" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.57" value="1" />
-          <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="46" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="31" />
-          <entry key="html" value="128" />
+          <entry key="PNG" value="2" />
+          <entry key="css" value="33" />
+          <entry key="html" value="147" />
           <entry key="jpeg" value="2" />
-          <entry key="jpg" value="13" />
+          <entry key="jpg" value="34" />
           <entry key="js" value="6" />
-          <entry key="png" value="11" />
+          <entry key="png" value="12" />
           <entry key="pstat" value="1" />
-          <entry key="py" value="259" />
+          <entry key="py" value="297" />
           <entry key="sql" value="1" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="31" />
-          <entry key="HTML" value="128" />
-          <entry key="Image" value="26" />
+          <entry key="CSS" value="33" />
+          <entry key="HTML" value="147" />
+          <entry key="Image" value="50" />
           <entry key="JavaScript" value="6" />
           <entry key="Profiler Session" value="1" />
-          <entry key="Python" value="259" />
+          <entry key="Python" value="297" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="268" />
-          <entry key="dummy" value="12" />
-          <entry key="html" value="2555" />
+          <entry key="Django Console" value="7" />
+          <entry key="css" value="306" />
+          <entry key="dummy" value="29" />
+          <entry key="html" value="3111" />
           <entry key="js" value="67" />
-          <entry key="py" value="4087" />
+          <entry key="py" value="5340" />
           <entry key="py@app-django-demo" value="5" />
-          <entry key="txt" value="346" />
+          <entry key="txt" value="482" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="268" />
+          <entry key="CSS" value="306" />
           <entry key="CommandLine" value="5" />
-          <entry key="HTML" value="2555" />
+          <entry key="HTML" value="3111" />
           <entry key="JavaScript" value="67" />
-          <entry key="PLAIN_TEXT" value="358" />
-          <entry key="Python" value="4087" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="970017526">
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="3" />
+          <entry key="PLAIN_TEXT" value="511" />
+          <entry key="Python" value="5347" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/intro.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/venv/AntiqueID/Lib/site-packages/django/utils/autoreload.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="224" selection-start-line="224" selection-end-line="224" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/venv/AntiqueID/Lib/site-packages/django/core/management/commands/runserver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/venv/AntiqueID/Lib/site-packages/django/core/management/base.py">
+        <entry file="file://$PROJECT_DIR$/mysite/classification/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="375" column="38" lean-forward="true" selection-start-line="375" selection-start-column="38" selection-end-line="375" selection-end-column="38" />
+            <state relative-caret-position="266">
+              <caret line="47" column="3" lean-forward="true" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/myadmin/static/myadmin/css/bootstrap-reboot.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/myadmin/static/myadmin/img/sancai.jpeg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/myadmin/static/myadmin/img/profile.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/myadmin/static/myadmin/css/jumbotron.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/myadmin/static/myadmin/css/flipcard.css">
+        <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/pyplot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="2216">
+              <caret line="2155" column="4" selection-start-line="2155" selection-start-column="4" selection-end-line="2155" selection-end-column="4" />
+              <folding>
+                <element signature="e#537#553#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/myadmin/urls.py">
+        <entry file="file://$PROJECT_DIR$/mysite/classification/img_loader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/core/handlers/exception.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/Software/Anaconda3/Lib/site-packages/PIL/Image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="2633" selection-start-line="2633" selection-end-line="2633" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/logout.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="72" column="88" selection-start-line="72" selection-start-column="88" selection-end-line="72" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/classification/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-266">
+              <caret line="43" column="95" selection-start-line="41" selection-start-column="22" selection-end-line="43" selection-end-column="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -237,6 +261,8 @@
       <find>肖专家</find>
       <find>朴专家</find>
       <find>孙艺</find>
+      <find>pre</find>
+      <find>model</find>
     </findStrings>
     <replaceStrings>
       <replace>managed = True</replace>
@@ -252,14 +278,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mysite/personal/templates/personal/home.html" />
-        <option value="$PROJECT_DIR$/mysite/personal/templates/personal/header.html" />
-        <option value="$PROJECT_DIR$/mysite/personal/static/personal/css/cover.css" />
-        <option value="$PROJECT_DIR$/mysite/myadmin/templates/myadmin/mallmanagement.html" />
-        <option value="$PROJECT_DIR$/mysite/myadmin/templates/myadmin/usermanagement.html" />
-        <option value="$PROJECT_DIR$/mysite/myadmin/static/myadmin/css/filpcard.css" />
-        <option value="$PROJECT_DIR$/mysite/myadmin/templates/myadmin/auctionmanagement.html" />
-        <option value="$PROJECT_DIR$/mysite/myadmin/templates/myadmin/intro.html" />
         <option value="$PROJECT_DIR$/mysite/myadmin/urls.py" />
         <option value="$PROJECT_DIR$/mysite/myadmin/views.py" />
         <option value="$PROJECT_DIR$/mysite/myadmin/static/myadmin/css/cover.css" />
@@ -279,7 +297,6 @@
         <option value="$PROJECT_DIR$/mysite/login/templates/login/massagepage.html" />
         <option value="$PROJECT_DIR$/mysite/login/templates/login/signin.html" />
         <option value="$PROJECT_DIR$/mysite/login/forms.py" />
-        <option value="$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html" />
         <option value="$PROJECT_DIR$/mysite/classification/templates/classification/header.html" />
         <option value="$PROJECT_DIR$/mysite/classification/templates/classification/logout.html" />
         <option value="$PROJECT_DIR$/mysite/login/views.py" />
@@ -290,19 +307,28 @@
         <option value="$PROJECT_DIR$/mysite/auction/urls.py" />
         <option value="$PROJECT_DIR$/mysite/auction/form.py" />
         <option value="$PROJECT_DIR$/mysite/auction/forms.py" />
-        <option value="$PROJECT_DIR$/mysite/auction/views.py" />
-        <option value="$PROJECT_DIR$/mysite/personal/templates/personal/bootstrap_cover.html" />
         <option value="$PROJECT_DIR$/mysite/expert/templates/expert/expert_choose.html" />
         <option value="$PROJECT_DIR$/mysite/classification/urls.py" />
         <option value="$PROJECT_DIR$/mysite/classification/img_loader.py" />
-        <option value="$PROJECT_DIR$/mysite/classification/color_model/train.py" />
         <option value="$PROJECT_DIR$/mysite/mysite/settings.py" />
         <option value="$PROJECT_DIR$/mysite/classification/color_model/test.py" />
         <option value="$PROJECT_DIR$/mysite/auction/templates/auction/auction_details.html" />
         <option value="$PROJECT_DIR$/mysite/workshop/templates/workshop/all_experts.html" />
         <option value="$PROJECT_DIR$/mysite/workshop/templates/workshop/frontpage.html" />
+        <option value="$PROJECT_DIR$/mysite/personal/templates/personal/bootstrap_cover.html" />
+        <option value="$PROJECT_DIR$/mysite/auction/views.py" />
+        <option value="$PROJECT_DIR$/mysite/classification/color_model/background_subtraction.py" />
+        <option value="$PROJECT_DIR$/mysite/classification/predict.py" />
+        <option value="$PROJECT_DIR$/mysite/classification/tests.py" />
+        <option value="$PROJECT_DIR$/mysite/classification/templates/classification/result.html" />
+        <option value="$PROJECT_DIR$/mysite/classification/static/classification/css/jumbotron.css" />
         <option value="$PROJECT_DIR$/mysite/classification/templates/classification/intro.html" />
+        <option value="$PROJECT_DIR$/mysite/classification/color_model/train.py" />
+        <option value="$PROJECT_DIR$/mysite/classification/train.py" />
+        <option value="$PROJECT_DIR$/mysite/classification/color_model/color_predict.py" />
+        <option value="$PROJECT_DIR$/mysite/classification/color_predict.py" />
         <option value="$PROJECT_DIR$/mysite/classification/views.py" />
+        <option value="$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html" />
       </list>
     </option>
   </component>
@@ -318,9 +344,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="132" />
-    <option name="width" value="1615" />
-    <option name="height" value="1083" />
+    <option name="x" value="585" />
+    <option name="y" value="26" />
+    <option name="width" value="1860" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -330,6 +357,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="app-django-demo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="app-django-demo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="mysite" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="app-django-demo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="mysite" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="classification" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -359,22 +408,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="app-django-demo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="app-django-demo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="mysite" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,389 +417,22 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media\auction" />
-      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media" />
-      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media\background" />
-      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media\avatar" />
-      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\myadmin\static\myadmin\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\auction\static" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\myadmin\static\myadmin\css" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\myadmin\static\myadmin\img" />
       <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\myadmin\static\myadmin" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/AntiqueID.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../README.md</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/app-django-demo.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/admin.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/models.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/urls.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/views.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/migrations/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/templates/classification/header.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/templates/classification/intro.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/views.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/static/expert/css/album.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/static/expert/css/carousel.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/static/expert/js/vendor/holder.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/templates/expert/expert_choose.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/templates/expert/expert_comment.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/templates/expert/expert_comment_detail.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/templates/expert/expert_detail.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/__pycache__/admin.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/__pycache__/models.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/__pycache__/urls.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/__pycache__/views.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/admin.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/migrations/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/models.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/templates/login/signin.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/templates/login/signup.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/views.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/myadmin/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/myadmin/__pycache__/admin.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/myadmin/__pycache__/models.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/myadmin/__pycache__/urls.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/myadmin/__pycache__/views.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/myadmin/migrations/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/mysite/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/mysite/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/mysite/__pycache__/settings.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/mysite/__pycache__/urls.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/mysite/__pycache__/wsgi.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/mysite/settings.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/mysite/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/personal/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/personal/__pycache__/admin.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/personal/__pycache__/models.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/personal/__pycache__/urls.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/personal/__pycache__/views.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/personal/migrations/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/personal/templates/personal/bootstrap_cover.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/__pycache__/admin.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/__pycache__/models.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/__pycache__/urls.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/__pycache__/views.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/migrations/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/templates/workshop/frontpage.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/views.py</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/dataSources.local.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/dataSources.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/dataSources/82cba652-af79-447c-8939-125139d4c20e.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/dataSources/82cba652-af79-447c-8939-125139d4c20e/storage_v2/_src_/schema/main.uQUzAA.meta</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/dataSources/bac44eef-0f70-49da-9090-f61c12ef8d13.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/dataSources/bac44eef-0f70-49da-9090-f61c12ef8d13/storage_v2/_src_/schema/main.uQUzAA.meta</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/encodings.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/other.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/admin.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/apps.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/forms.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/migrations/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/models.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/album.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-grid.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-grid.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-grid.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-grid.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-reboot.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-reboot.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-reboot.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-reboot.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-theme.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-theme.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-theme.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap-theme.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/bootstrap.min.css.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/carousel.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/cover.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/jumbotron.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/css/style2.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.eot</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/fonts/glyphicons-halflings-regular.woff2</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.bundle.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.bundle.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.bundle.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.bundle.min.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/bootstrap.min.js.map</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/npm.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/quantize.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/vendor/holder.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/static/auction/js/vendor/popper.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/templates/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/templates/auction/auction.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/templates/auction/auction_details.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/templates/auction/example0.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/tests.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/auction/views.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/__init__.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/admin.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/img_loader.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/models.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/urls.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/__pycache__/views.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/color_model/code.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/color_model/profile.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/color_model/test.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/color_model/train.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/img_loader.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/migrations/__pycache__/__init__.cpython-35.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/templates/classification/logout.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/templates/classification/result.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/__pycache__/admin.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/__pycache__/models.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/__pycache__/urls.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/__pycache__/views.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/admin.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/apps.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/migrations/__init__.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/migrations/__pycache__/__init__.cpython-36.pyc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/models.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/tests.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/views.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/forms.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/migrations/0001_initial.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/login/templates/login/massagepage.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/auction/auction1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/auction/auction2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/auction/auction3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/auction/auction4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/auction/auction5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/auction/auction6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/favicon.ico</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/banner1.PNG</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product10.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product11.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product12.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product13.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product14.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product15.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product16.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product17.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product18.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product7.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product8.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/product9.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/sancai_haibao.PNG</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/sannder2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/img/sancai_product/shop-banner-1.PNG</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/s583468eaf298f.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/s58bcfc20c5076.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/shop/shop1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/shop/shop2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/shop/shop3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/shop/shop4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/shop/shop5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/shop/shop6.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/upload/鉴宝馆页面-专家收藏页面.PNG</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/workshop_avatar/1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/workshop_avatar/2.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/workshop_avatar/3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/workshop_avatar/4.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/animate.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/bootstrap-grid.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/bootstrap.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/carousel.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/easyzoom.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/font-awesome.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/jquery-ui.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/jumbotron.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/linearicons.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/meanmenu.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/nice-select.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/owl.carousel.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/responsive.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/slick.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/css/venobox.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/bootstrap.bundle.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/bootstrap.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/easyzoom.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/imagesloaded.pkgd.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/isotope.pkgd.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/jquery.countdown.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/jquery.counterup.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/jquery.meanmenu.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/jquery.nice-select.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/jquery.scrollUp.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/main.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/owl.carousel.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/plugins.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/popper.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/slick.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/vendor/holder.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/vendor/jquery-1.12.4.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/vendor/modernizr-2.8.3.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/vendor/popper.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/venobox.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/waypoints.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/static/shop/js/wow.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/templates/shop/shop.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/shop/views.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/templates/workshop/all_comments.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/workshop/templates/workshop/all_experts.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/Activate.ps1</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/activate</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/activate.bat</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/deactivate.bat</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/python.exe</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/python3.dll</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/python36.dll</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/python36_d.dll</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/python3_d.dll</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/python_d.exe</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/Scripts/pythonw.exe</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../venv/pyvenv.cfg</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/color_thief/profile.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/classification/color_thief/test.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/expert/migrations/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mysite/media/avatar2.jpg</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\classification" />
+      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\classification\color_model" />
+      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\classification\static\classification\fonts" />
+      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\classification\model" />
+      <recent name="C:\Users\agno3\PycharmProjects\PotteryGenes\AntiqueID\app-django-demo\mysite\media\classification" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -803,6 +469,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="background_subtraction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="app-django-demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mysite/classification/color_model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mysite/classification/color_model/background_subtraction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python">
       <module name="app-django-demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -819,6 +507,28 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mysite/manage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="app-django-demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mysite/classification" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mysite/classification/predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -855,7 +565,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="mysite.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\vanit\venv\AntiqueID\Scripts\python.exe" />
+      <option name="SDK_HOME" value="E:\Software\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -898,9 +608,13 @@
       <item itemvalue="Django server.Unnamed" />
       <item itemvalue="Python.manage" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.background_subtraction" />
+      <item itemvalue="Python.predict" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.predict" />
+        <item itemvalue="Python.background_subtraction" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -993,7 +707,70 @@
       <option name="project" value="LOCAL" />
       <updated>1551171250171</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update upload function">
+      <created>1551171507560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551171507560</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update upload function">
+      <created>1551171657273</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551171657273</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update classification page">
+      <created>1551182934472</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551182934472</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update classification page">
+      <created>1551190987937</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551190987937</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update auction page">
+      <created>1551191012591</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551191012591</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update color algortihm">
+      <created>1551259508997</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1551259508998</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update model algortihm">
+      <created>1551410555614</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1551410555614</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update predict algorithmn in classification/views.py">
+      <created>1551881277585</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1551881277585</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update predict algorithmn in classification/views.py and result.html">
+      <created>1551946897240</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1551946897240</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1006,33 +783,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
-    <editor active="true" />
+    <frame x="55" y="-7" width="1488" height="878" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14770459" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1587517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4972863" weight="0.31812257" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6322355" visible="true" weight="0.35146022" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6329715" visible="true" weight="0.35202086" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932158" weight="0.30989584" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3294271" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4979647" weight="0.3285528" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32724902" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.36776447" side_tool="true" weight="0.35146022" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.42469472" side_tool="true" weight="0.63363755" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.5753053" weight="0.31160367" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.7455902" weight="0.3767927" />
       <window_info anchor="bottom" id="manage.py@app-django-demo" order="13" weight="0.32985657" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32885906" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" sideWeight="0.48490945" visible="true" weight="0.01696065" />
-      <window_info anchor="right" x="0" y="0" width="322" height="678" id="Documentation" order="5" sideWeight="0.5150905" side_tool="true" visible="true" weight="0.01696065" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.94025606" visible="true" weight="0.04613297" />
+      <window_info anchor="right" id="Database" order="4" sideWeight="0.47239265" weight="0.019561816" />
+      <window_info anchor="right" x="0" y="0" width="322" height="678" id="Documentation" order="5" sideWeight="0.059743956" side_tool="true" visible="true" weight="0.04613297" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
     </layout>
   </component>
@@ -1046,14 +821,20 @@
     <MESSAGE value="Add page ref" />
     <MESSAGE value="add databese in login page" />
     <MESSAGE value="use session and and an logout function in classification page" />
-    <MESSAGE value="update auction page" />
     <MESSAGE value="update secret key" />
     <MESSAGE value="auction update forms" />
     <MESSAGE value="update shop page by sjy" />
     <MESSAGE value="update expert name" />
     <MESSAGE value="update workshop page" />
     <MESSAGE value="fix upload function" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix upload function" />
+    <MESSAGE value="update upload function" />
+    <MESSAGE value="update classification page" />
+    <MESSAGE value="update auction page" />
+    <MESSAGE value="update color algortihm" />
+    <MESSAGE value="update model algortihm" />
+    <MESSAGE value="update predict algorithmn in classification/views.py" />
+    <MESSAGE value="update predict algorithmn in classification/views.py and result.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="update predict algorithmn in classification/views.py and result.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1067,6 +848,49 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mysite/login/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="98" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/folder.jpg" />
+    <entry file="file://$PROJECT_DIR$/mysite/auction/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/auction/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/auction/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1074,151 +898,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/path.py" />
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/utils/autoreload.py" />
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/__init__.py" />
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/colorbar.py" />
-    <entry file="file://$PROJECT_DIR$/mysite/shop/templates/shop/shop.html">
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/path.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="107">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/_layoutbox.py" />
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/gridspec.py" />
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/utils/autoreload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1539" />
+      </provider>
+    </entry>
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/colorbar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/shop/templates/shop/shop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="1246" column="8" selection-start-line="1246" selection-start-column="8" selection-end-line="1246" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/_layoutbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/gridspec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/personal/templates/personal/home.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/personal/templates/personal/header.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/personal/templates/personal/bootstrap_cover.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="57" column="88" selection-start-line="57" selection-start-column="88" selection-end-line="57" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/expert/templates/expert/expert_choose.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/expert/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/result.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/color_model/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/color_model/code.jpg">
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/gf_ybx_34.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/color_model/profile.jpg">
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/Cover.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/color_model/train.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/auction/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/auction/templates/auction/auction.html">
+    <entry file="file://E:/Software/Anaconda3/envs/tensorflow/Lib/site-packages/sklearn/dummy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="79" column="38" selection-start-line="78" selection-start-column="20" selection-end-line="79" selection-end-column="38" />
+        <state relative-caret-position="4256">
+          <caret line="238" column="8" selection-start-line="238" selection-start-column="8" selection-end-line="238" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/auction/templates/auction/auction_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/workshop/templates/workshop/all_comments.html">
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/basic.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/workshop/templates/workshop/frontpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/__init__.py">
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/color_mind.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/admin.py">
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/header.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/manage.py">
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/home.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/models.py">
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/keras/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/workshop/templates/workshop/header.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/workshop/templates/workshop/all_experts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/login/templates/login/signin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/logout.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="43" column="95" selection-start-line="41" selection-start-column="22" selection-end-line="43" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/intro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="72" column="88" selection-start-line="72" selection-start-column="88" selection-end-line="72" selection-end-column="88" />
+        <state relative-caret-position="133">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1229,9 +987,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/PIL/Image.py" />
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/core/handlers/exception.py" />
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/core/handlers/base.py" />
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/sancai_background.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/logout.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/expert/templates/expert/expert_choose.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/static/classification/css/style2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2793" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/static/classification/css/jumbotron.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/templates/classification/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="112" column="38" lean-forward="true" selection-start-line="103" selection-start-column="15" selection-end-line="112" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/color_model/code.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/color_model/profile.jpg" />
+    <entry file="file://$PROJECT_DIR$/mysite/classification/color_model/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/1-1Q029120153S7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/1e6d0ad5d99630bd5d94ed87d7bebb95.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/3_42_71633_600_800.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/3_97_72808_600_800.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/3_286_72692_600_800.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/classification/img_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -1239,63 +1049,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/pyplot.py" />
-    <entry file="file://$PROJECT_DIR$/mysite/classification/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="47" column="3" lean-forward="true" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/myadmin/static/myadmin/img/sancai_background.jpg">
+    <entry file="file://$PROJECT_DIR$/mysite/media/upload/163.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/intro.html">
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/PIL/Image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        <state relative-caret-position="433">
+          <caret line="2633" selection-start-line="2633" selection-end-line="2633" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/venv/AntiqueID/Lib/site-packages/django/utils/autoreload.py">
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/core/handlers/exception.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="224" selection-start-line="224" selection-end-line="224" />
+        <state relative-caret-position="361">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/myadmin/templates/myadmin/expertapply.html">
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2166">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="409">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/classification/img_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Software/Anaconda3/Lib/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2216">
+          <caret line="2155" column="4" selection-start-line="2155" selection-start-column="4" selection-end-line="2155" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#537#553#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/venv/AntiqueID/Lib/site-packages/django/core/management/commands/runserver.py">
+    <entry file="file://$PROJECT_DIR$/mysite/classification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/myadmin/static/myadmin/css/style2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="11" selection-start-column="20" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venv/AntiqueID/Lib/site-packages/django/core/management/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="375" column="38" lean-forward="true" selection-start-line="375" selection-start-column="38" selection-end-line="375" selection-end-column="38" />
+        <state relative-caret-position="266">
+          <caret line="47" column="3" lean-forward="true" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
