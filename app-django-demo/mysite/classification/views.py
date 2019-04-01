@@ -40,6 +40,7 @@ def upload_file(request):
 
         pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', myFile.name)
         pic_path = pic_path.replace('\\', '/')
+        print(pic_path)
         image.save(pic_path)
         pic_name = myFile.name
 
@@ -47,7 +48,6 @@ def upload_file(request):
         raw_coordinate = request.POST.get("coordinate", None)
         if not raw_coordinate:
             pic_rect =(0, 0, int(image.size[0])-1, int(image.size[1])-1)
-            #pic_rect=(0,0,50,50)
             print(pic_rect)
         else:
             real_coordinate = raw_coordinate.split("#", raw_coordinate.count('#'))
