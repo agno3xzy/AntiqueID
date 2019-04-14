@@ -52,6 +52,14 @@
           </li>
         </ul>
       </div>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                {% if request.session.is_login %}
+                    <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
+                    <li><a href="/classification/logout/">登出</a></li>
+                {% endif %}
+            </ul>
+        </div>
     </nav>
     </header>
     <main role="main" >
@@ -59,9 +67,9 @@
         <div class="row featurette" style="margin-top: -4%;margin-bottom: -4%">
           <div class="col-md-7 order-md-2" style="margin-top: -6%; margin-left: -10%;">
             <div class="container">
-                <h2 class="featurette-heading">X专家</h2>
+                <h2 class="featurette-heading">{{ Expert.expert_name }}</h2>
                 <br />
-                <p class="lead">朴XX，XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                <p class="lead">{{ Expert.expert_info }}</p>
             <p>
                 <a href="#" class="btn btn-primary my-2">邀请评价</a>
                 <a href="#" class="btn btn-secondary my-2">咨询古玩</a>
@@ -69,7 +77,7 @@
             </div>
           </div>
           <div class="col-md-5 order-md-1" style="margin-left:2.5%" >
-            <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="/avatar1.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="{{ Expert.expert_avatar }}" alt="Generic placeholder image">
           </div>
         </div>
       </section>
@@ -80,6 +88,28 @@
         <div class="container">
 
           <div class="row">
+              {% for foo in CCC %}
+                  <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="{{ foo.commodity_img }}" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">{{ foo.expert_comment }}</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                              <form action="/expert/comment_detail/"  method="post" enctype="multipart/form-data">
+                                <div class="btn-group">
+                                    {% csrf_token %}
+                                    <input hidden type="text" name = "comm_id" value="{{ foo.commodity_id }}">
+                                    <input hidden type="text" name = "expert_id" value="{{ Expert.expert_id }}">
+                                    <p><input class="btn btn-sm btn-outline-secondary"  type="submit"  name="Submit" value="详细信息"/></p>
+                                </div>
+                              </form>
+                            <small class="text-muted">{{ foo.Time }}</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              {% endfor %}
+              <!--
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" src="/example0.png" alt="Card image cap">
@@ -206,6 +236,7 @@
                 </div>
               </div>
             </div>
+            -->
           </div>
         </div>
       </div>

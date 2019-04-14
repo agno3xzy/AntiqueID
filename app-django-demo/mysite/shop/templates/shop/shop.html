@@ -64,6 +64,14 @@
                     </li>
                 </ul>
             </div>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                {% if request.session.is_login %}
+                    <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
+                    <li><a href="/classification/logout/">登出</a></li>
+                {% endif %}
+            </ul>
+        </div>
         </nav>
     </header>
 
@@ -73,7 +81,22 @@
         <br/>
 
         <div class="container marketing">
-
+             <div class="row">
+                 {% for foo in comm_list %}
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="{{ foo.comm_img }}" alt="Generic placeholder image" width="140"
+                         height="140">
+                    <h2>{{ foo.comm_name }}</h2>
+                    <p>￥{{ foo.comm_sellprice }}</p>
+                    <form action="/expert/comment/"  method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input hidden type="text" name = "id" value="{{ foo.comm_id }}">
+                        <p><input class="btn btn-secondary"  type="submit"  name="Submit" value="立即购买&raquo;"/></p>
+                    </form>
+                </div>
+                 {% endfor %}
+             </div>
+        <!--
             <div class="row">
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="/shop/shop1.jpg" alt="Generic placeholder image" width="140"
@@ -81,21 +104,21 @@
                     <h2>三彩兽面镇墓兽</h2>
                     <p>￥39000.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="/shop/shop2.jpg" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>三彩骑马男俑</h2>
                     <p>￥8000.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="/shop/shop3.jpg" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>三彩高胡帽男牵马俑</h2>
                     <p>￥88000.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
 
                 <br/>
                 <div class="col-lg-4">
@@ -104,21 +127,21 @@
                     <h2>三彩蓝釉白斑马</h2>
                     <p>￥47000.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="/shop/shop5.jpg" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>三彩骑马女俑</h2>
                     <p>￥28000.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="/shop/shop6.jpg" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>三彩女坐俑</h2>
                     <p>￥59900.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
 
                 <br/>
                 <div class="col-lg-4">
@@ -127,22 +150,23 @@
                     <h2>三彩兽面镇墓兽</h2>
                     <p>￥39000.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                    <img class="rounded-circle" src="/shop/shop2.jpg" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>三彩骑马男俑</h2>
                     <p>￥8000.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="/shop/shop3.jpg" alt="Generic placeholder image" width="140"
                          height="140">
                     <h2>三彩高胡帽男牵马俑</h2>
                     <p>￥88000.00</p>
                     <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
+                </div>
+            </div>
+            -->
 
     </main>
 </div>

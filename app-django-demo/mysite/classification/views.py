@@ -58,7 +58,7 @@ def upload_file(request):
         #颜色模型
         dominant_color = color_predict.dominant_predict(pre_pic_path, pic_name)
         #分类模型鉴定逻辑
-        model_path = "D:/2019Spring/Intel杯/数据集/Tangsancai/model_to_reformat/trained_model_horse_man_fake_plate.h5"
+        model_path = "C:/Users/vanit/PycharmProjects/AntiqueID/trained_model_horse_man_fake_plate.h5"
         result = predict(model_path, pic_path)
 
         #以下四个变量控制前端页面显示的结果

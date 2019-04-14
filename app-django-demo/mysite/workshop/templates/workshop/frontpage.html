@@ -52,6 +52,14 @@
           </li>
         </ul>
       </div>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                {% if request.session.is_login %}
+                    <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
+                    <li><a href="/classification/logout/">登出</a></li>
+                {% endif %}
+            </ul>
+        </div>
     </nav>
     </header>
     <main role="main" >
@@ -59,9 +67,9 @@
         <div class="row featurette" style="margin-top: -4%;margin-bottom: -4%">
           <div class="col-md-7 order-md-2" style="margin-top: -6%; margin-left: -10%;">
             <div class="container">
-                <h2 class="featurette-heading">三彩知因0号用户</h2>
+                <h2 class="featurette-heading">{{ user.user_name }}</h2>
                 <br />
-                <p class="lead">古玩老手</p>
+                <p class="lead">{{ user.user_info }}</p>
             <p>
                 <a href="#" class="btn btn-primary my-2">修改个人信息</a>
                 <a href="#" class="btn btn-secondary my-2">申请成为专家</a>
@@ -78,138 +86,36 @@
           <h1 class="jumbotron-heading" style="text-align: center">商品收藏</h1>
           <br />
         <div class="container">
-
           <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+              {% for comm in Commodity_collection_display %}
               <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
+                <img class="card-img-top" src="{{ comm.comm_img }}" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                  <p class="card-text">{{ comm.comm_info }}</p>
                   <div class="d-flex justify-content-between align-items-center">
+                    <form action="/expert/comment/"  method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input hidden type="text" name = "id" value="{{ comm.comm_id }}">
+                        <p><input class="btn btn-sm btn-outline-secondary"  type="submit"  name="Submit" value="详细信息"/></p>
+                    </form><!--
                     <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
+                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button"></a></p>
                     </div>
-                    <small class="text-muted">2018.12.16</small>
+                    <small class="text-muted">2018.12.16</small>-->
                   </div>
                 </div>
               </div>
             </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="/example0.png" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+              {% endfor %}
           </div>
         </div>
             <div class="btn-group" style="margin-left: 50%">
-                <p><a class="btn btn-primary my-2" href="/workshop/allcomment/" role="button">全部</a></p>
+                <form action="/workshop/allcomment/"  method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input hidden type="text" name = "user_id" value="{{ user.user_id }}">
+                    <p><input class="btn btn-primary my-2"  type="submit"  name="Submit" value="全部"/></p>
+                </form>
             </div>
       </div>
 
@@ -217,122 +123,38 @@
           <h1 class="jumbotron-heading" style="text-align: center">专家收藏</h1>
           <br />
         <div class="container">
-
           <div class="row">
-
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-body text-center">
-                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>X专家</h2>
-                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-body text-center">
-                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>X专家</h2>
-                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+              {% for expert in Expert_collection_display %}
               <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <div class="card-body text-center">
-                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>X专家</h2>
-                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
+                    <img class="rounded-circle" src="{{ expert.expert_avatar }}" alt="Generic placeholder image" width="140" height="140">
+                    <h2>{{ expert.expert_name }}</h2>
+                    <p class="card-text">{{ expert.expert_info }}</p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
+                    <form action="/expert/detail/"  method="post" enctype="multipart/form-data">
+                        <div class="btn-group">
+                            {% csrf_token %}
+                            <input hidden type="text" name = "expert_id" value="{{ expert.expert_id }}">
+                            <p><input class="btn btn-sm btn-outline-secondary"  type="submit"  name="Submit" value="详细信息&raquo;"/></p>
+                        </div>
+                    </form>
                     <div class="btn-group">
                         <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
                     </div>
-                    <small class="text-muted">2018.12.16</small>
                   </div>
                 </div>
               </div>
             </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-body text-center">
-                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>X专家</h2>
-                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-body text-center">
-                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>X专家</h2>
-                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <div class="card-body text-center">
-                    <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>X专家</h2>
-                    <p class="card-text">XX年XX月XX日出生，毕业于XX大学考古系，XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>
-                    </div>
-                    <div class="btn-group">
-                        <p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">咨询专家</a></p>
-                    </div>
-                    <small class="text-muted">2018.12.16</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+              {% endfor %}
           </div>
         </div>
             <div class="btn-group" style="margin-left: 50%">
-                <p><a class="btn btn-primary my-2" href="/workshop/allexpert/" role="button">全部</a></p>
+                <form action="/workshop/allexpert/"  method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input hidden type="text" name = "user_id" value="{{ user.user_id }}">
+                    <p><input class="btn btn-primary my-2"  type="submit"  name="Submit" value="全部"/></p>
+                </form>
             </div>
       </div>
 

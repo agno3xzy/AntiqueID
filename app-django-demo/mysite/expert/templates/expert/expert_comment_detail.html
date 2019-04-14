@@ -52,6 +52,14 @@
           </li>
         </ul>
       </div>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                {% if request.session.is_login %}
+                    <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
+                    <li><a href="/classification/logout/">登出</a></li>
+                {% endif %}
+            </ul>
+        </div>
     </nav>
     </header>
     <main role="main" >
@@ -63,17 +71,24 @@
         <div class="row featurette" style="margin-bottom: -2.5%">
           <div class="col-md-7 order-md-2" style="margin-left: -5%">
             <div class="container">
-                <h2 class="featurette-heading">三彩马</h2>
+                <h2 class="featurette-heading">{{ Commodity.comm_name }}</h2>
                 <br />
-                <p class="lead">XX年XX月XX日于XX墓出土，色彩鲜艳，体型优美</p>
+                <p class="lead">{{ Commodity.comm_info }}</p>
+                <p>￥{{ Commodity.comm_sellprice }}</p>
             <p>
-                <a class="btn btn-primary my-2" href="/expert/comment/" role="button">立即购买</a>
-                <a href="#" class="btn btn-secondary my-2">联系卖家</a>
+                <form action="/expert/comment/"  method="post" enctype="multipart/form-data">
+                    <div class="btn-group">
+                        {% csrf_token %}
+                        <input hidden type="text" name = "id" value="{{ Commodity.comm_id }}">
+                        <input class="btn btn-primary my-2"  type="submit"  name="Submit" value="立即购买"/>
+                        <a href="#" class="btn btn-secondary my-2" style="margin-left: 10px">联系卖家</a>
+                    </div>
+                </form>
             </p>
             </div>
           </div>
           <div class="col-md-5 order-md-1" style="margin-left: 3%">
-            <img class="featurette-image img-fluid mx-auto" src="/example0.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="{{ Commodity.comm_img }}" alt="Generic placeholder image">
           </div>
         </div>
       </section>
@@ -84,9 +99,9 @@
             <div class="row featurette" style="margin-bottom: -4%">
               <div class="col-md-7 order-md-2" style="margin-top: -6%; margin-left: -10%;">
                 <div class="container">
-                    <h1 class="featurette-heading">X专家</h1>
+                    <h1 class="featurette-heading">{{ Expert.expert_name }}</h1>
                     <br />
-                    <p class="lead">这具三彩马大致是于盛唐时期制作的唐三彩，颜色鲜艳，体态优美，极具收藏价值</p>
+                    <p class="lead">{{ Expert_Comment.expert_comment }}</p>
                 <p>
                     <a href="#" class="btn btn-primary my-2">邀请评价</a>
                     <a href="#" class="btn btn-secondary my-2">咨询古玩</a>
@@ -94,7 +109,7 @@
                 </div>
               </div>
               <div class="col-md-5 order-md-1 text-center" style="margin-left:2.5%" >
-                <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="/avatar1.png" alt="Generic placeholder image">
+                <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="{{ Expert.expert_avatar }}" alt="Generic placeholder image">
               </div>
             </div>
           </section>

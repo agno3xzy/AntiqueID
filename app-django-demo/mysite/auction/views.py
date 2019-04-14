@@ -13,7 +13,7 @@ def auction(request):
     name_list = models.Commodity.objects.filter(comm_startprice__gt = 0).values_list('comm_name').order_by('comm_id')
 
     comm_num = models.Commodity.objects.filter(comm_startprice__gt = 0).count()
-    comm_list = models.Commodity.objects.filter(comm_startprice__gt = 0).order_by('comm_id')
+    comm_list = models.Commodity.objects.filter(comm_startprice__gt = 0).filter(comm_con = 0).order_by('comm_id')
 
     '''
     for id in commid_max:
@@ -21,9 +21,6 @@ def auction(request):
         startprice = models.Commidity.objects.filter(comm_id=id).value('comm_startprice')
         sellprice = models.Commidity.objects.filter(comm_id=id).value('comm_sellprice')
     '''
-
-
-
     return render(request,'auction/auction.html', locals())
 
 def details(request):

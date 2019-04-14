@@ -82,6 +82,8 @@ class ExpertHasCommodity(models.Model):
     expert_mainpage_main = models.ForeignKey(Expert, models.DO_NOTHING, related_name='mianpage_in_expertHasComm')
     commodity_comm = models.ForeignKey(Commodity, models.DO_NOTHING)
     expert_info = models.TextField(blank=True, null=True)
+    expert_comment = models.TextField(blank=True, null=True)
+    expert_comment_time = models.DateField()
 
     class Meta:
         managed = False

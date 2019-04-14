@@ -52,6 +52,14 @@
           </li>
         </ul>
       </div>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                {% if request.session.is_login %}
+                    <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
+                    <li><a href="/classification/logout/">登出</a></li>
+                {% endif %}
+            </ul>
+        </div>
     </nav>
     </header>
     <main role="main" >
@@ -60,6 +68,60 @@
             <h1 class="featurette-heading">商品信息</h1>
             <br /><br />
           </div>
+
+          <div class="row featurette" style="margin-bottom: -2.5%">
+          <div class="col-md-7 order-md-2" style="margin-left: -5%">
+            <div class="container">
+                <h2 class="featurette-heading">{{ Commodity.comm_name }}</h2>
+                <br />
+                <p class="lead">{{ Commodity.comm_info }}</p>
+                <p>￥{{ Commodity.comm_sellprice }}</p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">立即购买</a>
+                <a href="#" class="btn btn-secondary my-2">联系卖家</a>
+            </p>
+            </div>
+          </div>
+          <div class="col-md-5 order-md-1" style="margin-left: 3%">
+            <img class="featurette-image img-fluid mx-auto" src="{{ Commodity.comm_img }}" alt="Generic placeholder image">
+          </div>
+        </div>
+      </section>
+
+        <div class="album py-5 bg-light" style="background-image: url('/bk_test.jpg'); background-size: cover">
+          <h1 class="jumbotron-heading" style="text-align: center">专家评价</h1>
+          <br />
+        <div class="container">
+
+          <div class="row">
+            {%  for foo in EEE %}
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <img class="rounded-circle" src="{{ foo.Expert_avatar }}" alt="Generic placeholder image" width="140" height="140">
+                    <h2>{{ foo.Expert_name }}</h2>
+                    <p class="card-text">{{ foo.Expert_comment }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <form action="/expert/comment_detail/"  method="post" enctype="multipart/form-data">
+                        <div class="btn-group">
+                            {% csrf_token %}
+                            <input hidden type="text" name = "comm_id" value="{{ Commodity.comm_id }}">
+                            <input hidden type="text" name = "expert_id" value="{{ foo.Expert_id }}">
+                            <p><input class="btn btn-sm btn-outline-secondary"  type="submit"  name="Submit" value="详细信息"/></p>
+                            <!--<p><a class="btn btn-sm btn-outline-secondary" href="/expert/comment_detail/" role="button">详细信息</a></p>-->
+                        </div>
+                    </form>
+                    <small class="text-muted">{{ foo.Time }}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+              {% endfor %}
+          </div>
+
+        </div>
+        </div>
+          <!--
         <div class="row featurette" style="margin-bottom: -2.5%">
           <div class="col-md-7 order-md-2" style="margin-left: -5%">
             <div class="container">
@@ -224,7 +286,7 @@
           </div>
         </div>
       </div>
-
+-->
     </main>
 
     <!-- Bootstrap core JavaScript
