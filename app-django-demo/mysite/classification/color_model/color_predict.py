@@ -13,3 +13,14 @@ def dominant_predict(pic_path, pic_name):
     color_path = color_path.replace('\\', '/')
     dominant_img.save(color_path)
     return dominant_color
+
+def feature_color(pic_path):
+    color_thief = ColorThief(pic_path)
+    feature_color = color_thief.get_palette(3,1)
+    hex_rgb_list = []
+    for rgb in feature_color:
+        hex_rgb_list.append(rgb_to_hex(rgb))
+    return hex_rgb_list
+
+def rgb_to_hex(rgb):
+    return '#%02x%02x%02x' % rgb

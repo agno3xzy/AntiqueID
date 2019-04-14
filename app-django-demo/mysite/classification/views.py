@@ -1,5 +1,6 @@
 import sys
 import os
+import time
 from . import img_loader as ld
 from PIL import Image
 from django.http import HttpResponse
@@ -37,12 +38,12 @@ def upload_file(request):
         if not myFile:
             return HttpResponse("no files for upload!")
         image = Image.open(myFile)
-
-        pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', myFile.name)
+        pic_name = str(int(time.time())) + '.png'
+        pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', pic_name)
         pic_path = pic_path.replace('\\', '/')
         print(pic_path)
         image.save(pic_path)
-        pic_name = myFile.name
+        #pic_name = myFile.name
 
         #处理用户输入的坐标参数
         raw_coordinate = request.POST.get("coordinate", None)
@@ -55,10 +56,11 @@ def upload_file(request):
 
         #图像前景分离
         pre_pic_path = background_subtraction.bg_sb(pic_path, pic_name, pic_rect)
-        #颜色模型
-        dominant_color = color_predict.dominant_predict(pre_pic_path, pic_name)
+        #颜色模型:以十六进制字符串的形式返回语义分割后各个部分的rgb值
+        #dominant_color = color_predict.dominant_predict(pre_pic_path, pic_name)
+        feature_color = color_predict.feature_color(pre_pic_path)
         #分类模型鉴定逻辑
-        model_path = "C:/Users/vanit/PycharmProjects/AntiqueID/trained_model_horse_man_fake_plate.h5"
+        model_path = "D:/2019Spring/Intel杯/model/trained_model_horse_man_fake_plate.h5"
         result = predict(model_path, pic_path)
 
         #以下四个变量控制前端页面显示的结果
@@ -76,7 +78,7 @@ def upload_file(request):
             is_plate = True
 
 
-        return render(request, "classification/intro2.html", locals())
+        return render(request, "classification/report.html", locals())
 
 
 def predict(model_path, pic_path):
@@ -85,7 +87,6 @@ def predict(model_path, pic_path):
     p = ld.transform_pic(pic_path, size)
     p = p.reshape([1,128,128,3])
     return model.predict(p)
-        #model.predict_proba(p)
 
-
-
+def report(request):
+    return render(request, "classification/report.html")

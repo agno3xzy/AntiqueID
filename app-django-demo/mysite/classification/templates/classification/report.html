@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function displayColor(eleid, style) {
+            var c = document.getElementById(eleid);
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = style;
+            ctx.fillRect(0, 0, 100, 100);
+        }
+    </script>
+
+    <title>鉴定报告</title>
+</head>
+<body style="background-image: url('/bk_test.jpg');background-size: cover;">
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="color: #533f03">三彩知因</a>
+    </li>
+    <li class="nav-item"><a class="nav-link" href='/'>主页</a></li>
+    <li class="nav-item"><a class="nav-link active" href='/classification/'>辅助鉴定</a></li>
+    <li class="nav-item"><a class="nav-link" href='/workshop/'>三彩坊</a></li>
+    {% if request.session.is_login %}
+        <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
+        <li><a href="/classification/logout/">登出</a></li>
+    {% else %}
+    {% endif %}
+</ul>
+
+<div style="background-image: url('/background/report_background.png');background-size: cover;background-repeat:no-repeat; background-attachment:fixed">
+<div class="mx-auto" style="width: 75%; margin-top: 100px; " >
+
+<div class="row">
+    <div class="col-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-overview-tab" data-toggle="pill" href="#v-pills-overview" role="tab" aria-controls="v-pills-overview" aria-selected="true">报告综述</a>
+            <a class="nav-link" id="v-pills-color-tab" data-toggle="pill" href="#v-pills-color" role="tab" aria-controls="v-pills-color" aria-selected="false">颜色分析</a>
+            <a class="nav-link" id="v-pills-tomb-tab" data-toggle="pill" href="#v-pills-tomb" role="tab" aria-controls="v-pills-tomb" aria-selected="false">墓穴分析</a>
+            <a class="nav-link" id="v-pills-dynasty-tab" data-toggle="pill" href="#v-pills-dynasty" role="tab" aria-controls="v-pills-dynasty" aria-selected="false">朝代分析</a>
+            <a class="nav-link" id="v-pills-feature-tab" data-toggle="pill" href="#v-pills-feature" role="tab" aria-controls="v-pills-feature" aria-selected="false">特征分析</a>
+        </div>
+    </div>
+    <div class="col-9">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-overview" role="tabpanel" aria-labelledby="v-pills-overview-tab">
+                <h1>报告综述</h1>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img src="/upload/{{ pic_name }}" alt="..." class="img-thumbnail">
+                        </div>
+
+                        <div class="col-sm">
+                           {% if is_horse %}
+                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f">三彩马</h1>
+                        {% elif  is_man %}
+                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f">唐三彩人俑</h1>
+                        {% elif is_fake %}
+                            <h1 style="font-family: 楷体; font-size: 55px; color: #5f3f3f">唐三彩工艺品</h1>
+                        {% elif is_plate %}
+                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f">唐三彩器皿</h1>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">颜色得分</th>
+                        <th scope="col">墓穴相似度</th>
+                        <th scope="col">朝代匹配度</th>
+                        <th scope="col">特征匹配度</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">85</th>
+                        <td>堂懿德太子墓： 96%</td>
+                        <td>盛唐</td>
+                        <td>裂纹 花式</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2>您的古玩最终得分为：95</h2>
+                <h2>点击左侧栏目查看详细信息</h2>
+            </div>
+            <div class="tab-pane fade" id="v-pills-color" role="tabpanel" aria-labelledby="v-pills-color-tab">
+                <h1>文玩主色分析：下面放置用户上传文玩的主色和采集的文玩主色</h1>
+                <canvas id="myCanvas" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey">
+                    <script> displayColor("myCanvas","{{feature_color.0}}")</script>
+                </canvas>
+                <canvas id="myCanvas2" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey">
+                    <script> displayColor('myCanvas2','{{feature_color.1}}')</script>
+                </canvas>
+                <canvas id="myCanvas3" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey">
+                    <script> displayColor('myCanvas3','{{feature_color.2}}')</script>
+                </canvas>
+                <h1>用户上传文玩色块和标准差距</h1>
+                <canvas id="standardColor1" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey">
+                    <script> displayColor("standardColor1","#FF0000")</script>
+                </canvas>
+                <canvas id="standardColor2" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey">
+                    <script> displayColor('standardColor2','#343ed3')</script>
+                </canvas>
+                <canvas id="standardColor3" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey">
+                    <script> displayColor('standardColor3','#343ED3')</script>
+                </canvas>
+            </div>
+            <div class="tab-pane fade" id="v-pills-tomb" role="tabpanel" aria-labelledby="v-pills-tomb-tab">
+                <h1>墓穴分析正文</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img src="/tangzhaojun.png" alt="..." class="img-thumbnail">
+                        </div>
+
+                        <div class="col-lg">
+                            <div class="col-sm">
+                                <img src="/唐昭墓.png" alt="..." class="img-thumbnail">
+                            </div>
+                            <div class="col-sm">
+                                <p><br>昭陵是唐太宗李世民与文德皇后长孙氏的合葬陵墓，
+                                    位于陕西省咸阳市礼泉县城西北22.5千米的九嵕山上，是关中“唐十八陵”，
+                                    也是中国历代帝王陵园中规模最大、陪葬墓最多的一座。
+                                    昭陵是初唐走向盛唐的实物见证，是了解、研究唐代政治、经济、文化难得的文物宝库。
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-dynasty" role="tabpanel" aria-labelledby="v-pills-dynasty-tab">
+                <h1>朝代分析正文</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img src="/shengtang.png" alt="..." class="img-thumbnail">
+                        </div>
+
+                        <div class="col-lg">
+                            <div class="col-sm">
+                                <img src="/盛唐.png" alt="..." class="img-thumbnail">
+                            </div>
+                            <div class="col-sm">
+                                <p>唐代贞观之治以后，国力强盛、百业俱兴，同时也导致了一些高官生活的腐化，于是厚葬之风日盛。
+                                    唐三彩当时也是作为一种冥器，曾经被列入官府的明文规定，一品、二品、三品、四品，就是说可以允许他随葬多少件，
+                                    但是实际上作为这些达官显贵们，并不满足于明文的规定，反而他们往往比官府规定要增加很多的倍数，
+                                    去做这种厚葬。这也就是唐三彩当时能够迅速在中原地区发展和兴起的一个主要原因之一。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-feature" role="tabpanel" aria-labelledby="v-pills-feature-tab">
+                <h1>特征分析</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img src="/example/feature_example0.jpg" alt="..." class="img-thumbnail">
+                        </div>
+
+                        <div class="col-lg">
+                            <div class="col-sm">
+                                <img src="/example/feature_example1.jpg" alt="..." class="img-thumbnail">
+                            </div>
+                            <div class="col-sm">
+                                <img src="/example/feature_example2.jpg" alt="..." class="img-thumbnail">
+                            </div>
+                            <div class="col-sm">
+                                <img src="/example/feature_example3.jpg" alt="..." class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">特征名称</th>
+                        <th scope="col">特征类别</th>
+                        <th scope="col">特征稀有度</th>
+                        <th scope="col">特征吻合度</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
