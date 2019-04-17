@@ -1,2 +1,5 @@
 #OSX thingy
 .DS_Store
+.idea
+/app-django-demo/.idea
+/app-django-demo/mysite/.idea
