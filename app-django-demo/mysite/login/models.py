@@ -13,7 +13,7 @@ class Administrator(models.Model):
     admin_passwd = models.CharField(max_length=20)
 
     class Meta:
-        managed = False
+        #managed = False
         db_table = 'administrator'
 
 
@@ -27,7 +27,7 @@ class Classification(models.Model):
     user_mainpage_main = models.ForeignKey('User', models.DO_NOTHING, related_name='user_mainpage_main_class' )
 
     class Meta:
-        managed = False
+        #managed = False
         db_table = 'classification'
 
 
@@ -44,7 +44,7 @@ class Commodity(models.Model):
     user_mainpage_main = models.ForeignKey('User', models.DO_NOTHING, related_name='mainpage_in_commidity')
 
     class Meta:
-        managed = False
+        #managed = False
         db_table = 'commodity'
 
 
@@ -60,7 +60,7 @@ class Expert(models.Model):
     mainpage_main = models.ForeignKey('Mainpage', models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        #managed = False
         db_table = 'expert'
         unique_together = (('expert_id', 'mainpage_main'),)
 
@@ -72,7 +72,7 @@ class ExpertHasClassification(models.Model):
     expert_info = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        #managed = False
         db_table = 'expert_has_classification'
         unique_together = (('expert_expert', 'expert_mainpage_main', 'classification_class'),)
 
@@ -86,7 +86,7 @@ class ExpertHasCommodity(models.Model):
     expert_comment_time = models.DateField()
 
     class Meta:
-        managed = False
+        #managed = False
         db_table = 'expert_has_commodity'
         unique_together = (('expert_expert', 'expert_mainpage_main', 'commodity_comm'),)
 
@@ -100,7 +100,7 @@ class Mainpage(models.Model):
     main_inventory = models.TextField(blank=True, null=True)
 
     class Meta:
-        managed = False
+       # managed = False
         db_table = 'mainpage'
 
 
@@ -119,6 +119,6 @@ class User(models.Model):
     mainpage_main = models.ForeignKey(Mainpage, models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        #managed = False
         db_table = 'user'
         unique_together = (('user_id', 'mainpage_main'),)

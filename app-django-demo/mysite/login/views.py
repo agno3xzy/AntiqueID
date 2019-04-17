@@ -1,12 +1,7 @@
 from django.shortcuts import render, redirect
 from . import  models, forms
-import hashlib
-# Create your views here.
 
 def signin(request):
-    if request.session.get('is_login', None):
-        message = "重复登陆！"
-        return redirect("http://127.0.0.1:8000/classification/")
     if request.method == "POST":
         login_form = forms.UserForm(request.POST)
         message = "所有字段都必须填写！"
@@ -19,14 +14,11 @@ def signin(request):
                     request.session['is_login'] = True
                     request.session['user_id'] = user.user_id
                     request.session['user_email'] = user.user_email
-                    return redirect("http://127.0.0.1:8000/classification/")
-                    message = "密码正确！"
+                    return redirect('/', locals())
                 else:
                     message = "密码不正确！"
             except:
                 message = "邮箱不存在！"
-
-        #return render(request, 'login/signin.html', {"message": message})
         return render(request, 'login/signin.html', locals())
     login_form = forms.UserForm()
     return render(request, 'login/signin.html', locals())
@@ -79,11 +71,9 @@ def signup(request):
     signup_form = forms.SignupForm()
     return render(request, 'login/signup.html',locals())
 
-def hash_code(s, salt='mysite'):# 注册页面密码加密
-    h = hashlib.sha256()
-    s += salt
-    h.update(s.encode())  # update方法只接收bytes类型
-    return h.hexdigest()
+def logout(request):
+    request.session.flush()
+    return redirect('/', locals())
 
 def massagepage(request):
     return render(request, 'login/massagepage.html')
