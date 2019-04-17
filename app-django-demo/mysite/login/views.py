@@ -67,7 +67,7 @@ def signup(request):
                 new_user.user_idenity = 0
                 new_mainpage.save()
                 new_user.save()
-                return redirect('/login/signin/',locals())  # 自动跳转到登录页面
+                return redirect('/login/signin/',locals())  # 自动跳转到登录页面.
     signup_form = forms.SignupForm()
     return render(request, 'login/signup.html',locals())
 
