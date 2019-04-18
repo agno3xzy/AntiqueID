@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from . import  models, forms
-
+from django.shortcuts import render, redirect
+from . import forms
+import login.models as models
 comm_collection_id = []
 expert_collection_id = []
 comm_collection_num = 0
@@ -136,3 +136,13 @@ def allexpert(request):
         Expert_collection_num = expert_collection_num
         Expert_collection_display = Expert_collection
     return render(request, 'workshop/all_experts.html', locals())
+
+def apply(request):
+    if request.session.get('is_login', None):
+        if request.method == "POST":
+            UserId = request.session['user_id']
+            #UserId = request.POST.get("user_id", "")
+            user = models.User.objects.get(user_id = UserId)
+            user.user_identity = 1
+            user.save()
+            return redirect('../', locals())

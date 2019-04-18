@@ -8,9 +8,9 @@ from django.shortcuts import render
 from keras import backend as K
 from keras.models import load_model
 
-sys.path.insert(0, 'mysite/classification/color_model')
-import color_predict
-import background_subtraction
+#sys.path.insert(0, 'mysite/classification/color_model')
+from . import color_predict
+from . import background_subtraction
 # Create your views here.
 size = 128,128
 
@@ -39,7 +39,7 @@ def upload_file(request):
             return HttpResponse("no files for upload!")
         image = Image.open(myFile)
         pic_name = str(int(time.time())) + '.png'
-        pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', pic_name)
+        pic_path = os.path.join(os.getcwd() + '/media/upload/', pic_name)
         pic_path = pic_path.replace('\\', '/')
         print(pic_path)
         image.save(pic_path)
@@ -60,7 +60,7 @@ def upload_file(request):
         #dominant_color = color_predict.dominant_predict(pre_pic_path, pic_name)
         feature_color = color_predict.feature_color(pre_pic_path)
         #分类模型鉴定逻辑
-        model_path = "D:/2019Spring/Intel杯/model/trained_model_horse_man_fake_plate.h5"
+        model_path = "D:/trained_model_horse_man_fake_plate.h5"
         result = predict(model_path, pic_path)
 
         #以下四个变量控制前端页面显示的结果

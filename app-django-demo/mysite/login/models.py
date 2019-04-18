@@ -110,7 +110,7 @@ class User(models.Model):
     user_email = models.CharField(max_length=45)
     user_phone = models.CharField(max_length=15, blank=True, null=True)
     user_avatar = models.CharField(max_length=45, blank=True, null=True)
-    user_idenity = models.IntegerField()
+    user_identity = models.IntegerField()
     user_name = models.CharField(max_length=45, blank=True, null=True)
     user_wechat = models.CharField(max_length=15, blank=True, null=True)
     user_alipay = models.CharField(max_length=15, blank=True, null=True)

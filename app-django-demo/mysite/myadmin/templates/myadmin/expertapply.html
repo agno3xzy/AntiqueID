@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -22,7 +22,7 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-    <script src="/static/myadmin/js/expertapply.js"></script>
+    {#    <script src="/static/myadmin/js/expertapply.js"></script>#}
     <!-- Bootstrap core CSS -->
     <!-- Custom styles for this template -->
     <link href="/static/myadmin/css/cover.css" rel="stylesheet">
@@ -53,116 +53,55 @@
         <div class="row ">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1>Expert Resume</h1>
+                    <h1>待审核专家列表</h1>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container">
+        <script>
+            window.onload = function () {
+                var x = document.getElementsByClassName("flip-card");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].setAttribute("onclick", "window.location = 'http://127.0.0.1:8000/myadmin/expert_detail/'");
+                }
+            }
+        </script>
         <div class="row">
-
-            <div class="col-md-*">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src='/avatar/avatar1.png' alt="Avatar" style="width: 100%;height: 100%;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>XX博物馆馆长</p>
-                            <br/>
-                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                        </div>
-                    </div>
+            {% for i in expertList %}
+            <div class="card" style="width: 18rem;">
+                {% if i.user_avatar == None %}
+                <img src="/avatar/avatar_default.jpg" class="card-img-top" alt="..." size="50%">
+                {% else %}
+                <img src="{{ i.user_avatar }}" class="card-img-top" alt="...">
+                {% endif %}
+                <div class="card-body">
+                    {% if i.user_name != None %}
+                    <h5 class="card-title">专家姓名： {{ i.user_name }}</h5>
+                    {% else %}
+                    <h5 class="card-title">专家ID： {{ i.user_id }}</h5>
+                    {% endif %}
+                    {% if i.user_name != None %}
+                    <p class="card-text">专家信息：</p>
+                    {% else %}
+                    <p class="card-text"></p>
+                    {% endif %}
+                    <form action="../checkapply/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input class="btn btn-primary" name="foo" type="submit" value="pass">通过</input>
+                        <input hidden name="id" value="{{ i.user_id }}"/>
+                        <input hidden name="operation" value="pass"/>
+                    </form>
+                    <form action="../checkapply/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input class="btn btn-primary" name="fooo" type="submit" value="reject">拒绝</input>
+                        <input hidden name="id" value="{{ i.user_id }}"/>
+                        <input hidden name="operation" value="reject"/>
+                    </form>
                 </div>
             </div>
-            <br/>
-            <div class="col-md-*">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="/avatar/avatar2.png" alt="Avatar" style="width: 100%;
-    height: 100%;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>XX博物馆馆长</p>
-                            <br/>
-                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-*">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="/avatar/avatar1.png" alt="Avatar" style="width: 100%;
-    height: 100%;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>XX博物馆馆长</p>
-                            <br/>
-                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-*">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="/avatar/avatar2.png" alt="Avatar" style="width: 100%;
-    height: 100%;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>XX博物馆馆长</p>
-                            <br/>
-                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-*">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="/avatar/avatar1.png" alt="Avatar" style="width: 100%;
-    height: 100%;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>XX博物馆馆长</p>
-                            <br/>
-                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-*">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="/avatar/avatar2.png" alt="Avatar" style="width: 100%;
-    height: 100%;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>XX博物馆馆长</p>
-                            <br/>
-                            <p>从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
     </div>
 </body>

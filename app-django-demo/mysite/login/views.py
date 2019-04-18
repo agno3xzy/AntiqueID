@@ -64,7 +64,7 @@ def signup(request):
                 new_user.user_name = username
                 new_user.user_phone = phone
                 new_user.mainpage_main = new_mainpage
-                new_user.user_idenity = 0
+                new_user.user_identity = 0
                 new_mainpage.save()
                 new_user.save()
                 return redirect('/login/signin/',locals())  # 自动跳转到登录页面.
