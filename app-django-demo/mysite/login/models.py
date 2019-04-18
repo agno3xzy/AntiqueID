@@ -16,15 +16,18 @@ class Administrator(models.Model):
         #managed = False
         db_table = 'administrator'
 
-
+#鉴定类
 class Classification(models.Model):
     class_id = models.IntegerField(primary_key=True)
     class_img = models.CharField(max_length=200)
     class_type = models.IntegerField(blank=True, null=True)
     class_result = models.TextField(blank=True, null=True)
+    class_color =  models.CharField(max_length=200)
+    class_tomb = models.CharField(max_length=200)
+    class_dynasty = models.CharField(max_length=200)
+    class_feature = models.CharField(max_length=200)
     class_evaluate = models.DecimalField(max_digits=4, decimal_places=2, blank=True, null=True)
     user_user = models.ForeignKey('User', models.DO_NOTHING, related_name='user_user_class')
-    user_mainpage_main = models.ForeignKey('User', models.DO_NOTHING, related_name='user_mainpage_main_class' )
 
     class Meta:
         #managed = False
@@ -110,7 +113,7 @@ class User(models.Model):
     user_email = models.CharField(max_length=45)
     user_phone = models.CharField(max_length=15, blank=True, null=True)
     user_avatar = models.CharField(max_length=45, blank=True, null=True)
-    user_idenity = models.IntegerField()
+    user_identity = models.IntegerField()
     user_name = models.CharField(max_length=45, blank=True, null=True)
     user_wechat = models.CharField(max_length=15, blank=True, null=True)
     user_alipay = models.CharField(max_length=15, blank=True, null=True)

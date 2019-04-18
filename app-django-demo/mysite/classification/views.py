@@ -4,33 +4,27 @@ import time
 from . import img_loader as ld
 from PIL import Image
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from keras import backend as K
 from keras.models import load_model
+import login.models as models
 
-sys.path.insert(0, 'mysite/classification/color_model')
-import color_predict
-import background_subtraction
+#sys.path.insert(0, 'mysite/classification/color_model')
+from . import color_predict
+from . import background_subtraction
 # Create your views here.
 size = 128,128
 
 def index(request):
+    if not request.session.get('is_login', None):
+        return redirect("/login/signin/")
     return render(request, 'classification/intro.html')
 
 def color_mind(request):
     return render(request, 'classification/color_mind.html')
 
-def result(request):
-    return render(request, 'classification/intro2.html')
-
-def logout(request):
-    if not request.session.get('is_login', None):
-        # 如果本来就未登录，也就没有登出一说
-        return render(request, 'classification/logout.html')
-    request.session.flush()
-    return render(request, 'classification/logout.html')
-
 def upload_file(request):
+
     if request.method == "POST":  # 请求方法为POST时，进行处理
         #这里的img是h5表单里的name
         Dict = {}
@@ -38,7 +32,8 @@ def upload_file(request):
         if not myFile:
             return HttpResponse("no files for upload!")
         image = Image.open(myFile)
-        pic_name = str(int(time.time())) + '.png'
+        Timestamp = int(time.time())
+        pic_name = str(Timestamp) + '.png'
         pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', pic_name)
         pic_path = pic_path.replace('\\', '/')
         print(pic_path)
@@ -64,20 +59,32 @@ def upload_file(request):
         result = predict(model_path, pic_path)
 
         #以下四个变量控制前端页面显示的结果
-        is_horse = False
-        is_man = False
-        is_fake = False
-        is_plate = False
+        classtype = 0
         if int(result[0][0]) == 1:
-            is_horse = True
-        if int(result[0][1]) == 1:
-            is_man = True
-        if int(result[0][2]) == 1:
-            is_fake = True
-        if int(result[0][3]) == 1:
-            is_plate = True
+            classtype = 0
+        elif int(result[0][1]) == 1:
+            classtype = 1
+        elif int(result[0][2]) == 1:
+            classtype = 2
+        elif int(result[0][3]) == 1:
+            classtype = 3
 
-
+        #保存鉴定报告
+        userID = request.session['user_id']
+        user = models.User.objects.get(user_id=userID)
+        mainpage = models.Mainpage.objects.get(main_id=userID)
+        report = models.Classification()
+        report.user_user = user
+        report.class_id = Timestamp
+        report.class_img = pic_path
+        report.class_color = "".join(feature_color)
+        report.class_type = classtype
+        report.save()
+        report = models.Classification.objects.get(class_id = Timestamp)
+        report_color_list = report.class_color.split('#')
+        for i in range(len(report_color_list)):
+            report_color_list[i] = '#' + report_color_list[i]
+        print(report_color_list)
         return render(request, "classification/report.html", locals())
 
 
@@ -89,4 +96,10 @@ def predict(model_path, pic_path):
     return model.predict(p)
 
 def report(request):
-    return render(request, "classification/report.html")
+    report_id = request.POST.get("report_id", "")
+    report = models.Classification.objects.get(class_id=report_id)
+    report_color_list = report.class_color.split('#')
+    for i in range(len(report_color_list)):
+        report_color_list[i] = '#' + report_color_list[i]
+    print(report_color_list)
+    return render(request, "classification/report.html", locals())

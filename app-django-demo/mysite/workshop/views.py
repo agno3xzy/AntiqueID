@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from . import  models, forms
+from . import forms
+import login.models as models
 
 comm_collection_id = []
 expert_collection_id = []
@@ -58,6 +59,9 @@ def index(request):
         else:
             Expert_collection_num = expert_collection_num
             Expert_collection_display = Expert_collection
+         #所有报告
+        reports = models.Classification.objects.filter(user_user=user)
+        print(reports)
         return render(request, 'workshop/frontpage.html', locals())
     if request.method == "POST":
         login_form = forms.UserForm(request.POST)
@@ -98,7 +102,6 @@ def index(request):
                     message = "密码不正确！"
             except:
                 message = "邮箱不存在！"
-        #return render(request, 'login/signin.html', {"message": message})
         return render(request, 'login/signin.html', locals())
     login_form = forms.UserForm()
     return render(request, 'login/signin.html', locals())
