@@ -5,7 +5,9 @@ from . import  models, forms
 def index(request):
     commid_list = models.Commodity.objects.filter(comm_startprice = 0).order_by('comm_id').values_list('comm_id')
     commid_query = models.Commodity.objects.filter(comm_startprice = 0).order_by('comm_id').values_list('comm_id').reverse()
-    commid_max = commid_query[0][0]
+    commid_max = 0
+    if commid_query != None:
+        commid_max = commid_query[0]
     commsrc_list = models.Commodity.objects.filter(comm_startprice = 0).values_list('comm_img').order_by('comm_id')
     commstartprice_list = models.Commodity.objects.filter(comm_startprice = 0).values_list('comm_startprice').order_by('comm_id')
     commsellprice_list = models.Commodity.objects.filter(comm_startprice = 0).values_list('comm_sellprice').order_by('comm_id')

@@ -9,9 +9,9 @@ from keras import backend as K
 from keras.models import load_model
 import login.models as models
 
-sys.path.insert(0, 'mysite/classification/color_model')
-import color_predict
-import background_subtraction
+#sys.path.insert(0, 'mysite/classification/')
+from . import color_predict
+from . import background_subtraction
 # Create your views here.
 size = 128,128
 
@@ -34,7 +34,7 @@ def upload_file(request):
         image = Image.open(myFile)
         Timestamp = int(time.time())
         pic_name = str(Timestamp) + '.png'
-        pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', pic_name)
+        pic_path = os.path.join(os.getcwd() + '/media/upload/', pic_name)
         pic_path = pic_path.replace('\\', '/')
         print(pic_path)
         image.save(pic_path)

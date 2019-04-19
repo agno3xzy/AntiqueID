@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from . import  models, forms
+import login.models as models
+from . import forms
 
 # Create your views here.
 def index(request):
