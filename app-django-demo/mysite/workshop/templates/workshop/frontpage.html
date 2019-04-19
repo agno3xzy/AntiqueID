@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -67,6 +67,56 @@
         <div class="row featurette" style="margin-top: -4%;margin-bottom: -4%">
             <div class="col-md-7 order-md-2" style="margin-top: -6%; margin-left: -10%;">
                 <div class="container">
+                    <h2 class="featurette-heading">{{ user.user_email }}</h2>
+                    <br />
+                    {% if user.user_identity == 0 %}
+                        <h4>目前状态 ：普通用户</h4>
+                    {% elif user.user_identity == 1 %}
+                        <h4>目前状态 ：专家待审</h4>
+                    {% else %}
+                        <h4>目前状态 ：专家</h4>
+                    {% endif %}
+                    <p>
+                        <a href="#" class="btn btn-primary my-2">修改个人信息</a>
+                        <a href="apply/" class="btn btn-secondary my-2">申请成为专家</a>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        点击申请成为专家
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <form action="apply/" method="post">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">专家姓名</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">简介</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">提交</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5 order-md-1" style="margin-left:2.5%" >
+                <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="/avatar1.png" alt="Generic placeholder image">
+            </div>
+            <div class="col-md-7 order-md-2" style="margin-top: -6%; margin-left: -10%;">
+                <div class="container">
                     <h2 class="featurette-heading">{{ user.user_name }}</h2>
                     <br />
                     <p class="lead">{{ user.user_info }}</p>
@@ -80,7 +130,7 @@
                 <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="/avatar1.png" alt="Generic placeholder image">
             </div>
         </div>
-    </section>
+      </section>
 
     <div class="album py-5 bg-light" style="background-image: url('/bk_test.jpg'); background-size: cover">
         <h1 class="jumbotron-heading" style="text-align: center">鉴定记录</h1>
@@ -187,6 +237,16 @@
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script src="{% static 'expert/js/vendor/popper.min.js' %}></script>
     <script src="{% static 'expert/js/bootstrap.bundle.min.js'%}></script>
+<script src="{% static 'expert/js/vendor/holder.min.js' %}></script>
+</main>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="{% static 'expert/js/vendor/popper.min.js' %></script>
+    <script src="{% static 'expert/js/bootstrap.bundle.min.js' %}></script>
 <script src="{% static 'expert/js/vendor/holder.min.js' %}></script>
   </body>
 </html>

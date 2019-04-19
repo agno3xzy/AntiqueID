@@ -3,5 +3,4 @@ window.onload = function () {
     for (var i = 0; i < x.length; i++) {
         x[i].setAttribute("onclick", "window.location = 'http://127.0.0.1:8000/myadmin/expert_detail/'");
     }
-
 }

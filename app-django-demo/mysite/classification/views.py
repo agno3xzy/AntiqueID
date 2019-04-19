@@ -9,9 +9,9 @@ from keras import backend as K
 from keras.models import load_model
 import login.models as models
 
-#sys.path.insert(0, 'mysite/classification/color_model')
-from . import color_predict
-from . import background_subtraction
+sys.path.insert(0, 'mysite/classification/color_model')
+import color_predict
+import background_subtraction
 # Create your views here.
 size = 128,128
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . import forms
 import login.models as models
 
@@ -102,6 +102,7 @@ def index(request):
                     message = "密码不正确！"
             except:
                 message = "邮箱不存在！"
+        #return render(request, 'login/signin.html', {"message": message})
         return render(request, 'login/signin.html', locals())
     login_form = forms.UserForm()
     return render(request, 'login/signin.html', locals())
@@ -139,3 +140,13 @@ def allexpert(request):
         Expert_collection_num = expert_collection_num
         Expert_collection_display = Expert_collection
     return render(request, 'workshop/all_experts.html', locals())
+
+def apply(request):
+    if request.session.get('is_login', None):
+        if request.method == "POST":
+            UserId = request.session['user_id']
+            #UserId = request.POST.get("user_id", "")
+            user = models.User.objects.get(user_id = UserId)
+            user.user_identity = 1
+            user.save()
+            return redirect('../', locals())
