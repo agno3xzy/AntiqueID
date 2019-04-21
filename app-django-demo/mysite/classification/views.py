@@ -34,7 +34,7 @@ def upload_file(request):
         image = Image.open(myFile)
         Timestamp = int(time.time())
         pic_name = str(Timestamp) + '.png'
-        pic_path = os.path.join(os.getcwd() + '/media/upload/', pic_name)
+        pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', pic_name)
         pic_path = pic_path.replace('\\', '/')
         print(pic_path)
         image.save(pic_path)

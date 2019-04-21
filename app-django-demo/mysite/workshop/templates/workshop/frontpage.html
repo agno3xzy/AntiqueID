@@ -1,24 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-
-    <title>专家资历</title>
-
+    <title>个人主页</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap core CSS -->
     <link href="{% static 'expert/css/bootstrap-grid.min.css' %}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="{% static 'expert/css/album.css' %}" rel="stylesheet">
     <link href="{% static 'expert/css/carousel.css' %}" rel="stylesheet">
 </head>
@@ -62,6 +56,7 @@
         </div>
     </nav>
 </header>
+
 <main role="main" >
     <section class="jumbotron text-center" style="background-image: url('/bk_test.jpg'); background-size: cover;">
         <div class="row featurette" style="margin-top: -4%;margin-bottom: -4%">
@@ -78,30 +73,21 @@
                     {% endif %}
                     <p>
                         <a href="#" class="btn btn-primary my-2">修改个人信息</a>
-                        <a href="apply/" class="btn btn-secondary my-2">申请成为专家</a>
                     <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <button class="btn btn-primary my-2 collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                         点击申请成为专家
                                     </button>
                                 </h2>
                             </div>
-
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <div class="container">
                                         <form action="apply/" method="post">
                                             {% csrf_token %}
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">专家姓名</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputPassword1">简介</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                            </div>
+                                           <textarea class="form-control" aria-label="With textarea" name="applyment"></textarea>
                                             <button type="submit" class="btn btn-primary">提交</button>
                                         </form>
                                     </div>
@@ -115,22 +101,7 @@
             <div class="col-md-5 order-md-1" style="margin-left:2.5%" >
                 <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="/avatar1.png" alt="Generic placeholder image">
             </div>
-            <div class="col-md-7 order-md-2" style="margin-top: -6%; margin-left: -10%;">
-                <div class="container">
-                    <h2 class="featurette-heading">{{ user.user_name }}</h2>
-                    <br />
-                    <p class="lead">{{ user.user_info }}</p>
-                    <p>
-                        <a href="#" class="btn btn-primary my-2">修改个人信息</a>
-                        <a href="#" class="btn btn-secondary my-2">申请成为专家</a>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-5 order-md-1" style="margin-left:2.5%" >
-                <img class="featurette-image img-fluid mx-auto" style="max-width: 60%" src="/avatar1.png" alt="Generic placeholder image">
-            </div>
-        </div>
-      </section>
+    </section>
 
     <div class="album py-5 bg-light" style="background-image: url('/bk_test.jpg'); background-size: cover">
         <h1 class="jumbotron-heading" style="text-align: center">鉴定记录</h1>
@@ -231,22 +202,16 @@
             </form>
         </div>
     </div>
-
 </main>
+</body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="{% static 'expert/js/vendor/popper.min.js' %}></script>
-    <script src="{% static 'expert/js/bootstrap.bundle.min.js'%}></script>
-<script src="{% static 'expert/js/vendor/holder.min.js' %}></script>
-</main>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+<script src="{% static 'expert/js/vendor/popper.min.js' %}"></script>
+<script src="{% static 'expert/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'expert/js/vendor/holder.min.js' %}"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="{% static 'expert/js/vendor/popper.min.js' %></script>
-    <script src="{% static 'expert/js/bootstrap.bundle.min.js' %}></script>
-<script src="{% static 'expert/js/vendor/holder.min.js' %}></script>
-  </body>
+<script src="{% static 'expert/js/vendor/popper.min.js' %}"></script>
+<script src="{% static 'expert/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'expert/js/vendor/holder.min.js'%}"></script>
 </html>

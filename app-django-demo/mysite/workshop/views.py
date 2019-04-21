@@ -145,8 +145,8 @@ def apply(request):
     if request.session.get('is_login', None):
         if request.method == "POST":
             UserId = request.session['user_id']
-            #UserId = request.POST.get("user_id", "")
             user = models.User.objects.get(user_id = UserId)
             user.user_identity = 1
+            user.user_applyment = request.POST.get("applyment")
             user.save()
             return redirect('../', locals())
