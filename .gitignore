@@ -1,5 +1,14 @@
-#OSX thingy
-.DS_Store
+# .idea configuration file #
 .idea
-/app-django-demo/.idea
-/app-django-demo/mysite/.idea
+
+# django migrations file #
+migrations
+db.sqlite3
+
+# Python #
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
