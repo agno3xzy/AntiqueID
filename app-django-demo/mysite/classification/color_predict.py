@@ -20,7 +20,7 @@ def feature_color(pic_path):
     hex_rgb_list = []
     for rgb in feature_color:
         hex_rgb_list.append(rgb_to_hex(rgb))
-    return hex_rgb_list
+    return hex_rgb_list, feature_color
 
 def rgb_to_hex(rgb):
     return '#%02x%02x%02x' % rgb
