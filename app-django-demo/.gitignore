@@ -1,5 +1,6 @@
-# .idea configuration file #
+# configuration file #
 .idea
+.DS_Store
 
 # django migrations file #
 migrations
@@ -14,4 +15,3 @@ dist
 build
 __pycache__
 
-.DS_Store
