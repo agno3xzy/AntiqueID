@@ -11,12 +11,13 @@ from keras import backend as K
 from keras.models import load_model
 import login.models as models
 
-#sys.path.insert(0, 'mysite/classification/')
 from . import color_predict
 from . import background_subtraction
 from . import color_similarity
-# Create your views here.
+
 size = 128,128
+category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4}
+category_name = {0:'唐三彩马俑', 1:'唐三彩罐', 2:'唐三彩人像', 3:'唐三彩碗',4:'唐三彩人像——头部'}
 
 def index(request):
     if not request.session.get('is_login', None):
@@ -39,9 +40,7 @@ def upload_file(request):
         pic_name = str(Timestamp) + '.png'
         pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', pic_name)
         pic_path = pic_path.replace('\\', '/')
-        print(pic_path)
         image.save(pic_path)
-        #pic_name = myFile.name
 
         #处理用户输入的坐标参数
         raw_coordinate = request.POST.get("coordinate", None)
@@ -55,11 +54,27 @@ def upload_file(request):
         #图像前景分离
         pre_pic_path = background_subtraction.bg_sb(pic_path, pic_name, pic_rect)
         #颜色模型:以十六进制字符串的形式返回语义分割后各个部分的rgb值
-        #dominant_color = color_predict.dominant_predict(pre_pic_path, pic_name)
         feature_color, dec_feature_color = color_predict.feature_color(pre_pic_path)
         #分类模型鉴定逻辑
         model_path = "D:/2019Spring/Intel杯/model/trained_model_horse_man_fake_plate.h5"
+
+        '''
+        #暂时使用NanoNets，因此注释模型本地模型判断
+        
         result = predict(model_path, pic_path)
+        
+        #以下四个变量控制前端页面显示的结果
+        
+        classtype = 0
+        if int(result[0][0]) == 1:
+            classtype = 0
+        elif int(result[0][1]) == 1:
+            classtype = 1
+        elif int(result[0][2]) == 1:
+            classtype = 2
+        elif int(result[0][3]) == 1:
+            classtype = 3
+        '''
 
         std_rgb=[(122,100,103),(87,125,35)]
 
@@ -71,26 +86,16 @@ def upload_file(request):
         a.calculate_k_nearest(color_similarity.ColorHub.EUCLIDEAN, 1)
 
         # 获取nearest数组和distance_sum数组并打印
-        # a.print_nearest(a.get_k_nearest())
-        # a.print_distance_sum(a.get_distance_sum())
         color_score = a.get_distance_avgsum(a.get_distance_sum())
-        #以下四个变量控制前端页面显示的结果
-        classtype = 0
-        if int(result[0][0]) == 1:
-            classtype = 0
-        elif int(result[0][1]) == 1:
-            classtype = 1
-        elif int(result[0][2]) == 1:
-            classtype = 2
-        elif int(result[0][3]) == 1:
-            classtype = 3
 
-        classresult = get_from_nano(pic_path)
+        classresult, classmsg = get_from_nano(pic_path)
 
-        save_as_report(request,Timestamp,pic_path,color_score,feature_color,classtype, classresult)
+        save_as_report(request,Timestamp,pic_path,color_score,feature_color,category[classmsg], classresult)
 
+        #输出相应前端报告格式
         report = models.Classification.objects.get(class_id = Timestamp)
         report_color_list = report.class_color.split('#')
+        antique_name = category_name[report.class_type]
         for i in range(len(report_color_list)):
             if i == 0:
                 pass
@@ -117,7 +122,7 @@ def report(request):
             pass
         else:
             report_color_list[i] = '#' + report_color_list[i]
-    print(report_color_list)
+    antique_name = category_name[report.class_type]
     return render(request, "classification/report.html", locals())
 
 #存储为鉴定报告
@@ -143,16 +148,16 @@ def get_from_nano(pic_path):
     response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
     dic = json.loads(response.text)
     print(dic)
+    class_msg = "null"
     result_dic = {}
     if dic['message'] == 'Success':
         for i in dic['result'][0]['prediction']:
-            # print(i['label'] + '的可能性为：' + str(i['probability']))
+            print(i)
             if i['probability'] >= 0.50:
                 result_dic[i['label']] = i['probability']
 
     if not bool(result_dic):
-        print('请检查您的图片是否为唐三彩。')
+        pass
     else:
-        for i in result_dic:
-            print(i + '的可能性为：' + str(result_dic[i]))
-    return response.text
+        class_msg = str(max(result_dic,key=result_dic.get))
+    return response.text, class_msg

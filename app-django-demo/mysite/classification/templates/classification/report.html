@@ -131,15 +131,7 @@
                                     </div>
 
                                     <div class="col-sm">
-                                        {% if report.class_type == 0%}
-                                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f">三彩马</h1>
-                                        {% elif  report.class_type == 1 %}
-                                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f">唐三彩人俑</h1>
-                                        {% elif report.class_type == 2 %}
-                                            <h1 style="font-family: 楷体; font-size: 55px; color: #5f3f3f">唐三彩工艺品</h1>
-                                        {% elif report.class_type == 3 %}
-                                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f">唐三彩器皿</h1>
-                                        {% endif %}
+                                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f">{{ antique_name }}</h1>
                                     </div>
                                 </div>
                             </div>

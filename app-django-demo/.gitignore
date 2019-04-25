@@ -1,0 +1,6 @@
+# .idea configuration file #
+.idea
+
+# django migrations file #
+migrations
+db.sqlite3
