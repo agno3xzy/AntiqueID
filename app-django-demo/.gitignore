@@ -4,3 +4,11 @@
 # django migrations file #
 migrations
 db.sqlite3
+
+# Python #
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
