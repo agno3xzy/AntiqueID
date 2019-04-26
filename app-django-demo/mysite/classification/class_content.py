@@ -215,5 +215,3 @@ content = { '综述':
 
 def get_content(title, topic, index):
     return content[title][topic][index]
-print(content)
-print(get_content("综述","风俗",1))

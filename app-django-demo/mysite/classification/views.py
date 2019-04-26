@@ -14,6 +14,7 @@ import login.models as models
 from . import color_predict
 from . import background_subtraction
 from . import color_similarity
+from . import class_content
 
 size = 128,128
 category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4}

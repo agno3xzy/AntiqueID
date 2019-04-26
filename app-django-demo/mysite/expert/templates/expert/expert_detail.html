@@ -21,6 +21,7 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'expert/css/album.css' %}" rel="stylesheet">
     <link href="{% static 'expert/css/carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'classification/css/component.css' %}" rel="stylesheet">
   </head>
 
   <body>
@@ -30,6 +31,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!--
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -60,6 +62,27 @@
                 {% endif %}
             </ul>
         </div>
+        -->
+
+                <nav class="menu menu--prospero" style="height: 20px">
+					<ul class="menu__list">
+                    {% if request.session.is_login %}
+						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
+						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">三彩坊</a></li>
+						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                        <li class="menu__item"><a href="/classification/logout/" class="menu__link" style="color:blue">登出</a></li>
+                    {% else %}
+						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
+						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">三彩坊</a></li>
+						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                    {% endif %}
+					</ul>
+				</nav>
     </nav>
     </header>
     <main role="main" >
