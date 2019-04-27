@@ -33,25 +33,6 @@
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-<!--
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            {% if request.session.is_login %}
-                <li class="nav-item"><a class="nav-link" href='/'>主页</a></li>
-                <li class="nav-item"><a class="nav-link active" href='/classification/'>辅助鉴定</a></li>
-                <li class="nav-item"><a class="nav-link" href='/workshop/'>三彩坊</a></li>
-                <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
-                <li><a href="/classification/logout/">登出</a></li>
-            {% else %}
-                <li class="nav-item"><a class="nav-link" href='/'>主页</a></li>
-                <li class="nav-item"><a class="nav-link active" href='/classification/'>辅助鉴定</a></li>
-                <li class="nav-item"><a class="nav-link" href='/workshop/'>三彩坊</a></li>
-            {% endif %}
-
-        </ul>
-
-    </div>-->
-
 				<nav class="menu menu--prospero" style="height: 20px">
 					<ul class="menu__list">
                     {% if request.session.is_login %}
@@ -74,14 +55,15 @@
 </nav>
 
 <main role="main">
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="background-image: url('/bk_test.jpg'); background-size: cover">
         <div class="container">
             <div class="row">
                 <div class="col-sm">
                     <h1 style="font-family: HuaKangOuYangXunTiW5-0-1">辅助鉴别，就现在！</h1>
-                    <p style="font-family: 宋体">您可以看到下方这份靓丽的鉴赏报告。<br>不过，令人兴奋的是，您也可以拥有您自己的！<br>动手拍一张你心爱唐三彩的照片，或者从搜索引擎中寻觅。<br>找好之后，请点击"现在上传"，获取属于您的三彩报告！
+                    <p style="font-family: 宋体">觉得一份靓丽的鉴赏报告会为自己的古玩增色不少？
+                        <br>令人兴奋的是，您也可以拥有您自己的！
+                        <br>动手拍一张你心爱唐三彩的照片，或者从搜索引擎中寻觅。
+                        <br>找好之后，请点击"现在上传"，获取属于您的三彩报告！
                     </p>
                     <form  action="upload_file/" method="post" enctype="multipart/form-data">
                         {% csrf_token %}

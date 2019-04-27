@@ -3,6 +3,7 @@ import os
 import time
 import requests
 import json
+import random
 from . import img_loader as ld
 from PIL import Image
 from django.http import HttpResponse
@@ -19,6 +20,7 @@ from . import class_content
 size = 128,128
 category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4}
 category_name = {0:'唐三彩马俑', 1:'唐三彩罐', 2:'唐三彩人像', 3:'唐三彩碗',4:'唐三彩人像——头部'}
+tomb_category = {0:'唐昭陵韦贵妃墓',1:'唐惠庄太子李撝墓',2:'唐昭陵韦贵妃墓'}
 
 def index(request):
     if not request.session.get('is_login', None):
@@ -91,7 +93,8 @@ def upload_file(request):
 
         classresult, classmsg = get_from_nano(pic_path)
 
-        save_as_report(request,Timestamp,pic_path,color_score,feature_color,category[classmsg], classresult)
+        tomb, tomb_pic = predict_tomb(pic_path)
+        save_as_report(request,Timestamp,pic_path,color_score,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic))
 
         #输出相应前端报告格式
         report = models.Classification.objects.get(class_id = Timestamp)
@@ -103,6 +106,9 @@ def upload_file(request):
             else:
                 report_color_list[i] = '#' + report_color_list[i]
         print(report_color_list)
+        tomb_list = report.class_tomb.split('#')
+        tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]))
+        tomb_name = tomb_category[int(tomb_list[0])]
         return render(request, "classification/report.html", locals())
 
 
@@ -118,6 +124,9 @@ def report(request):
     report_id = request.POST.get("report_id", "")
     report = models.Classification.objects.get(class_id=report_id)
     report_color_list = report.class_color.split('#')
+    tomb_list = report.class_tomb.split('#')
+    tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]))
+    tomb_name = tomb_category[int(tomb_list[0])]
     for i in range(len(report_color_list)):
         if i == 0:
             pass
@@ -127,7 +136,7 @@ def report(request):
     return render(request, "classification/report.html", locals())
 
 #存储为鉴定报告
-def save_as_report(request, Timestamp, pic_path, color_score, feature_color, classtype, classresult):
+def save_as_report(request, Timestamp, pic_path, color_score, feature_color, classtype, classresult, tomb, tomb_pic):
     # 保存鉴定报告
     userID = request.session['user_id']
     user = models.User.objects.get(user_id=userID)
@@ -139,6 +148,7 @@ def save_as_report(request, Timestamp, pic_path, color_score, feature_color, cla
     report.class_color = str(color_score) + "".join(feature_color)
     report.class_type = classtype
     report.class_result = classresult
+    report.class_tomb = tomb + '#' + tomb_pic
     report.save()
 
 #nanoNets
@@ -162,3 +172,20 @@ def get_from_nano(pic_path):
     else:
         class_msg = str(max(result_dic,key=result_dic.get))
     return response.text, class_msg
+
+#墓穴预测
+def predict_tomb(pic_path):
+
+    tomb = random.randint(0,2)
+    tomb_pic_name = random.randint(1,7)
+
+    return tomb, tomb_pic_name
+
+#朝代预测
+def predict_dynasty():
+    pass
+
+
+#特征分析
+def feature_analysis():
+    pass

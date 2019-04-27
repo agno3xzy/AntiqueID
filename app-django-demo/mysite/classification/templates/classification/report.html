@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         {% load staticfiles %}
         <link rel="stylesheet" href="{% static 'classification/css/bootstrap2.css' %}">
-    <link href="{% static 'classification/css/component.css' %}" rel="stylesheet">
+        <link href="{% static 'classification/css/component.css' %}" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -20,41 +20,25 @@
         <title>鉴定报告</title>
     </head>
     <body style="background-image: url('/bk_test.jpg');background-size: cover;">
-<!--
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="color: #533f03">三彩知因</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href='/'>主页</a></li>
-        <li class="nav-item"><a class="nav-link active" href='/classification/'>辅助鉴定</a></li>
-        <li class="nav-item"><a class="nav-link" href='/workshop/'>三彩坊</a></li>
-        {% if request.session.is_login %}
-            <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
-            <li><a href="/classification/logout/">登出</a></li>
-        {% else %}
-        {% endif %}
-    </ul>
-    -->
-
-                <nav class="menu menu--prospero" style="height: 20px">
-					<ul class="menu__list">
-                    {% if request.session.is_login %}
-						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
-						<li class="menu__item menu__item--current"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item"><a href="/workshop/" class="menu__link">三彩坊</a></li>
-						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
-						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
-                        <li class="menu__item"><a href="/classification/logout/" class="menu__link" style="color:blue">登出</a></li>
-                    {% else %}
-						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
-						<li class="menu__item menu__item--current"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item"><a href="/workshop/" class="menu__link">三彩坊</a></li>
-						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
-						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
-                    {% endif %}
-					</ul>
-				</nav>
+    <nav class="menu menu--prospero" style="height: 20px">
+        <ul class="menu__list">
+            {% if request.session.is_login %}
+                <li class="menu__item"><a href="/" class="menu__link">主页</a></li>
+                <li class="menu__item menu__item--current"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+                <li class="menu__item"><a href="/workshop/" class="menu__link">三彩坊</a></li>
+                <li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+                <li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                <li class="menu__item"><a href="/classification/logout/" class="menu__link" style="color:blue">登出</a></li>
+            {% else %}
+                <li class="menu__item"><a href="/" class="menu__link">主页</a></li>
+                <li class="menu__item menu__item--current"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+                <li class="menu__item"><a href="/workshop/" class="menu__link">三彩坊</a></li>
+                <li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+                <li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+            {% endif %}
+        </ul>
+    </nav>
     <div class="mx-auto" style="width: 75%;">
         <h1 style=" text-align: center;
             margin: auto;
@@ -70,8 +54,6 @@
                  5px 5px black,6px 6px black,
                  7px 7px black,8px 8px black;">鉴定报告</h1>
     </div>
-
-    <!--<div style="background-image: url('/background/report_background.png');background-size: cover;background-repeat:no-repeat; background-attachment:fixed">-->
     <div class="mx-auto" style="width: 75%;margin-top: 100px " >
 
         <div class="row">
@@ -144,20 +126,10 @@
                         border-bottom-left-radius: 1.25rem;
                         border-bottom-right-radius: 1.25rem;">
                         <div style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;margin-right: 20px">
-                            <h1>报告综述</h1>
-
-                            <div class="container"  style="margin-top: 20px">
-                                <div class="row">
-                                    <div class="col-sm">
-                                        <img src="/upload/{{ report.class_id }}.png" alt="..." class="img-thumbnail">
-                                    </div>
-
-                                    <div class="col-sm">
-                                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f">{{ antique_name }}</h1>
-                                    </div>
-                                </div>
+                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f; text-align: center">{{ antique_name }}</h1>
+                            <div class="container"  style="margin-top: 20px; text-align: center">
+                                <img src="/upload/{{ report.class_id }}.png" class="rounded img-thumbnail" >
                             </div>
-
                             <table class="table table-hover" style="margin-top: 20px">
                                 <thead>
                                 <tr>
@@ -170,14 +142,14 @@
                                 <tbody>
                                 <tr>
                                     <th scope="row">{{report_color_list.0}}</th>
-                                    <td>堂懿德太子墓： 96%</td>
+                                    <td>{{ tomb_name }}</td>
                                     <td>盛唐</td>
                                     <td>裂纹 花式</td>
                                 </tr>
                                 </tbody>
                             </table>
-                            <h2 style="margin-top: 20px">您的古玩最终得分为：95</h2>
-                            <h2 style="margin-top: 20px">点击左侧栏目查看详细信息</h2>
+                            <h2 style="margin-top: 20px;text-align: center">您的古玩最终得分为：95</h2>
+                            <h2 style="margin-top: 20px;text-align: center">点击左侧栏目查看详细信息</h2>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-color" role="tabpanel" aria-labelledby="v-pills-color-tab"
@@ -188,30 +160,81 @@
                         border-bottom-left-radius: 1.25rem;
                         border-bottom-right-radius: 1.25rem;">
                         <div style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;margin-right: 20px">
-                            <h1 style="margin-top: 20px">文玩主色分析：下面放置用户上传文玩的主色和采集的文玩主色</h1>
-                            <div style="margin-top: 20px">
-                                <canvas id="myCanvas" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey;margin-left: 10px">
-                                    <script> displayColor("myCanvas","{{report_color_list.1}}")</script>
-                                </canvas>
-                                <canvas id="myCanvas2" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey;margin-left: 10px">
-                                    <script> displayColor('myCanvas2','{{report_color_list.2}}')</script>
-                                </canvas>
-                                <canvas id="myCanvas3" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey;margin-left: 10px">
-                                    <script> displayColor('myCanvas3','{{report_color_list.3}}')</script>
-                                </canvas>
+                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f; text-align: center">色彩分析</h1>
+
+                            <h1 style="text-align: center">以下是您的文玩主色</h1>
+                            <div style="margin-top: 20px; text-align: center">
+                                <ul class="list-group list-group-horizontal">
+                                    <li class="list-group-item">
+                                        <div class="card" style="width: 10rem;">
+                                            <canvas id="myCanvas" width="100" height="100" >
+                                                <script> displayColor("myCanvas","{{report_color_list.1}}")</script>
+                                            </canvas>
+                                            <div class="card-body">
+                                                <p class="card-text">{{report_color_list.1}}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="card" style="width: 10rem;">
+                                            <canvas id="myCanvas2" width="100" height="100" >
+                                                <script> displayColor("myCanvas2","{{report_color_list.2}}")</script>
+                                            </canvas>
+                                            <div class="card-body">
+                                                <p class="card-text">{{report_color_list.2}}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="card" style="width: 10rem;">
+                                            <canvas id="myCanvas3" width="100" height="100" >
+                                                <script> displayColor("myCanvas3","{{report_color_list.3}}")</script>
+                                            </canvas>
+                                            <div class="card-body">
+                                                <p class="card-text">{{report_color_list.3}}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <h1 style="margin-top: 20px">用户上传文玩色块和标准差距</h1>
+
+                            <h1 style="margin-top: 20px; text-align: center">以下与您文玩匹配的唐三彩标准色块</h1>
+
                             <div style="margin-top: 20px">
-                                <canvas id="standardColor1" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey;margin-left: 10px">
-                                    <script> displayColor("standardColor1","#FF0000")</script>
-                                </canvas>
-                                <canvas id="standardColor2" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey;margin-left: 10px">
-                                    <script> displayColor('standardColor2','#343ed3')</script>
-                                </canvas>
-                                <canvas id="standardColor3" width="100" height="100" style="border:1px solid #d3d3d3; box-shadow: 5px 5px grey;margin-left: 10px">
-                                    <script> displayColor('standardColor3','#343ED3')</script>
-                                </canvas>
+                                <ul class="list-group list-group-horizontal">
+                                    <li class="list-group-item">
+                                        <div class="card" style="width: 10rem;">
+                                            <canvas id="standardColor1" width="100" height="100" >
+                                                <script> displayColor("standardColor1","#FF0000")</script>
+                                            </canvas>
+                                            <div class="card-body">
+                                                <p class="card-text">唐三彩的釉色除了常用的赫、绿、白以外，还有蓝、紫、黑，在当时视蓝釉为贵，故有“蓝三彩”之说</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="card" style="width: 10rem;">
+                                            <canvas id="standardColor2" width="100" height="100" >
+                                                <script> displayColor("standardColor2","#343ed3")</script>
+                                            </canvas>
+                                            <div class="card-body">
+                                                <p class="card-text">三彩釉色的主要成分是铅，为得到不同的色彩还增加了猛、钻、硅酸铜、氧化铁等金属成分。</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="card" style="width: 10rem;">
+                                            <canvas id="standardColor3" width="100" height="100" >
+                                                <script> displayColor("standardColor3","#343ED3")</script>
+                                            </canvas>
+                                            <div class="card-body">
+                                                <p class="card-text">在千度左右的烧烤下，玻化窑变，釉色就出现了流窜现象，几种釉色融汇渗化，异彩纷呈。</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
+
                         </div>
                         <h1>您的颜色相似度为{{report_color_list.0}}</h1>
                     </div>
@@ -223,23 +246,20 @@
                         border-bottom-left-radius: 1.25rem;
                         border-bottom-right-radius: 1.25rem;">
                         <div style="margin-left: 20px;margin-top: 20px;margin-bottom: 20px;margin-right: 20px">
-                            <h1 style="margin-top: 20px">墓穴分析正文</h1>
+                            <h1 style="font-family: 楷体; font-size: 100px; color: #5f3f3f; text-align: center">墓穴分析</h1>
                             <div class="container" style="margin-top: 20px">
                                 <div class="row" style="margin-top: 20px">
                                     <div class="col-sm" style="margin-top: 20px">
-                                        <img src="/tangzhaojun.png" alt="..." class="img-thumbnail">
+                                        <img src="/tomb/{{ tomb_list.1 }}.jpg" alt="..." class="img-thumbnail">
                                     </div>
 
                                     <div class="col-lg" >
                                         <div class="col-sm">
-                                            <img src="/唐昭墓.png" alt="..." class="img-thumbnail">
+                                           <h1>{{ tomb_name }}</h1>
                                         </div>
                                         <div class="col-sm" style="margin-top: 20px">
-                                            <p><br>昭陵是唐太宗李世民与文德皇后长孙氏的合葬陵墓，
-                                                位于陕西省咸阳市礼泉县城西北22.5千米的九嵕山上，是关中“唐十八陵”，
-                                                也是中国历代帝王陵园中规模最大、陪葬墓最多的一座。
-                                                昭陵是初唐走向盛唐的实物见证，是了解、研究唐代政治、经济、文化难得的文物宝库。
-
+                                            <p><br>
+                                                    {{ tomb_content }}
                                             </p>
                                         </div>
                                     </div>
