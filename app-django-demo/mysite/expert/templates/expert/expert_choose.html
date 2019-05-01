@@ -37,17 +37,19 @@
                     {% if request.session.is_login %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
 						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">三彩坊</a></li>
+						<li class="menu__item"><a href="/workshop/" class="menu__link">三彩坊</a></li>
 						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                        <li class="menu__item menu__item--current"><a href="/expert/" class="menu__link">专家问答</a></li>
                         <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
                         <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
                     {% else %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
 						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">三彩坊</a></li>
+						<li class="menu__item"><a href="/workshop/" class="menu__link">三彩坊</a></li>
 						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                        <li class="menu__item menu__item--current"><a href="/expert/" class="menu__link">专家问答</a></li>
                     {% endif %}
 					</ul>
 				</nav>
@@ -55,9 +57,9 @@
     </header>
 
     <main role="main">
-        <br />
-        <br />
-        <br />
+        <br>
+        <br>
+        <br>
 
       <div class="container marketing" >
 
@@ -76,70 +78,15 @@
             </form>
           </div>
             {% endfor %}
-        <!--
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-            <h2>X专家</h2>
-            <p>XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-            <p><a class="btn btn-secondary" href="detail/" role="button">￥30咨询 &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-            <h2>X专家</h2>
-            <p>XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-            <p><a class="btn btn-secondary" href="detail/" role="button">￥30咨询 &raquo;</a></p>
-          </div>
-
-            <div class="col-lg-4">
-            <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-            <h2>X专家</h2>
-            <p>XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-            <p><a class="btn btn-secondary" href="detail/" role="button">￥30咨询 &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-            <h2>X专家</h2>
-            <p>XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-            <p><a class="btn btn-secondary" href="detail/" role="button">￥30咨询 &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-            <h2>X专家</h2>
-            <p>XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-            <p><a class="btn btn-secondary" href="detail/" role="button">￥30咨询 &raquo;</a></p>
-          </div>
-
-            <div class="col-lg-4">
-            <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-            <h2>X专家</h2>
-            <p>XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-            <p><a class="btn btn-secondary" href="detail/" role="button">￥30咨询 &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-            <h2>X专家</h2>
-            <p>XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-            <p><a class="btn btn-secondary" href="detail/" role="button">￥30咨询 &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="/avatar1.png" alt="Generic placeholder image" width="140" height="140">
-            <h2>X专家</h2>
-            <p>XX博物馆馆长，从事古玩行业多年，眼光老辣，鉴别精准，对唐三彩类古玩有独到的见解</p>
-            <p><a class="btn btn-secondary" href="detail/" role="button">￥30咨询 &raquo;</a></p>
-          </div>
-          -->
         </div>
 
     </main>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="{% static 'expert/js/vendor/popper.min.js' %></script>
-    <script src="{% static 'expert/js/bootstrap.bundle.min.js' %}></script>
-    <script src="{% static 'expert/js/vendor/holder.min.js' %}></script>
-
+    <script src="{% static 'expert/js/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'expert/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'expert/js/vendor/holder.min.js' %}"></script>
   </body>
 </html>

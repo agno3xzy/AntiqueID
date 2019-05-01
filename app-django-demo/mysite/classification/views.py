@@ -21,7 +21,7 @@ from . import localization
 size = 128,128
 category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4}
 category_name = {0:'唐三彩马俑', 1:'唐三彩罐', 2:'唐三彩人像', 3:'唐三彩碗',4:'唐三彩人像——头部'}
-tomb_category = {0:'唐昭陵韦贵妃墓',1:'唐惠庄太子李撝墓',2:'唐昭陵韦贵妃墓'}
+tomb_category = {0:'唐昭陵韦贵妃墓',1:'唐惠庄太子李撝墓',2:'懿德太子墓'}
 
 def index(request):
     if not request.session.get('is_login', None):
