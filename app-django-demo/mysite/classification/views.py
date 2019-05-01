@@ -16,6 +16,7 @@ from . import color_predict
 from . import background_subtraction
 from . import color_similarity
 from . import class_content
+from . import localization
 
 size = 128,128
 category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4}
@@ -94,7 +95,9 @@ def upload_file(request):
         classresult, classmsg = get_from_nano(pic_path)
 
         tomb, tomb_pic = predict_tomb(pic_path)
-        save_as_report(request,Timestamp,pic_path,color_score,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic))
+        feature_list = localization.localize(pic_path)
+
+        save_as_report(request,Timestamp,pic_path,color_score,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic), feature_list)
 
         #输出相应前端报告格式
         report = models.Classification.objects.get(class_id = Timestamp)
@@ -109,6 +112,7 @@ def upload_file(request):
         tomb_list = report.class_tomb.split('#')
         tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]))
         tomb_name = tomb_category[int(tomb_list[0])]
+
         return render(request, "classification/report.html", locals())
 
 
@@ -127,16 +131,18 @@ def report(request):
     tomb_list = report.class_tomb.split('#')
     tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]))
     tomb_name = tomb_category[int(tomb_list[0])]
+    feature_list = report.class_feature.split('#')
     for i in range(len(report_color_list)):
         if i == 0:
             pass
         else:
             report_color_list[i] = '#' + report_color_list[i]
     antique_name = category_name[report.class_type]
+
     return render(request, "classification/report.html", locals())
 
 #存储为鉴定报告
-def save_as_report(request, Timestamp, pic_path, color_score, feature_color, classtype, classresult, tomb, tomb_pic):
+def save_as_report(request, Timestamp, pic_path, color_score, feature_color, classtype, classresult, tomb, tomb_pic, feature_list):
     # 保存鉴定报告
     userID = request.session['user_id']
     user = models.User.objects.get(user_id=userID)
@@ -149,6 +155,11 @@ def save_as_report(request, Timestamp, pic_path, color_score, feature_color, cla
     report.class_type = classtype
     report.class_result = classresult
     report.class_tomb = tomb + '#' + tomb_pic
+    featureStr = feature_list[0]
+    for index in range(len(feature_list)):
+        if index > 0:
+            featureStr = featureStr + '#' + feature_list[index]
+    report.class_feature = featureStr
     report.save()
 
 #nanoNets

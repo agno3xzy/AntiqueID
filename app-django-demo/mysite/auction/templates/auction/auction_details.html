@@ -31,20 +31,6 @@
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
-        <!--
-        <div class="inner">
-            <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link" style="color: black" href="/">主页</a>
-                <a class="nav-link " style="color: black"
-                   href="/classification/">辅助鉴赏</a>
-                <a class="nav-link" style="color: black"
-                   href="/workshop/">鉴宝馆</a>
-                <a class="nav-link active" style="color: black"
-                   href="/auction/">拍卖</a>
-                <a class="nav-link" style="color: black"
-                   href="/shop/">商城</a>
-            </nav>
-        </div>-->
                 <nav class="menu menu--prospero" style="height: 20px">
 					<ul class="menu__list">
                     {% if request.session.is_login %}
@@ -54,7 +40,7 @@
 						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item menu__item--current"><a href="/auction/" class="menu__link">拍卖</a></li>
                         <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
-                        <li class="menu__item"><a href="/classification/logout/" class="menu__link" style="color:blue">登出</a></li>
+                        <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
                     {% else %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
 						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
