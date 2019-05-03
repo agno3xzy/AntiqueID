@@ -22,6 +22,7 @@ size = 128,128
 category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4}
 category_name = {0:'唐三彩马俑', 1:'唐三彩罐', 2:'唐三彩人像', 3:'唐三彩碗',4:'唐三彩人像——头部'}
 tomb_category = {0:'唐昭陵韦贵妃墓',1:'唐惠庄太子李撝墓',2:'懿德太子墓'}
+dynasty_category = {0:'初唐', 1:'盛唐'}
 
 def index(request):
     if not request.session.get('is_login', None):
@@ -92,12 +93,13 @@ def upload_file(request):
         # 获取nearest数组和distance_sum数组并打印
         color_score = a.get_distance_avgsum(a.get_distance_sum())
 
-        classresult, classmsg = get_from_nano(pic_path)
+        classresult, classmsg = get_from_nano(pre_pic_path)
 
-        tomb, tomb_pic = predict_tomb(pic_path)
-        feature_list = localization.localize(pic_path)
+        tomb, tomb_pic = predict_tomb(pre_pic_path)
+        dynasty = predict_dynasty(pre_pic_path)
+        feature_list = localization.localize(pre_pic_path)
 
-        save_as_report(request,Timestamp,pic_path,color_score,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic), feature_list)
+        save_as_report(request,Timestamp,pic_path,color_score,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic), feature_list, dynasty)
 
         #输出相应前端报告格式
         report = models.Classification.objects.get(class_id = Timestamp)
@@ -110,9 +112,14 @@ def upload_file(request):
                 report_color_list[i] = '#' + report_color_list[i]
         print(report_color_list)
         tomb_list = report.class_tomb.split('#')
-        tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]))
+        tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]), 0)
+        if dynasty == 0 :
+            dynasty_content = class_content.get_content('朝代', '初唐', 0, 0)
+        else:
+            dynasty_content = class_content.get_content('朝代', '盛唐', 0, 0)
+        dynasty_name = dynasty_category[dynasty]
         tomb_name = tomb_category[int(tomb_list[0])]
-
+        feature_content = feature_analysis(report.class_type)
         return render(request, "classification/report.html", locals())
 
 
@@ -129,20 +136,25 @@ def report(request):
     report = models.Classification.objects.get(class_id=report_id)
     report_color_list = report.class_color.split('#')
     tomb_list = report.class_tomb.split('#')
-    tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]))
+    tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]), 0)
     tomb_name = tomb_category[int(tomb_list[0])]
     feature_list = report.class_feature.split('#')
+    if int(report.class_dynasty) == 0:
+        dynasty_content = class_content.get_content('朝代', '初唐', 0, 0)
+    else:
+        dynasty_content = class_content.get_content('朝代', '盛唐', 0, 0)
+    dynasty_name = dynasty_category[int(report.class_dynasty)]
     for i in range(len(report_color_list)):
         if i == 0:
             pass
         else:
             report_color_list[i] = '#' + report_color_list[i]
     antique_name = category_name[report.class_type]
-
+    feature_content = feature_analysis(report.class_type)
     return render(request, "classification/report.html", locals())
 
 #存储为鉴定报告
-def save_as_report(request, Timestamp, pic_path, color_score, feature_color, classtype, classresult, tomb, tomb_pic, feature_list):
+def save_as_report(request, Timestamp, pic_path, color_score, feature_color, classtype, classresult, tomb, tomb_pic, feature_list, dynasty):
     # 保存鉴定报告
     userID = request.session['user_id']
     user = models.User.objects.get(user_id=userID)
@@ -155,6 +167,7 @@ def save_as_report(request, Timestamp, pic_path, color_score, feature_color, cla
     report.class_type = classtype
     report.class_result = classresult
     report.class_tomb = tomb + '#' + tomb_pic
+    report.class_dynasty = str(dynasty)
     featureStr = feature_list[0]
     for index in range(len(feature_list)):
         if index > 0:
@@ -193,10 +206,26 @@ def predict_tomb(pic_path):
     return tomb, tomb_pic_name
 
 #朝代预测
-def predict_dynasty():
-    pass
-
+def predict_dynasty(pic_path):
+    dynasty = random.randint(0,1)
+    return dynasty
 
 #特征分析
-def feature_analysis():
-    pass
+def feature_analysis(category):
+    featrue_content = []
+    if category == 0:
+        featrue_content.append(class_content.get_content('大类分析和介绍', '马', '综述', 0))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(1,4)))
+        featrue_content.append(str(class_content.get_content('大类分析和介绍', '马', '工艺', 0)))
+
+    elif category == 1 or category == 3:
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '分类', 0))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(1, 4)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(5, 8)))
+    else:
+        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '综述', 0))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(1, 2)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(3, 4)))
+
+    print(featrue_content)
+    return featrue_content

@@ -281,18 +281,16 @@
                             <div class="container" style="margin-top: 20px">
                                 <div class="row" style="margin-top: 20px">
                                     <div class="col-sm" style="margin-top: 20px">
-                                        <img src="/shengtang.png" alt="..." class="img-thumbnail">
+                                        <img src="/dynasty/{{ report.class_dynasty }}.png" alt="..." class="img-thumbnail">
                                     </div>
 
                                     <div class="col-lg">
                                         <div class="col-sm">
-                                            <img src="/盛唐.png" alt="..." class="img-thumbnail">
+                                            <h1>{{ dynasty_name }}</h1>
                                         </div>
                                         <div class="col-sm" style="margin-top: 20px">
-                                            <p>唐代贞观之治以后，国力强盛、百业俱兴，同时也导致了一些高官生活的腐化，于是厚葬之风日盛。
-                                                唐三彩当时也是作为一种冥器，曾经被列入官府的明文规定，一品、二品、三品、四品，就是说可以允许他随葬多少件，
-                                                但是实际上作为这些达官显贵们，并不满足于明文的规定，反而他们往往比官府规定要增加很多的倍数，
-                                                去做这种厚葬。这也就是唐三彩当时能够迅速在中原地区发展和兴起的一个主要原因之一。
+                                            <p>
+                                                {{ dynasty_content }}
                                             </p>
                                         </div>
                                     </div>
@@ -328,30 +326,22 @@
                             <table class="table" style="margin-top: 20px">
                                 <thead>
                                 <tr>
-                                    <th scope="col">特征名称</th>
-                                    <th scope="col">特征类别</th>
-                                    <th scope="col">特征稀有度</th>
-                                    <th scope="col">特征吻合度</th>
+                                    <th scope="col">综述</th>
+                                    <th scope="col">艺术特征</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <td>{{ feature_content.0}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
+                                    <td>{{ feature_content.1 }}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
+                                    <td>{{ feature_content.2 }}</td>
                                 </tr>
                                 </tbody>
                             </table>
