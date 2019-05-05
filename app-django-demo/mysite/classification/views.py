@@ -81,25 +81,21 @@ def upload_file(request):
             classtype = 3
         '''
 
-        std_rgb=[(122,100,103),(87,125,35)]
 
         a = color_similarity.ColorHub()
-        a.read_from_data(dec_feature_color,std_rgb)
-        a.print_info()
+        a.read_from_data(dec_feature_color)
+        a.calculate_k_nearest(color_similarity.ColorHub.EUCLIDEAN, 5)
 
-        # 计算k-nearest颜色（用欧几里得距离）
-        a.calculate_k_nearest(color_similarity.ColorHub.EUCLIDEAN, 1)
+        color_showcase = a.get_showcase(a.calculate_nearest_sum())
 
-        # 获取nearest数组和distance_sum数组并打印
-        color_score = a.get_distance_avgsum(a.get_distance_sum())
 
-        classresult, classmsg = get_from_nano(pre_pic_path)
+        class_dic, classmsg = get_from_nano(pre_pic_path)
+        classresult = json.dumps(class_dic)
 
         tomb, tomb_pic = predict_tomb(pre_pic_path)
         dynasty = predict_dynasty(pre_pic_path)
         feature_list = localization.localize(pre_pic_path)
-
-        save_as_report(request,Timestamp,pic_path,color_score,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic), feature_list, dynasty)
+        save_as_report(request,Timestamp,pic_path,color_showcase,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic), feature_list, dynasty)
 
         #输出相应前端报告格式
         report = models.Classification.objects.get(class_id = Timestamp)
@@ -110,7 +106,6 @@ def upload_file(request):
                 pass
             else:
                 report_color_list[i] = '#' + report_color_list[i]
-        print(report_color_list)
         tomb_list = report.class_tomb.split('#')
         tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]), 0)
         if dynasty == 0 :
@@ -120,6 +115,9 @@ def upload_file(request):
         dynasty_name = dynasty_category[dynasty]
         tomb_name = tomb_category[int(tomb_list[0])]
         feature_content = feature_analysis(report.class_type)
+        index_color_list = []
+        for i in range(len(report_color_list)):
+            index_color_list.append(i)
         return render(request, "classification/report.html", locals())
 
 
@@ -151,10 +149,13 @@ def report(request):
             report_color_list[i] = '#' + report_color_list[i]
     antique_name = category_name[report.class_type]
     feature_content = feature_analysis(report.class_type)
+    class_dic = json.loads(report.class_result)
+    color_showcase = json.loads(report_color_list[0])
+    color_list = report_color_list[1:]
     return render(request, "classification/report.html", locals())
 
 #存储为鉴定报告
-def save_as_report(request, Timestamp, pic_path, color_score, feature_color, classtype, classresult, tomb, tomb_pic, feature_list, dynasty):
+def save_as_report(request, Timestamp, pic_path, color_showcase, feature_color, classtype, classresult, tomb, tomb_pic, feature_list, dynasty):
     # 保存鉴定报告
     userID = request.session['user_id']
     user = models.User.objects.get(user_id=userID)
@@ -163,7 +164,7 @@ def save_as_report(request, Timestamp, pic_path, color_score, feature_color, cla
     report.user_user = user
     report.class_id = Timestamp
     report.class_img = pic_path
-    report.class_color = str(color_score) + "".join(feature_color)
+    report.class_color = json.dumps(color_showcase) + "".join(feature_color)
     report.class_type = classtype
     report.class_result = classresult
     report.class_tomb = tomb + '#' + tomb_pic
@@ -182,20 +183,16 @@ def get_from_nano(pic_path):
             'modelId': ('', 'c41da85a-1303-451a-9077-71128b3e7acd')}
     response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
     dic = json.loads(response.text)
-    print(dic)
     class_msg = "null"
     result_dic = {}
     if dic['message'] == 'Success':
         for i in dic['result'][0]['prediction']:
-            print(i)
-            if i['probability'] >= 0.50:
-                result_dic[i['label']] = i['probability']
-
+            result_dic[i['label']] = i['probability']
     if not bool(result_dic):
         pass
     else:
         class_msg = str(max(result_dic,key=result_dic.get))
-    return response.text, class_msg
+    return result_dic, class_msg
 
 #墓穴预测
 def predict_tomb(pic_path):
