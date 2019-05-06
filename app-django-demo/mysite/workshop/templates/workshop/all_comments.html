@@ -36,7 +36,7 @@
                     {% if request.session.is_login %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
 						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">三彩坊</a></li>
+						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
 						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
                         <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
@@ -45,7 +45,7 @@
                     {% else %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
 						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">三彩坊</a></li>
+						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
 						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
                         <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
@@ -59,7 +59,7 @@
         <div class="row featurette" style="margin-top: -4%;margin-bottom: -4%">
           <div class="col-md-7 order-md-2" style="margin-top: -6%; margin-left: -10%;">
             <div class="container">
-                <h2 class="featurette-heading">{{ user.user_name }}</h2>
+                <h2 class="featurette-heading">{{ user.user_email }}</h2>
                 <br />
                 <p class="lead">{{ user.user_info }}</p>
             <p>

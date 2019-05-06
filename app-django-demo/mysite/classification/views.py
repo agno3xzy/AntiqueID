@@ -115,9 +115,7 @@ def upload_file(request):
         dynasty_name = dynasty_category[dynasty]
         tomb_name = tomb_category[int(tomb_list[0])]
         feature_content = feature_analysis(report.class_type)
-        index_color_list = []
-        for i in range(len(report_color_list)):
-            index_color_list.append(i)
+        color_list = report_color_list[1:]
         return render(request, "classification/report.html", locals())
 
 

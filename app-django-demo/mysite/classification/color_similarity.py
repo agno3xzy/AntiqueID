@@ -209,6 +209,11 @@ class ColorHub:
         index = 0
         self.nearest_sum = [0]*len(self.pic)
         for each_nearest in self.nearest:
+            if index >= len(self.pic):
+                break
+            print(index)
+            print(temp)
+            print(self.nearest_sum)
             for rgb_each in each_nearest:
                 temp[self.calculate_color_type(self.std.index(rgb_each))]+=1
             self.nearest_sum[index] = max(temp)

@@ -20,14 +20,15 @@ def get_cropbox_from_nano(dir):
 
     if dic['message'] == 'Success':
         for i in dic['result'][0]['prediction']:
-            if i['score'] >= 0.50:
-                labels.append(i['label'])
-                probabilities[i['label']] = i['score']
-                crop_box.append([i['xmin'], i['ymin'], i['xmax'], i['ymax']])
+            #if i['score'] >= 0.50:
+            labels.append(i['label'])
+            probabilities[i['label']] = i['score']
+            crop_box.append([i['xmin'], i['ymin'], i['xmax'], i['ymax']])
 
-    #print(labels)
-    #print(probabilities)
-    #print(crop_box)
+
+    print(labels)
+    print(probabilities)
+    print(crop_box)
     return labels, probabilities, crop_box
 
 def get_file_name(dir):
