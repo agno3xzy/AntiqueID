@@ -61,7 +61,7 @@ def index(request):
             Expert_collection_display = Expert_collection
          #所有报告
         reports = models.Classification.objects.filter(user_user=user)
-        print(reports)
+        #print(reports)
         return render(request, 'workshop/frontpage.html', locals())
     if request.method == "POST":
         login_form = forms.UserForm(request.POST)

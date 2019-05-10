@@ -50,8 +50,8 @@ def details(request):
         now_price = temp_price[0]['comm_sellprice']
         if price_form.is_valid():
             userprice = price_form.cleaned_data['userpirce']
-            print(userprice)
-            print(now_price)
+            #print(userprice)
+            #print(now_price)
             if int(userprice) <= now_price:
                 message = "报价应高于目前最高报价! "
             else:

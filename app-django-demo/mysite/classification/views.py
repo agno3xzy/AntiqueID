@@ -19,8 +19,8 @@ from . import class_content
 from . import localization
 
 size = 128,128
-category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4}
-category_name = {0:'唐三彩马俑', 1:'唐三彩罐', 2:'唐三彩人像', 3:'唐三彩碗',4:'唐三彩人像——头部'}
+category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4, 'camel':5}
+category_name = {0:'唐三彩马俑', 1:'唐三彩罐', 2:'唐三彩人像', 3:'唐三彩碗',4:'唐三彩人像——头部',5:'唐三彩骆驼'}
 tomb_category = {0:'唐昭陵韦贵妃墓',1:'唐惠庄太子李撝墓',2:'懿德太子墓'}
 dynasty_category = {0:'初唐', 1:'盛唐'}
 
@@ -51,7 +51,7 @@ def upload_file(request):
         raw_coordinate = request.POST.get("coordinate", None)
         if not raw_coordinate:
             pic_rect =(0, 0, int(image.size[0])-1, int(image.size[1])-1)
-            print(pic_rect)
+            #print(pic_rect)
         else:
             real_coordinate = raw_coordinate.split("#", raw_coordinate.count('#'))
             pic_rect =(int(real_coordinate[0]),int(real_coordinate[1]),int(real_coordinate[2]),int(real_coordinate[2]))
@@ -116,6 +116,7 @@ def upload_file(request):
         tomb_name = tomb_category[int(tomb_list[0])]
         feature_content = feature_analysis(report.class_type)
         color_list = report_color_list[1:]
+        color_sum_str = class_content.get_content('釉色分析', '综述', 0, 0)
         return render(request, "classification/report.html", locals())
 
 
@@ -150,6 +151,7 @@ def report(request):
     class_dic = json.loads(report.class_result)
     color_showcase = json.loads(report_color_list[0])
     color_list = report_color_list[1:]
+    color_sum_str = class_content.get_content('釉色分析', '综述', 0, 0)
     return render(request, "classification/report.html", locals())
 
 #存储为鉴定报告
@@ -222,5 +224,5 @@ def feature_analysis(category):
         featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(1, 2)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(3, 4)))
 
-    print(featrue_content)
+    #print(featrue_content)
     return featrue_content

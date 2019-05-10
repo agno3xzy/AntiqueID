@@ -43,7 +43,7 @@ class Expert:
 def comment(request):
     if request.method == "POST":
         commodity_id = request.POST.get("id", '')
-        print(commodity_id)
+        #print(commodity_id)
         Commodity = models.Commodity.objects.get(comm_id = commodity_id)
         expert_Commodity = models.ExpertHasCommodity.objects.filter(commodity_comm = commodity_id).reverse()
         EEE = []
@@ -63,8 +63,8 @@ def comment_detail(request):
     if request.method == "POST":
         commodity_id = request.POST.get("comm_id", '')
         expert_id = request.POST.get("expert_id", '')
-        print(commodity_id)
-        print(expert_id)
+        #print(commodity_id)
+        #print(expert_id)
         Commodity = models.Commodity.objects.get(comm_id = commodity_id)
         Expert = models.Expert.objects.get(expert_id = expert_id)
         Expert_Comment = models.ExpertHasCommodity.objects.get(commodity_comm = commodity_id, expert_expert = expert_id)

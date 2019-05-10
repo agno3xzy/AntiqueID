@@ -13,7 +13,7 @@ def expertapply(request):
 
 #管理员端确认是否通过申请
 def checkapply(request):
-    if request.session.get('is_login', None) and request.method == 'POST':
+    if request.method == 'POST':
         UserId = request.POST.get('id')
         operation = request.POST.get('operation')
         if operation == 'pass':

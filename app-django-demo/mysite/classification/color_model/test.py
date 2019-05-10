@@ -8,9 +8,9 @@ for root, dirs, files in os.walk('D:\\2019Spring\Intel杯\数据集\Tangsancai\\
         # print(file)     #文件名
         color_thief = ColorThief(os.path.join(root, file))
         dominant_color = color_thief.get_color(quality=1)
-        print(dominant_color)
+        #print(dominant_color)
         horse_dominantcolor.append(dominant_color)
-print(horse_dominantcolor)
+#print(horse_dominantcolor)
 background = Image.new("RGB", (1000, 1000), (255, 255, 255))
 background.show()
 iter = 0

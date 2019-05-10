@@ -47,7 +47,7 @@ direc = os.getcwd()
 #目前路径为linux上的
 for i in all_classes:
 		dirr.append(direc + "/Tangsancai/" + i + "/")
-		print(i)
+		#print(i)
 
 model_name = ''
 for i in classes:
@@ -70,7 +70,7 @@ def show_pic(pic_dir):
 	pic = transform_pic(pic_dir)
 	plt.imshow(pic, cmap = plt.cm.binary)
 	plt.show()
-	print('shape: '+ str(pic.shape))
+	#print('shape: '+ str(pic.shape))
 
 def load_pics(each_dir):
 	for n in os.listdir(each_dir):    

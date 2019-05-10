@@ -118,12 +118,13 @@ class ColorHub:
         self.distance = np.zeros((len(self.pic), len(self.std)), dtype='float')
 
     #输出颜色信息
+    '''
     def print_info(self):
-        print('您的颜色:')
-        print(self.pic_vec)
-        print('标准颜色:')
-        print(self.std_vec)
-
+        #print('您的颜色:')
+        #print(self.pic_vec)
+        #print('标准颜色:')
+        #print(self.std_vec)
+    '''
     def calculate_constants(self):
         a = np.array([0, 0, 0])
         b = np.array([255, 255, 255])
@@ -138,7 +139,7 @@ class ColorHub:
         self.CURRENT = type
         self.K = K
         if len(self.pic) == 0 and len(self.std) == 0:
-            print('Please initialize your colors data.')
+            #print('Please initialize your colors data.')
             return -1
 
         for i in range(0,len(self.pic)):
@@ -182,6 +183,7 @@ class ColorHub:
             return None
 
     #打印出每个输入颜色的最近邻颜色矩阵
+
     def print_nearest(self):
         print(self.nearest)
         print(self.dic[self.CURRENT])
@@ -190,6 +192,7 @@ class ColorHub:
             for j in range(0, self.K):
                 print(self.nearest[i][j], end=' ')
             print('')
+
 
     #打印出每个输入颜色的距离列表
     def print_distance_sum(self, distance_sum):
@@ -211,9 +214,9 @@ class ColorHub:
         for each_nearest in self.nearest:
             if index >= len(self.pic):
                 break
-            print(index)
-            print(temp)
-            print(self.nearest_sum)
+            #print(index)
+            #print(temp)
+            #print(self.nearest_sum)
             for rgb_each in each_nearest:
                 temp[self.calculate_color_type(self.std.index(rgb_each))]+=1
             self.nearest_sum[index] = max(temp)

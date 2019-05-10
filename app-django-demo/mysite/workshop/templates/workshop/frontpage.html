@@ -25,27 +25,27 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-                <nav class="menu menu--prospero" style="height: 20px">
-					<ul class="menu__list">
-                    {% if request.session.is_login %}
-						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
-						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
-						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
-						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
-                        <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
-                        <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
-                    {% else %}
-						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
-						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
-						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
-						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
-                        <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
-                    {% endif %}
-					</ul>
-				</nav>
+        <nav class="menu menu--prospero" style="height: 20px">
+            <ul class="menu__list">
+                {% if request.session.is_login %}
+                    <li class="menu__item"><a href="/" class="menu__link">主页</a></li>
+                    <li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+                    <li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
+                    <li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+                    <li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                    <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                    <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
+                {% else %}
+                    <li class="menu__item"><a href="/" class="menu__link">主页</a></li>
+                    <li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+                    <li class="menu__item menu__item--current"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
+                    <li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+                    <li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                    <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
+                {% endif %}
+            </ul>
+        </nav>
     </nav>
 </header>
 
@@ -66,26 +66,28 @@
                     <p>
                         <a href="#" class="btn btn-primary my-2">修改个人信息</a>
                     <div class="accordion" id="accordionExample">
-                        <div class="card" style="background-image: url('/bk_test.jpg');">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-primary my-2 collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        点击申请成为专家
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <div class="container">
-                                        <form action="apply/" method="post">
-                                            {% csrf_token %}
-                                           <textarea class="form-control" aria-label="With textarea" name="applyment"></textarea>
-                                            <button type="submit" class="btn btn-primary">提交</button>
-                                        </form>
+                        {% if user.user_identity != 2%}
+                            <div class="card" style="background-image: url('/bk_test.jpg');">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-primary my-2 collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            点击申请成为专家
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <form action="apply/" method="post">
+                                                {% csrf_token %}
+                                                <textarea class="form-control" aria-label="With textarea" name="applyment"></textarea>
+                                                <button type="submit" class="btn btn-primary">提交</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        {% endif %}
                     </div>
                     </p>
                 </div>

@@ -22,9 +22,6 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-    {#    <script src="/static/myadmin/js/expertapply.js"></script>#}
-    <!-- Bootstrap core CSS -->
-    <!-- Custom styles for this template -->
     <link href="/static/myadmin/css/cover.css" rel="stylesheet">
     <link href="/static/myadmin/css/flipcard.css" rel="stylesheet">
 </head>
@@ -71,8 +68,8 @@
         <div class="row">
             {% for i in expertList %}
             <div class="card" style="width: 18rem;">
-                {% if i.user_avatar == None %}
-                <img src="/avatar/avatar_default.jpg" class="card-img-top" alt="..." size="50%">
+                {% if i.user_avatar != None %}
+                <img src="/avatar/{{ i.user_avatar }}" class="card-img-top" alt="..." size="50%">
                 {% else %}
                 <img src="{{ i.user_avatar }}" class="card-img-top" alt="...">
                 {% endif %}
@@ -82,17 +79,14 @@
                     {% else %}
                     <h5 class="card-title">专家ID： {{ i.user_id }}</h5>
                     {% endif %}
-                    {% if i.user_name != None %}
-                    <p class="card-text">专家信息：</p>
-                    {% else %}
-                    <p class="card-text"></p>
-                    {% endif %}
+                    <p class="card-text">申请信息：{{ i.user_applyment }}</p>
                     <form action="../checkapply/" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <input class="btn btn-primary" name="foo" type="submit" value="pass">通过</input>
                         <input hidden name="id" value="{{ i.user_id }}"/>
                         <input hidden name="operation" value="pass"/>
                     </form>
+                </br>
                     <form action="../checkapply/" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <input class="btn btn-primary" name="fooo" type="submit" value="reject">拒绝</input>

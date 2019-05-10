@@ -69,7 +69,7 @@
                     </p>
                     <form  action="upload_file/" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <input type="file" name="imageFile" id="img"/>
+                        <input type="file" name="imageFile" accept="image/png,image/jpg, image/jpeg" id="img"/>
                         <br>
                         <input type="text" placeholder="1#2#100#100" name="coordinate" id="coordinate"/>
                         <input type="submit" id="fileSubmit" name="Submit" value="上传" />
