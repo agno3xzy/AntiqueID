@@ -219,10 +219,14 @@ def feature_analysis(category):
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '分类', 0))
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(1, 4)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(5, 8)))
+    elif category == 5 :
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '分类', 0))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(1, 4)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(5, 8)))
     else:
-        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '综述', 0))
-        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(1, 2)))
-        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(3, 4)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '骆驼', '综述', 0))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '骆驼', '颜色', 1))
+
 
     #print(featrue_content)
     return featrue_content
