@@ -39,12 +39,12 @@ class ColorHub:
              (40, 36, 37), (24, 15, 18), (28, 19, 22), ]
     }
     showcase_filename = {
-        0: ['6.jpg','7.jpg','8.jpg','9.jpg'],
-        1: ['1.jpg','2.jpg','3.jpg'],
-        2: ['10.jpg','11.jpg','12.jpg'],
-        3: ['16.jpg','17.jpg','18.jpg'],
-        4: ['4.jpg','5.jpg' ],
-        5: ['13.jpg','14.jpg','15.jpg'],
+        0: [0,'6.jpg','7.jpg','8.jpg','9.jpg'],
+        1: [1,'1.jpg','2.jpg','3.jpg'],
+        2: [2,'10.jpg','11.jpg','12.jpg'],
+        3: [3,'16.jpg','17.jpg','18.jpg'],
+        4: [4,'4.jpg','5.jpg' ],
+        5: [5,'13.jpg','14.jpg','15.jpg'],
     }
 
     #两个图片list的常量
@@ -139,7 +139,6 @@ class ColorHub:
         self.CURRENT = type
         self.K = K
         if len(self.pic) == 0 and len(self.std) == 0:
-            #print('Please initialize your colors data.')
             return -1
 
         for i in range(0,len(self.pic)):
@@ -208,18 +207,16 @@ class ColorHub:
 
     #计算最近邻颜色出现的个数
     def calculate_nearest_sum(self):
+        #记录每种颜色出现的次数
         temp = [0]*6
         index = 0
         self.nearest_sum = [0]*len(self.pic)
         for each_nearest in self.nearest:
             if index >= len(self.pic):
                 break
-            #print(index)
-            #print(temp)
-            #print(self.nearest_sum)
             for rgb_each in each_nearest:
                 temp[self.calculate_color_type(self.std.index(rgb_each))]+=1
-            self.nearest_sum[index] = max(temp)
+            self.nearest_sum[index] = temp.index(max(temp))
             index+=1
             temp = [0] * 6
         self.nearest_sum_max = max(self.nearest_sum)
@@ -239,15 +236,6 @@ class ColorHub:
             return 4
         elif index >= 91 and index <= 107:
             return 5
+
     def get_showcase(self, index):
         return self.showcase_filename[index]
-'''
-b = [(98, 101, 89), (128, 158, 106), (71, 108, 78)]
-a = ColorHub()
-a.read_from_data(b)
-
-    # 计算k-nearest颜色（用欧几里得距离）
-a.calculate_k_nearest(a.EUCLIDEAN, 5)
-
-print(a.get_showcase(a.calculate_nearest_sum()))
-'''

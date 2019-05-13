@@ -2,6 +2,8 @@ import os
 import cv2
 import numpy as np
 from PIL import Image
+import requests
+import json
 import matplotlib.pyplot as plt
 
 def bg_sb(pic_path, pic_name , pic_rect):
@@ -46,3 +48,20 @@ def bg_sb(pic_path, pic_name , pic_rect):
     #cv2.imencode(".png", dst)[1].tofile(pic_path2)
     cv2.imwrite(pic_path2, dst)
     return pic_path2
+
+#唐三彩器皿的目标检测
+def get_jar_cropbox(pic_path):
+
+    #crop_box代表每个所画区域，labels代表其对应标签
+    crop_box = []
+
+    url = 'https://app.nanonets.com/api/v2/ObjectDetection/Model/47ea4541-acbf-4aa1-95cd-25d69d8f1711/LabelFile/'
+    data = {'file': open(pic_path, 'rb')}
+    response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
+    dic = json.loads(response.text)
+
+    if dic['message'] == 'Success':
+        for i in dic['result'][0]['prediction']:
+            crop_box.append([i['xmin'], i['ymin'], i['xmax'], i['ymax']])
+    return crop_box
+

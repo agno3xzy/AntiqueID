@@ -19,8 +19,8 @@ from . import class_content
 from . import localization
 
 size = 128,128
-category = {'horse':0, 'jar':1, 'man':2, 'bowl':3, 'head':4, 'camel':5}
-category_name = {0:'唐三彩马俑', 1:'唐三彩罐', 2:'唐三彩人像', 3:'唐三彩碗',4:'唐三彩人像——头部',5:'唐三彩骆驼'}
+category = {'camel':0, 'horse':1, 'horse_man':2, 'man':3, 'jar':4}
+category_name = {0:'唐三彩骆驼', 1:'唐三彩马', 2:'唐三彩骑俑', 3:'唐三彩人像',4:'唐三彩器皿'}
 tomb_category = {0:'唐昭陵韦贵妃墓',1:'唐惠庄太子李撝墓',2:'懿德太子墓'}
 dynasty_category = {0:'初唐', 1:'盛唐'}
 
@@ -46,15 +46,21 @@ def upload_file(request):
         pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', pic_name)
         pic_path = pic_path.replace('\\', '/')
         image.save(pic_path)
-
-        #处理用户输入的坐标参数
-        raw_coordinate = request.POST.get("coordinate", None)
-        if not raw_coordinate:
-            pic_rect =(0, 0, int(image.size[0])-1, int(image.size[1])-1)
-            #print(pic_rect)
+        class_dic, classmsg = get_from_classification(pic_path)
+        if classmsg == 'jar':
+            rect_list = background_subtraction.get_jar_cropbox(pic_path)
+            pic_rect = (
+                int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
         else:
-            real_coordinate = raw_coordinate.split("#", raw_coordinate.count('#'))
-            pic_rect =(int(real_coordinate[0]),int(real_coordinate[1]),int(real_coordinate[2]),int(real_coordinate[2]))
+            # 处理用户输入的坐标参数
+            raw_coordinate = request.POST.get("coordinate", None)
+            if not raw_coordinate:
+                pic_rect = (0, 0, int(image.size[0]) - 1, int(image.size[1]) - 1)
+            else:
+                real_coordinate = raw_coordinate.split("#", raw_coordinate.count('#'))
+                pic_rect = (
+                    int(real_coordinate[0]), int(real_coordinate[1]), int(real_coordinate[2]), int(real_coordinate[2]))
+
 
         #图像前景分离
         pre_pic_path = background_subtraction.bg_sb(pic_path, pic_name, pic_rect)
@@ -65,11 +71,8 @@ def upload_file(request):
 
         '''
         #暂时使用NanoNets，因此注释模型本地模型判断
-        
         result = predict(model_path, pic_path)
-        
         #以下四个变量控制前端页面显示的结果
-        
         classtype = 0
         if int(result[0][0]) == 1:
             classtype = 0
@@ -81,44 +84,50 @@ def upload_file(request):
             classtype = 3
         '''
 
-
         a = color_similarity.ColorHub()
         a.read_from_data(dec_feature_color)
-        a.calculate_k_nearest(color_similarity.ColorHub.EUCLIDEAN, 5)
-
+        a.calculate_k_nearest(color_similarity.ColorHub.EUCLIDEAN, 10)
         color_showcase = a.get_showcase(a.calculate_nearest_sum())
-
-
-        class_dic, classmsg = get_from_nano(pre_pic_path)
         classresult = json.dumps(class_dic)
-
+        feature_list = localization.localize(pre_pic_path)
         tomb, tomb_pic = predict_tomb(pre_pic_path)
         dynasty = predict_dynasty(pre_pic_path)
-        feature_list = localization.localize(pre_pic_path)
         save_as_report(request,Timestamp,pic_path,color_showcase,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic), feature_list, dynasty)
 
         #输出相应前端报告格式
         report = models.Classification.objects.get(class_id = Timestamp)
-        report_color_list = report.class_color.split('#')
+
         antique_name = category_name[report.class_type]
+
+        report_color_list = report.class_color.split('#')
         for i in range(len(report_color_list)):
             if i == 0:
                 pass
             else:
                 report_color_list[i] = '#' + report_color_list[i]
+        color_list = report_color_list[1:]
+
+        color_sum_str = []
+        color_sum_str.append(class_content.get_content('釉色分析', '综述', 0, 0))
+        color_sum_str.append(class_content.get_content('釉色分析', color_showcase[0], 0, 0))
+        color_showcase = color_showcase[1:]
         tomb_list = report.class_tomb.split('#')
         tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]), 0)
+
+
         if dynasty == 0 :
             dynasty_content = class_content.get_content('朝代', '初唐', 0, 0)
         else:
             dynasty_content = class_content.get_content('朝代', '盛唐', 0, 0)
+
         dynasty_name = dynasty_category[dynasty]
         tomb_name = tomb_category[int(tomb_list[0])]
-        feature_content = feature_analysis(report.class_type)
-        color_list = report_color_list[1:]
-        color_sum_str = class_content.get_content('釉色分析', '综述', 0, 0)
-        return render(request, "classification/report.html", locals())
 
+        feature_content = feature_analysis(report.class_type)
+
+        class_dic = category_explanation(class_dic)
+
+        return render(request, "classification/report.html", locals())
 
 def predict(model_path, pic_path):
     K.clear_session()
@@ -149,9 +158,13 @@ def report(request):
     antique_name = category_name[report.class_type]
     feature_content = feature_analysis(report.class_type)
     class_dic = json.loads(report.class_result)
+    class_dic = category_explanation(class_dic)
     color_showcase = json.loads(report_color_list[0])
     color_list = report_color_list[1:]
-    color_sum_str = class_content.get_content('釉色分析', '综述', 0, 0)
+    color_sum_str = []
+    color_sum_str.append(class_content.get_content('釉色分析', '综述', 0, 0))
+    color_sum_str.append(class_content.get_content('釉色分析', color_showcase[0], 0, 0))
+    color_showcase = color_showcase[1:]
     return render(request, "classification/report.html", locals())
 
 #存储为鉴定报告
@@ -169,14 +182,35 @@ def save_as_report(request, Timestamp, pic_path, color_showcase, feature_color, 
     report.class_result = classresult
     report.class_tomb = tomb + '#' + tomb_pic
     report.class_dynasty = str(dynasty)
-    featureStr = feature_list[0]
-    for index in range(len(feature_list)):
-        if index > 0:
-            featureStr = featureStr + '#' + feature_list[index]
-    report.class_feature = featureStr
+    print(feature_list)
+    if len(feature_list) != 0:
+        featureStr = feature_list[0]
+        for index in range(len(feature_list)):
+            if index > 0:
+                featureStr = featureStr + '#' + feature_list[index]
+        report.class_feature = featureStr
     report.save()
 
 #nanoNets
+def get_from_classification(pic_path):
+    url = 'https://app.nanonets.com/api/v2/ImageCategorization/LabelFile/'
+
+    data = {'file': open(pic_path, 'rb'), 'modelId': ('', '93d67a85-04a2-4788-84c9-d692962d7557')}
+
+    response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
+    dic = json.loads(response.text)
+    class_msg = "null"
+    result_dic = {}
+    if dic['message'] == 'Success':
+        for i in dic['result'][0]['prediction']:
+            result_dic[i['label']] = i['probability']
+    if not bool(result_dic):
+        pass
+    else:
+        class_msg = str(max(result_dic, key=result_dic.get))
+    return result_dic, class_msg
+
+#Classification Networks
 def get_from_nano(pic_path):
     url = 'https://app.nanonets.com/api/v2/MultiLabelClassification/Model/c41da85a-1303-451a-9077-71128b3e7acd/LabelFiles/'
     data = {'files': open(pic_path, 'rb'),
@@ -210,23 +244,28 @@ def predict_dynasty(pic_path):
 #特征分析
 def feature_analysis(category):
     featrue_content = []
-    if category == 0:
+    if category == 1 or category == 2:
         featrue_content.append(class_content.get_content('大类分析和介绍', '马', '综述', 0))
-        featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(1,4)))
-        featrue_content.append(str(class_content.get_content('大类分析和介绍', '马', '工艺', 0)))
-
-    elif category == 1 or category == 3:
-        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '分类', 0))
-        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(1, 4)))
-        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(5, 8)))
-    elif category == 5 :
-        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '分类', 0))
-        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(1, 4)))
-        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(5, 8)))
-    else:
+        featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(1,3)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(4,6)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(7,9)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(10,12)))
+    elif category == 4:
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '综述', 0))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(1, 3)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(4, 6)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(7, 9)))
+    elif category == 0:
         featrue_content.append(class_content.get_content('大类分析和介绍', '骆驼', '综述', 0))
         featrue_content.append(class_content.get_content('大类分析和介绍', '骆驼', '颜色', 1))
-
-
-    #print(featrue_content)
+    else:
+        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '综述', 0))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(1, 3)))
+        featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(4, 7)))
     return featrue_content
+
+def category_explanation(before):
+    after = {}
+    for key, value in before.items():
+        after[category_name[category[key]]] = value
+    return after
