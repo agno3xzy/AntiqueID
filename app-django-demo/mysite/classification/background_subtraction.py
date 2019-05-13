@@ -49,7 +49,7 @@ def bg_sb(pic_path, pic_name , pic_rect):
     cv2.imwrite(pic_path2, dst)
     return pic_path2
 
-#唐三彩器皿的目标检测
+#唐三彩器皿目标检测
 def get_jar_cropbox(pic_path):
 
     #crop_box代表每个所画区域，labels代表其对应标签
@@ -65,3 +65,50 @@ def get_jar_cropbox(pic_path):
             crop_box.append([i['xmin'], i['ymin'], i['xmax'], i['ymax']])
     return crop_box
 
+#唐三彩人俑目标检测
+def get_man_cropbox(pic_path):
+    # crop_box代表每个所画区域，labels代表其对应标签
+    crop_box = []
+
+    url = 'https://app.nanonets.com/api/v2/ObjectDetection/Model/ce0e8909-166c-4cc4-92d6-9ab41b1eb605/LabelFile/'
+    data = {'file': open(pic_path, 'rb')}
+    response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
+    dic = json.loads(response.text)
+
+    if dic['message'] == 'Success':
+        for i in dic['result'][0]['prediction']:
+            crop_box.append([i['xmin'], i['ymin'], i['xmax'], i['ymax']])
+    return crop_box
+
+#唐三彩马俑目标检测
+def get_horse_cropbox(pic_path):
+    # crop_box代表每个所画区域，labels代表其对应标签
+    crop_box = []
+
+    url = 'https://app.nanonets.com/api/v2/ObjectDetection/Model/c65af3d0-25b6-45c3-a9a8-01bb0321d155/LabelFile/'
+    data = {'file': open(pic_path, 'rb')}
+    response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
+
+    dic = json.loads(response.text)
+
+    if dic['message'] == 'Success':
+        for i in dic['result'][0]['prediction']:
+            crop_box.append([i['xmin'], i['ymin'], i['xmax'], i['ymax']])
+    return crop_box
+
+
+# 唐三彩马俑目标检测
+def get_horse_man_cropbox(pic_path):
+    # crop_box代表每个所画区域，labels代表其对应标签
+    crop_box = []
+
+    url = 'https://app.nanonets.com/api/v2/ObjectDetection/Model/e1a78745-2a8e-4b21-912e-9b4c96e31cc9/LabelFile/'
+    data = {'file': open(pic_path, 'rb')}
+    response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
+
+    dic = json.loads(response.text)
+
+    if dic['message'] == 'Success':
+        for i in dic['result'][0]['prediction']:
+            crop_box.append([i['xmin'], i['ymin'], i['xmax'], i['ymax']])
+    return crop_box

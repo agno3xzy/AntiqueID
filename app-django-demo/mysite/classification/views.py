@@ -19,8 +19,8 @@ from . import class_content
 from . import localization
 
 size = 128,128
-category = {'camel':0, 'horse':1, 'horse_man':2, 'man':3, 'jar':4}
-category_name = {0:'唐三彩骆驼', 1:'唐三彩马', 2:'唐三彩骑俑', 3:'唐三彩人像',4:'唐三彩器皿'}
+category = {'camel':0, 'horse':1, 'horse_man':2, 'man':3, 'jar':4, 'fakehorse':5}
+category_name = {0:'唐三彩骆驼', 1:'唐三彩马', 2:'唐三彩骑俑', 3:'唐三彩人像',4:'唐三彩器皿',5:'唐三彩工艺品马'}
 tomb_category = {0:'唐昭陵韦贵妃墓',1:'唐惠庄太子李撝墓',2:'懿德太子墓'}
 dynasty_category = {0:'初唐', 1:'盛唐'}
 
@@ -51,6 +51,18 @@ def upload_file(request):
             rect_list = background_subtraction.get_jar_cropbox(pic_path)
             pic_rect = (
                 int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+        elif classmsg == 'man':
+            rect_list = background_subtraction.get_man_cropbox(pic_path)
+            pic_rect = (
+                int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+        elif classmsg == 'horse_man':
+            rect_list = background_subtraction.get_horse_man_cropbox(pic_path)
+            pic_rect = (
+                int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+        elif classmsg == 'horse':
+            rect_list = background_subtraction.get_horse_cropbox(pic_path)
+            pic_rect = (
+                int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
         else:
             # 处理用户输入的坐标参数
             raw_coordinate = request.POST.get("coordinate", None)
@@ -60,6 +72,7 @@ def upload_file(request):
                 real_coordinate = raw_coordinate.split("#", raw_coordinate.count('#'))
                 pic_rect = (
                     int(real_coordinate[0]), int(real_coordinate[1]), int(real_coordinate[2]), int(real_coordinate[2]))
+
 
 
         #图像前景分离
@@ -89,7 +102,7 @@ def upload_file(request):
         a.calculate_k_nearest(color_similarity.ColorHub.EUCLIDEAN, 10)
         color_showcase = a.get_showcase(a.calculate_nearest_sum())
         classresult = json.dumps(class_dic)
-        feature_list = localization.localize(pre_pic_path)
+        feature_list = localization.localize(pre_pic_path, classmsg)
         tomb, tomb_pic = predict_tomb(pre_pic_path)
         dynasty = predict_dynasty(pre_pic_path)
         save_as_report(request,Timestamp,pic_path,color_showcase,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic), feature_list, dynasty)
@@ -191,13 +204,42 @@ def save_as_report(request, Timestamp, pic_path, color_showcase, feature_color, 
         report.class_feature = featureStr
     report.save()
 
-#nanoNets
+
+#分类预测模型
 def get_from_classification(pic_path):
+
     url = 'https://app.nanonets.com/api/v2/ImageCategorization/LabelFile/'
-
     data = {'file': open(pic_path, 'rb'), 'modelId': ('', '93d67a85-04a2-4788-84c9-d692962d7557')}
-
     response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
+
+    dic = json.loads(response.text)
+    class_msg = "null"
+    result_dic = {}
+
+    tmp_class_msg = "null"
+    tmp_result_dic = {}
+
+    if dic['message'] == 'Success':
+        for i in dic['result'][0]['prediction']:
+            result_dic[i['label']] = i['probability']
+    if not bool(result_dic):
+        pass
+    else:
+        class_msg = str(max(result_dic, key=result_dic.get))
+    if class_msg == 'horse':
+        tmp_result_dic, tmp_class_msg = get_from_fakehorse(pic_path)
+        if tmp_class_msg == 'fakehorse':
+            result_dic = tmp_result_dic
+            class_msg = tmp_class_msg
+    return result_dic, class_msg
+
+#真假马预测分析
+def get_from_fakehorse(pic_path):
+
+    url = 'https://app.nanonets.com/api/v2/ImageCategorization/LabelFile/'
+    data = {'file': open(pic_path, 'rb'), 'modelId': ('', '9504306e-1853-4fc8-8a45-e62aeff18720')}
+    response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
+
     dic = json.loads(response.text)
     class_msg = "null"
     result_dic = {}
@@ -208,24 +250,6 @@ def get_from_classification(pic_path):
         pass
     else:
         class_msg = str(max(result_dic, key=result_dic.get))
-    return result_dic, class_msg
-
-#Classification Networks
-def get_from_nano(pic_path):
-    url = 'https://app.nanonets.com/api/v2/MultiLabelClassification/Model/c41da85a-1303-451a-9077-71128b3e7acd/LabelFiles/'
-    data = {'files': open(pic_path, 'rb'),
-            'modelId': ('', 'c41da85a-1303-451a-9077-71128b3e7acd')}
-    response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
-    dic = json.loads(response.text)
-    class_msg = "null"
-    result_dic = {}
-    if dic['message'] == 'Success':
-        for i in dic['result'][0]['prediction']:
-            result_dic[i['label']] = i['probability']
-    if not bool(result_dic):
-        pass
-    else:
-        class_msg = str(max(result_dic,key=result_dic.get))
     return result_dic, class_msg
 
 #墓穴预测
@@ -258,10 +282,13 @@ def feature_analysis(category):
     elif category == 0:
         featrue_content.append(class_content.get_content('大类分析和介绍', '骆驼', '综述', 0))
         featrue_content.append(class_content.get_content('大类分析和介绍', '骆驼', '颜色', 1))
-    else:
+    elif category == 3:
         featrue_content.append(class_content.get_content('大类分析和介绍', '人', '综述', 0))
         featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(1, 3)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(4, 7)))
+    else:
+        featrue_content.append("此文玩可能是工艺品！")
+        featrue_content.append("此文玩可能是工艺品！")
     return featrue_content
 
 def category_explanation(before):
