@@ -49,20 +49,32 @@ def upload_file(request):
         class_dic, classmsg = get_from_classification(pic_path)
         if classmsg == 'jar':
             rect_list = background_subtraction.get_jar_cropbox(pic_path)
-            pic_rect = (
-                int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+            if len(rect_list) != 0:
+                pic_rect = (
+                    int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+            else:
+                pic_rect = (0, 0, int(image.size[0]) - 1, int(image.size[1]) - 1)
         elif classmsg == 'man':
             rect_list = background_subtraction.get_man_cropbox(pic_path)
-            pic_rect = (
-                int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+            if len(rect_list) != 0:
+                pic_rect = (
+                    int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+            else:
+                pic_rect = (0, 0, int(image.size[0]) - 1, int(image.size[1]) - 1)
         elif classmsg == 'horse_man':
             rect_list = background_subtraction.get_horse_man_cropbox(pic_path)
-            pic_rect = (
-                int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+            if len(rect_list) != 0:
+                pic_rect = (
+                    int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+            else:
+                pic_rect = (0, 0, int(image.size[0]) - 1, int(image.size[1]) - 1)
         elif classmsg == 'horse':
             rect_list = background_subtraction.get_horse_cropbox(pic_path)
-            pic_rect = (
-                int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+            if len(rect_list) != 0:
+                pic_rect = (
+                    int(rect_list[0][0]), int(rect_list[0][1]), int(rect_list[0][2]), int(rect_list[0][3]))
+            else:
+                pic_rect = (0, 0, int(image.size[0]) - 1, int(image.size[1]) - 1)
         else:
             # 处理用户输入的坐标参数
             raw_coordinate = request.POST.get("coordinate", None)
