@@ -24,9 +24,10 @@
 
     <link href="{% static 'auction/css/cover.css' %}" rel="stylesheet">
     <link href="{% static 'classification/css/component.css' %}" rel="stylesheet">
+    <link href="{% static 'classification/css/guide.css' %}" rel="stylesheet">
 </head>
 
-<body class="text-center" style="background-image: url('/background/myadmin.png');background-size: cover;">
+<body class="text-center" style="background-image: url('/bk_test.jpg');background-size: cover;">
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
 <header>
@@ -45,7 +46,7 @@
 						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item menu__item--current"><a href="/auction/" class="menu__link">拍卖</a></li>
                         <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                        <li class="menu__item"><a class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
                         <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
                     {% else %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
@@ -59,6 +60,9 @@
 				</nav>
         </nav>
     </header>
+    <br />
+    <br />
+    <br />
     <div class="container" style="margin-top: 80px">
         <div class="row">
             <div class="col .col-xl-">
@@ -67,7 +71,7 @@
             <div class="col .col-md-">
                 <h1>{{ name0.comm_name }}</h1>
                 <br>
-                <form action="/auction/details/" method="post">
+                <form action="/auction/details/" method="post" enctype="multipart/form-data" id="test_form">
                     <h2>商品起拍价</h2>
                     {% if startprice0.comm_startprice %}
                         <div class="alert alert-warning">{{ startprice0.comm_startprice }}</div>
@@ -75,22 +79,46 @@
 
                     {% csrf_token %}
                     <h2>目前最高报价</h2>
-                    {% if userprice %}
-                        <div class="alert alert-warning">{{ sellprice0.comm_sellprice }}</div>
+                    {% if sellprice0.comm_sellprice  %}
+                        <div class="alert alert-warning" id='divId'>{{ sellprice0.comm_sellprice }}</div>
                     {% endif %}
 
                     {% csrf_token %}
                     <br>
                     <h2>请输入您的报价</h2>
                     <br>
-                    {{ price_form }}
-                    <h6 style="color: #ac2925">{{ message }}</h6>
+                    <tr>
+                        <th>
+                            <label>用户报价:</label>
+                        </th>
+                        <td>
+                            <input type="text" name="user_price" value="" maxlength="128">
+                        </td>
+                    </tr>
                     <input hidden name="id" value="{{ commodity_id }}">
-                    <input type="submit" value="提交报价">
+                    <button type="submit" id="btn2">提交报价</button>
+                    <button hidden type="reset" id="btn">重置</button>
+                    {% if message %}
+                        <script>
+                            function submit(){
+                                var form = document.getElementById('test_form');
+                                form.submit();
+                            }
+                            alert("{{ message }}");
+                            document.getElementsByName("user_price").value = null;
+                            setTimeout(submit(), 5000);
+                        </script>
+                    {% endif %}
                 </form>
 
             </div>
         </div>
+    </div>
+    <div class="guide">
+	    <div class="guide-wrap">
+		    <a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+		    <a href="/auction/" class="report" title="返回"><span>返回</span></a>
+	    </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

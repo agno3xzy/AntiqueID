@@ -4,12 +4,14 @@ import time
 import requests
 import json
 import random
+import cv2
 from . import img_loader as ld
 from PIL import Image
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from keras import backend as K
 from keras.models import load_model
+
 import login.models as models
 
 from . import color_predict
@@ -46,7 +48,14 @@ def upload_file(request):
         pic_path = os.path.join(os.getcwd() + '/mysite/media/upload/', pic_name)
         pic_path = pic_path.replace('\\', '/')
         image.save(pic_path)
-        class_dic, classmsg = get_from_classification(pic_path)
+
+
+        resize_pic_path  = resize_image(pic_path, pic_name)
+        if resize_pic_path == "null":
+            class_dic, classmsg = get_from_classification(pic_path)
+        else:
+            class_dic, classmsg = get_from_classification(resize_pic_path)
+
         if classmsg == 'jar':
             rect_list = background_subtraction.get_jar_cropbox(pic_path)
             if len(rect_list) != 0:
@@ -207,7 +216,6 @@ def save_as_report(request, Timestamp, pic_path, color_showcase, feature_color, 
     report.class_result = classresult
     report.class_tomb = tomb + '#' + tomb_pic
     report.class_dynasty = str(dynasty)
-    print(feature_list)
     if len(feature_list) != 0:
         featureStr = feature_list[0]
         for index in range(len(feature_list)):
@@ -308,3 +316,20 @@ def category_explanation(before):
     for key, value in before.items():
         after[category_name[category[key]]] = value
     return after
+
+def resize_image(pic_path, pic_name):
+    img = cv2.imread(pic_path)
+    resize_image_path = "null"
+    x, y = img.shape[0:2]
+    if max(x, y) < 500 :
+        return resize_image_path
+    else:
+        if x > y:
+            rate = 500.00 / x
+        else:
+            rate = 500.00 / y
+        img_resize = cv2.resize(img, (0, 0), fx=rate, fy=rate, interpolation=cv2.INTER_NEAREST)
+        resize_pic_path = os.path.join(os.getcwd() + '/mysite/media/after_resize/', pic_name)
+        resize_pic_path = resize_pic_path.replace('\\', '/')
+        cv2.imwrite(resize_pic_path, img_resize)
+        return resize_image_path

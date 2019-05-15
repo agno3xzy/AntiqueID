@@ -22,6 +22,7 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'expert/css/carousel.css' %}" rel="stylesheet">
     <link href="{% static 'classification/css/component.css' %}" rel="stylesheet">
+    <link href="{% static 'classification/css/guide.css' %}" rel="stylesheet">
   </head>
 
   <body>
@@ -41,7 +42,7 @@
 						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
                         <li class="menu__item menu__item--current"><a href="/expert/" class="menu__link">专家问答</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                        <li class="menu__item"><a class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
                         <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
                     {% else %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
@@ -82,7 +83,12 @@
 
     </main>
     </div>
-
+    <div class="guide">
+        <div class="guide-wrap">
+            <a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+            <a href="javascript:history.back(-1)" class="report" title="返回"><span>返回</span></a>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="{% static 'expert/js/vendor/popper.min.js' %}"></script>

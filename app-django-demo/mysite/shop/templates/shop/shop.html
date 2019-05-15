@@ -29,6 +29,7 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'shop/css/carousel.css' %}" rel="stylesheet">
     <link href="{% static 'classification/css/component.css' %}" rel="stylesheet">
+    <link href="{% static 'classification/css/guide.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -50,7 +51,7 @@
 						<li class="menu__item menu__item--current"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
                         <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                        <li class="menu__item"><a class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
                         <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
                     {% else %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
@@ -86,79 +87,13 @@
                 </div>
                  {% endfor %}
              </div>
-        <!--
-            <div class="row">
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="/shop/shop1.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩兽面镇墓兽</h2>
-                    <p>￥39000.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="/shop/shop2.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩骑马男俑</h2>
-                    <p>￥8000.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="/shop/shop3.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩高胡帽男牵马俑</h2>
-                    <p>￥88000.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-
-                <br/>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="/shop/shop4.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩蓝釉白斑马</h2>
-                    <p>￥47000.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="/shop/shop5.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩骑马女俑</h2>
-                    <p>￥28000.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="/shop/shop6.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩女坐俑</h2>
-                    <p>￥59900.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-
-                <br/>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="/shop/shop1.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩兽面镇墓兽</h2>
-                    <p>￥39000.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                   <img class="rounded-circle" src="/shop/shop2.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩骑马男俑</h2>
-                    <p>￥8000.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="/shop/shop3.jpg" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>三彩高胡帽男牵马俑</h2>
-                    <p>￥88000.00</p>
-                    <p><a class="btn btn-secondary" href="/expert/comment/" role="button">立即购买&raquo;</a></p>
-                </div>
-            </div>
-            -->
-
     </main>
+    <div class="guide">
+        <div class="guide-wrap">
+            <a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+            <a href="javascript:history.back(-1)" class="report" title="返回"><span>返回</span></a>
+        </div>
+    </div>
 </div>
 <!-- Bootstrap core JavaScript
 ================================================== -->

@@ -30,6 +30,7 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'auction/css/carousel.css' %}" rel="stylesheet">
     <link href="{% static 'classification/css/component.css' %}" rel="stylesheet">
+    <link href="{% static 'classification/css/guide.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -51,7 +52,7 @@
 						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
 						<li class="menu__item menu__item--current"><a href="/auction/" class="menu__link">拍卖</a></li>
                         <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                        <li class="menu__item"><a class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
                         <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
                     {% else %}
 						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
@@ -78,99 +79,31 @@
                      <div class="col-lg-4">
                         <img class="rounded-circle" src="{{ foo.comm_img }}" alt="Generic placeholder image" width="140" height="140">
                         <h2>{{ foo.comm_name }}</h2>
-                        <p>目前最高竞拍价：￥{{ foo.comm_startprice  }}</p>
+                        <p>目前最高竞拍价：￥{{ foo.comm_sellprice  }}</p>
                          <form action="auction_details/"  method="post" enctype="multipart/form-data">
                              {% csrf_token %}
                              <input hidden type="text" name = "id" value="{{ foo.comm_id }}">
                              <p><input class="btn btn-secondary"  type="submit"  name="Submit" value="参与竞拍"/></p>
                          </form>
-                    </div><!-- /.col-lg-4 -->
+                    </div>
                 {% endfor %}
-        <!--
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="{{ src0 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name0 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price0  }}</p>
-
-
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="{{ src1 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name1 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price1  }}</p>
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="{{ src2 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name2 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price2  }}</p>
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-
-                <br/>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="{{ src3 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name3 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price3  }}</p>
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="{{ src4 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name4 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price4  }}</p>
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="{{ src5 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name5 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price5  }}</p>
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-
-                <br/>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="{{ src6 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name6 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price6  }}</p>
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                   <img class="rounded-circle" src="{{ src7 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name7 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price7  }}</p>
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="{{ src8 }}" alt="Generic placeholder image" width="140"
-                         height="140">
-                    <h2>{{ name8 }}</h2>
-                    <p>目前最高竞拍价：￥{{ price8  }}</p>
-                    <p><a class="btn btn-secondary" href="auction_details/" role="button">参与竞拍&raquo;</a></p>
-                </div>
-            -->
-            </div><!-- /.row -->
+            </div>
 
     </main>
+    <div class="guide">
+	    <div class="guide-wrap">
+		    <a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+		    <a href="javascript:history.back(-1)" class="report" title="返回"><span>返回</span></a>
+	    </div>
+    </div>
 </div>
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="{% static 'auction/js/vendor/popper.min.js' %></script>
-    <script src="{% static 'auction/js/bootstrap.bundle.min.js' %}></script>
-<script src="{% static 'auction/js/vendor/holder.min.js' %}></script>
-
+<script src="{% static 'auction/js/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'auction/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'auction/js/vendor/holder.min.js' %}"></script>
   </body>
 </html>

@@ -13,11 +13,46 @@
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="{% static 'personal/css/cover.css' %}" rel="stylesheet">
+
+    <link href="{% static 'auction/css/cover.css' %}" rel="stylesheet">
+    <link href="{% static 'classification/css/component.css' %}" rel="stylesheet">
+    <link href="{% static 'classification/css/guide.css' %}" rel="stylesheet">
 </head>
 
 <body class="text-center" style="background-image: url('/2.png');background-size: cover;">
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="color: #533f03">三彩知因</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <nav class="menu menu--prospero" style="height: 20px">
+					<ul class="menu__list">
+                    {% if request.session.is_login %}
+						<li class="menu__item menu__item--current"><a href="/" class="menu__link">主页</a></li>
+						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+						<li class="menu__item"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
+						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                        <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
+                        <li class="menu__item"><a class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                        <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
+                    {% else %}
+						<li class="menu__item menu__item--current"><a href="/" class="menu__link">主页</a></li>
+						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+						<li class="menu__item"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
+						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                        <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
+                    {% endif %}
+					</ul>
+				</nav>
+        </nav>
+    </header>
+    <!--
     <header class="masthead mb-auto">
         <div class="inner">
             <nav class="nav nav-masthead justify-content-center">
@@ -34,8 +69,19 @@
                 {% endif %}
             </nav>
         </div>
-    </header>
-
+    </header>-->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <main role="main" class="inner cover">
         <img src="/logo4.0.png" width="40%">
         {#        <h1 class="cover-heading" style="color: #1b1e21">崭新的唐三彩鉴赏方式</h1>#}

@@ -1,0 +1,26 @@
+/* reset
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}
+fieldset,img{border:0;}
+:focus{outline:0;}
+ol,ul{list-style:none;list-style-position:outside;}
+table{border-collapse:collapse;border-spacing:0;}
+address,caption,cite,code,dfn,em,i,strong,th,var,optgroup{font-style:normal;font-weight:normal;}
+body,button,input,select,textarea{font:12px/1.5 微软雅黑,arial,sans-serif;}
+button,input,select,textarea,h1,h2,h3,h4,h5,h6{font-size:100%;}
+body{color:#333;min-width: 1120px;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#f60;text-decoration:underline;}
+a:hover em,a:hover i,a:hover span{cursor:pointer;}
+.cf:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.cf{*zoom:1;}
+*/
+/*** guide ***/
+.guide{width:60px;margin-left:0px;position:fixed;left:5%;bottom:134px;_position:absolute;_top:expression(documentElement.scrollTop+documentElement.clientHeight - this.clientHeight - 134+'px');display:block;}
+.guide a{display:block;width:60px;height:50px;background:url(button.png) no-repeat;margin-top:10px;text-decoration:none;font:16px/50px "Microsoft YaHei";text-align:center;color:#fff;border-radius:2px;}
+.guide a span{display:none;text-align:center;}
+.guide a:hover{text-decoration:none;background-color:#39F;color:#fff;}
+.guide a:hover span{display:block;width:60px;background:#39F}
+.guide .find{background-position:-84px -236px;}
+.guide .report{background-position:-145px -236px;}
+.guide .edit{background-position:-83px -185px;}
+.guide .top{background-position:-145px -185px;}
