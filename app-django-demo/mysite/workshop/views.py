@@ -6,6 +6,7 @@ comm_collection_id = []
 expert_collection_id = []
 comm_collection_num = 0
 expert_collection_num = 0
+
 def collection(Mainpage):
     comm_collection = Mainpage.main_collection
     expert_collection = Mainpage.main_followexpert
@@ -61,7 +62,8 @@ def index(request):
             Expert_collection_display = Expert_collection
          #所有报告
         reports = models.Classification.objects.filter(user_user=user)
-        #print(reports)
+        print(list(reports))
+        category_name = {0: '唐三彩骆驼', 1: '唐三彩马', 2: '唐三彩骑俑', 3: '唐三彩人像', 4: '唐三彩器皿', 5: '唐三彩工艺品马'}
         return render(request, 'workshop/frontpage.html', locals())
     if request.method == "POST":
         login_form = forms.UserForm(request.POST)
