@@ -19,20 +19,22 @@ def collection(Mainpage):
     global expert_collection_num
     expert_collection_num = 0
     str = ""
-    for i in comm_collection:
-        if i == '#':
-            comm_collection_id.append(models.Commodity.objects.get(comm_id = int(str)))
-            comm_collection_num = comm_collection_num + 1
-            str = ""
-        else:
-            str = str + i
-    for i in expert_collection:
-        if i == '#':
-            expert_collection_id.append(models.Expert.objects.get(expert_id = int(str)))
-            expert_collection_num = expert_collection_num + 1
-            str = ""
-        else:
-            str = str + i
+    if comm_collection:
+        for i in comm_collection:
+            if i == '#':
+                comm_collection_id.append(models.Commodity.objects.get(comm_id = int(str)))
+                comm_collection_num = comm_collection_num + 1
+                str = ""
+            else:
+                str = str + i
+    if expert_collection:
+        for i in expert_collection:
+            if i == '#':
+                expert_collection_id.append(models.Expert.objects.get(expert_id=int(str)))
+                expert_collection_num = expert_collection_num + 1
+                str = ""
+            else:
+                str = str + i
 
 
 def index(request):
