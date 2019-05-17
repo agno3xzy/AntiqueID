@@ -3,7 +3,24 @@ import os
 import requests
 import json
 
-#
+def get_cropbox_from_jar(dir):
+    labels = []
+    probabilities = {}
+    crop_box = []
+
+    url = 'https://app.nanonets.com/api/v2/ObjectDetection/Model/9195d487-2ef1-4e88-a0d8-7f61aa905e65/LabelFile/'
+    data = {'file': open(dir, 'rb')}
+    response = requests.post(url, auth=requests.auth.HTTPBasicAuth('55kaNUAnPTPcMMCJdXaP6ss4MbWOaZBu', ''), files=data)
+    dic = json.loads(response.text)
+
+    if dic['message'] == 'Success':
+        for i in dic['result'][0]['prediction']:
+            labels.append(i['label'])
+            probabilities[i['label']] = i['score']
+            crop_box.append([i['xmin'], i['ymin'], i['xmax'], i['ymax']])
+    return labels, probabilities, crop_box
+
+
 def get_cropbox_from_horse(dir):
 
     #crop_box代表每个所画区域，labels代表其对应标签
@@ -69,6 +86,8 @@ def localize(dir, category):
     file_name_list = []
     if category == "horse" or category =="horse_man":
         labels, probabilities, crop_box = get_cropbox_from_horse(dir)
+    elif category == 'jar':
+        labels, probabilities, crop_box = get_cropbox_from_jar(dir)
     else:
         labels, probabilities, crop_box = get_cropbox_from_man(dir)
     target = os.getcwd().split('classification')[0] + '\\mysite\\media\\localized\\'

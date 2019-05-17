@@ -124,7 +124,9 @@ def upload_file(request):
         color_showcase = a.get_showcase(a.calculate_nearest_sum())
         classresult = json.dumps(class_dic)
         feature_list = localization.localize(pre_pic_path, classmsg)
-        tomb, tomb_pic = predict_tomb(pre_pic_path)
+        feature_set = get_feature_set(feature_list)
+
+        tomb, tomb_pic = predict_tomb(pre_pic_path, color_showcase)
         dynasty = predict_dynasty(pre_pic_path)
         save_as_report(request,Timestamp,pic_path,color_showcase,feature_color,category[classmsg], classresult, str(tomb), str(tomb_pic), feature_list, dynasty)
 
@@ -157,7 +159,7 @@ def upload_file(request):
         dynasty_name = dynasty_category[dynasty]
         tomb_name = tomb_category[int(tomb_list[0])]
 
-        feature_content = feature_analysis(report.class_type)
+        feature_content = feature_analysis(report.class_type, feature_set)
 
         class_dic = category_explanation(class_dic)
 
@@ -179,6 +181,8 @@ def report(request):
     tomb_content = class_content.get_content('墓穴分析', '文案', int(tomb_list[0]), 0)
     tomb_name = tomb_category[int(tomb_list[0])]
     feature_list = report.class_feature.split('#')
+    feature_set = get_feature_set(feature_list)
+    get_feature_set(feature_list)
     if int(report.class_dynasty) == 0:
         dynasty_content = class_content.get_content('朝代', '初唐', 0, 0)
     else:
@@ -190,7 +194,7 @@ def report(request):
         else:
             report_color_list[i] = '#' + report_color_list[i]
     antique_name = category_name[report.class_type]
-    feature_content = feature_analysis(report.class_type)
+    feature_content = feature_analysis(report.class_type, feature_set)
     class_dic = json.loads(report.class_result)
     class_dic = category_explanation(class_dic)
     color_showcase = json.loads(report_color_list[0])
@@ -273,11 +277,17 @@ def get_from_fakehorse(pic_path):
     return result_dic, class_msg
 
 #墓穴预测
-def predict_tomb(pic_path):
+def predict_tomb(pic_path, color_list):
 
     tomb = random.randint(0,2)
-    tomb_pic_name = random.randint(1,7)
+    if color_list[0] in range(0,2):
+        tomb = 0
+    elif color_list[0] in range(2,4):
+        tomb = 1
+    elif color_list[0] in range(4,6):
+        tomb = 2
 
+    tomb_pic_name = random.randint(1,7)
     return tomb, tomb_pic_name
 
 #朝代预测
@@ -286,7 +296,7 @@ def predict_dynasty(pic_path):
     return dynasty
 
 #特征分析
-def feature_analysis(category):
+def feature_analysis(category, feature_set):
     featrue_content = []
     if category == 1 or category == 2:
         featrue_content.append(class_content.get_content('大类分析和介绍', '马', '综述', 0))
@@ -294,11 +304,19 @@ def feature_analysis(category):
         featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(4,6)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(7,9)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(10,12)))
+        if "saddle" in feature_set:
+            featrue_content.append(class_content.get_content('大类分析和介绍', '马', '马鞍', random.randint(1, 2)))
+        if "ribbon" in feature_set or "pattern" in feature_set:
+            featrue_content.append(class_content.get_content('大类分析和介绍', '马', '花纹', random.randint(1, 2)))
+        if "man_on_horse" in feature_set:
+            featrue_content.append(class_content.get_content('大类分析和介绍', '马', '骑者', random.randint(1, 3)))
     elif category == 4:
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '综述', 0))
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(1, 3)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(4, 6)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(7, 9)))
+        if "stripe" in feature_set:
+            featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '花纹', random.randint(1, 3)))
     elif category == 0:
         featrue_content.append(class_content.get_content('大类分析和介绍', '骆驼', '综述', 0))
         featrue_content.append(class_content.get_content('大类分析和介绍', '骆驼', '颜色', 1))
@@ -306,6 +324,8 @@ def feature_analysis(category):
         featrue_content.append(class_content.get_content('大类分析和介绍', '人', '综述', 0))
         featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(1, 3)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '人', '艺术特征', random.randint(4, 7)))
+        if "sleeve" in feature_set:
+            featrue_content.append(class_content.get_content('大类分析和介绍', '人', '袖子', random.randint(1, 3)))
     else:
         featrue_content.append("此文玩可能是工艺品！")
         featrue_content.append("此文玩可能是工艺品！")
@@ -333,3 +353,12 @@ def resize_image(pic_path, pic_name):
         resize_pic_path = resize_pic_path.replace('\\', '/')
         cv2.imwrite(resize_pic_path, img_resize)
         return resize_image_path
+
+def get_feature_set(feature_list):
+    tmp_list = []
+    feature_set = ()
+    for feature in feature_list:
+        tmp = feature.split('_')
+        tmp_list.append(tmp[2])
+    feature_set = set(tmp_list)
+    return feature_set

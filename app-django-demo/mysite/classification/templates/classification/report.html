@@ -22,34 +22,34 @@
     </head>
     <body style="background-image: url('/bk_test.jpg');background-size: cover;">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top"
-     style="background-image: url('/bk_test.jpg');background-size: cover;">
-    <a class="navbar-brand" href="#" style="color: #533f03">三彩知因</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-				<nav class="menu menu--prospero" style="height: 20px">
-					<ul class="menu__list">
-                    {% if request.session.is_login %}
-						<li class="menu__item"><a href="/" class="menu__link">主页</a></li>
-						<li class="menu__item menu__item--current"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
-						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
-						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
-                        <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
-                        <li class="menu__item"><a class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
-                        <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
-                    {% else %}
-						<li class="menu__item menu__item--current"><a href="/" class="menu__link">主页</a></li>
-						<li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
-						<li class="menu__item"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
-						<li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
-						<li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
-                        <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
-                    {% endif %}
-					</ul>
-				</nav>
-</nav>
+         style="background-image: url('/bk_test.jpg');background-size: cover;">
+        <a class="navbar-brand" href="#" style="color: #533f03">三彩知因</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="menu menu--prospero" style="height: 20px">
+            <ul class="menu__list">
+                {% if request.session.is_login %}
+                    <li class="menu__item"><a href="/" class="menu__link">主页</a></li>
+                    <li class="menu__item menu__item--current"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+                    <li class="menu__item"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
+                    <li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+                    <li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                    <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
+                    <li class="menu__item"><a class="menu__link" style="color:black;">当前在线：{{ request.session.user_name }}</a></li>
+                    <li class="menu__item"><a href="/login/logout/" class="menu__link" style="color:blue">登出</a></li>
+                {% else %}
+                    <li class="menu__item menu__item--current"><a href="/" class="menu__link">主页</a></li>
+                    <li class="menu__item"><a href="/classification/" class="menu__link">辅助鉴定</a></li>
+                    <li class="menu__item"><a href="/workshop/" class="menu__link">鉴宝馆</a></li>
+                    <li class="menu__item"><a href="/shop/" class="menu__link">商城</a></li>
+                    <li class="menu__item"><a href="/auction/" class="menu__link">拍卖</a></li>
+                    <li class="menu__item"><a href="/expert/" class="menu__link">专家问答</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </nav>
     <br />
     <br />
     <br />
@@ -306,19 +306,22 @@
                             <table class="table" style="margin-top: 20px">
                                 <thead>
                                 <tr>
-                                    <th scope="col">综述</th>
+                                    <th scope="col">No</th>
                                     <th scope="col">艺术特征</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>{{ feature_content.1 }}</td>
+                                {% for content in feature_content %}
+                                    {% if  content != feature_content.0%}
+
+                                         <tr>
+                                    <th scope="row">{{ forloop.counter | add:-1}}</th>
+                                    <td>{{ content }}</td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>{{ feature_content.2 }}</td>
-                                </tr>
+                                    {% endif %}
+
+
+                                {% endfor %}
                                 </tbody>
                             </table>
                         </div>
@@ -329,10 +332,10 @@
     </div>
 </div>
 <div class="guide">
-	<div class="guide-wrap">
-		<a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
-		<a href="javascript:history.back(-1)" class="report" title="返回"><span>返回</span></a>
-	</div>
+    <div class="guide-wrap">
+        <a href="javascript:window.scrollTo(0,0)" class="top" title="回顶部"><span>回顶部</span></a>
+        <a href="javascript:history.back(-1)" class="report" title="返回"><span>返回</span></a>
+    </div>
 </div>
 </body>
 </html>
