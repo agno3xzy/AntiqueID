@@ -21,6 +21,7 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+    <link href="{% static 'classification/css/guide.css' %}" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
@@ -58,6 +59,11 @@
     </div>
     <button type="reset" class="btn btn-default pull-left">重置</button>
     <button type="submit" class="btn btn-primary pull-right">提交</button>
+    <div class="guide">
+        <div class="guide-wrap">
+            <a href="javascript:history.back(-1)" class="report" title="返回"><span>返回</span></a>
+        </div>
+    </div>
 </form>
 </div>
 
