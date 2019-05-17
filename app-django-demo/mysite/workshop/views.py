@@ -152,4 +152,4 @@ def apply(request):
             user.user_identity = 1
             user.user_applyment = request.POST.get("applyment")
             user.save()
-            return redirect('../', locals())
+            return redirect('/workshop/', locals())
