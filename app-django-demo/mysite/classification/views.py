@@ -303,13 +303,12 @@ def feature_analysis(category, feature_set):
         featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(1,3)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(4,6)))
         featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(7,9)))
-        featrue_content.append(class_content.get_content('大类分析和介绍', '马', '艺术特征', random.randint(10,12)))
         if "saddle" in feature_set:
             featrue_content.append(class_content.get_content('大类分析和介绍', '马', '马鞍', random.randint(1, 2)))
         if "ribbon" in feature_set or "pattern" in feature_set:
             featrue_content.append(class_content.get_content('大类分析和介绍', '马', '花纹', random.randint(1, 2)))
         if "man_on_horse" in feature_set:
-            featrue_content.append(class_content.get_content('大类分析和介绍', '马', '骑者', random.randint(1, 3)))
+            featrue_content.append(class_content.get_content('大类分析和介绍', '马', '骑者', random.randint(1, 6)))
     elif category == 4:
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '综述', 0))
         featrue_content.append(class_content.get_content('大类分析和介绍', '器皿', '艺术特征', random.randint(1, 3)))
