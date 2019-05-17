@@ -65,10 +65,10 @@
     <br />
     <div class="container" style="margin-top: 80px">
         <div class="row">
-            <div class="col .col-xl-">
+            <div class="col .col-xl-" style="margin-left: -20px">
                 <img class="img-rounded" src="{{ src0.comm_img }}">
             </div>
-            <div class="col .col-md-">
+            <div class="col .col-md-" style="margin-right: -20px">
                 <h1>{{ name0.comm_name }}</h1>
                 <br>
                 <form action="/auction/details/" method="post" enctype="multipart/form-data" id="test_form">
@@ -96,7 +96,7 @@
                         </td>
                     </tr>
                     <input hidden name="id" value="{{ commodity_id }}">
-                    <button type="submit" id="btn2">提交报价</button>
+                    <button class="btn" style="background-color:white " type="submit" id="btn2">提交报价</button>
                     <button hidden type="reset" id="btn">重置</button>
                     {% if message %}
                         <script>

@@ -70,10 +70,10 @@
                     </p>
                     <form  action="upload_file/" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <input type="file" name="imageFile" accept="image/png,image/jpg, image/jpeg" id="img"/>
+                        <input class="btn btn-circle" type="file" name="imageFile" accept="image/png,image/jpg, image/jpeg" id="img"/>
                         <br>
-                        <input type="text" placeholder="1#2#100#100" name="coordinate" id="coordinate"/>
-                        <input type="submit" id="fileSubmit" name="Submit" value="上传" />
+                        <input class="btn btn-secondary" type="text" hidden="hidden" placeholder="1#2#100#100" name="coordinate" id="coordinate"/>
+                        <input class="btn btn-secondary" type="submit" id="fileSubmit" name="Submit" value="上传" />
                     </form>
                 </div>
 

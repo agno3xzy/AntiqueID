@@ -48,6 +48,7 @@ def details(request):
         sellprice0 = sellprice[0]
         src = models.Commodity.objects.filter(comm_id=commodity_id).values('comm_img')
         src0 = src[0]
+        Commodity = models.Commodity.objects.get(comm_id = commodity_id)
         now_price = temp_price[0]['comm_sellprice']
         userprice = request.POST.get("user_price", '')
         if userprice:
@@ -80,4 +81,5 @@ def auction_details(request):
         sellprice0 = sellprice[0]
         src = models.Commodity.objects.filter(comm_id = commodity_id).values('comm_img')
         src0 = src[0]
+        Commodity = models.Commodity.objects.get(comm_id = commodity_id)
     return render(request, 'auction/auction_details.html',locals())
