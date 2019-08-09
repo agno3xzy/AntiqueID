@@ -1,4 +1,9 @@
 ## 三彩知因
+
+### 成绩
+* [2019 第十二届“英特尔杯”全国大学生软件创新大赛 全国二等奖](https://software.intel.com/zh-cn/articles/2019-intel-cup-national-collegiate-software-innovation-contest-winners)
+* 全国大学生创新活动项目 市级
+
 ### LOG
 * 从这里开始记一下我们干了什么把。
 * 3/16：完成图片前景分离算法部分 肖之仪
