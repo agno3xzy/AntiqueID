@@ -16,8 +16,8 @@
 * 全国大学生创新活动项目 市级
 
 ### 小组成员
-* [agno3xzy](https://github.com/agno3xzy)
-* [Xingkai98](https://github.com/Xingkai98)
-* [ybxybx](https://github.com/ybxybx)
-* [DaBaoSjY](https://github.com/DaBaoSjY)
-* [piao88](https://github.com/piao88)
+* [肖之仪](https://github.com/agno3xzy)
+* [邢凯](https://github.com/Xingkai98)
+* [于礴枭](https://github.com/ybxybx)
+* [孙加铱](https://github.com/DaBaoSjY)
+* [朴志桓](https://github.com/piao88)
